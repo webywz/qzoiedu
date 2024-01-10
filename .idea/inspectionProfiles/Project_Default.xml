@@ -1,0 +1,53 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="38">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="el-tab-pane" />
+            <item index="7" class="java.lang.String" itemvalue="el-tabs" />
+            <item index="8" class="java.lang.String" itemvalue="el-tag" />
+            <item index="9" class="java.lang.String" itemvalue="el-table-column" />
+            <item index="10" class="java.lang.String" itemvalue="el-table" />
+            <item index="11" class="java.lang.String" itemvalue="el-button" />
+            <item index="12" class="java.lang.String" itemvalue="el-form" />
+            <item index="13" class="java.lang.String" itemvalue="el-input" />
+            <item index="14" class="java.lang.String" itemvalue="el-popover" />
+            <item index="15" class="java.lang.String" itemvalue="el-form-item" />
+            <item index="16" class="java.lang.String" itemvalue="el-autocomplete" />
+            <item index="17" class="java.lang.String" itemvalue="el-step" />
+            <item index="18" class="java.lang.String" itemvalue="el-steps" />
+            <item index="19" class="java.lang.String" itemvalue="el-date-picker" />
+            <item index="20" class="java.lang.String" itemvalue="el-row" />
+            <item index="21" class="java.lang.String" itemvalue="el-dialog" />
+            <item index="22" class="java.lang.String" itemvalue="el-select" />
+            <item index="23" class="java.lang.String" itemvalue="el-option" />
+            <item index="24" class="java.lang.String" itemvalue="el-button-group" />
+            <item index="25" class="java.lang.String" itemvalue="el-radio-button" />
+            <item index="26" class="java.lang.String" itemvalue="el-radio-group" />
+            <item index="27" class="java.lang.String" itemvalue="el-switch" />
+            <item index="28" class="java.lang.String" itemvalue="el-tree" />
+            <item index="29" class="java.lang.String" itemvalue="el-dropdown" />
+            <item index="30" class="java.lang.String" itemvalue="el-dropdown-menu" />
+            <item index="31" class="java.lang.String" itemvalue="el-checkbox" />
+            <item index="32" class="java.lang.String" itemvalue="el-checkbox-group" />
+            <item index="33" class="java.lang.String" itemvalue="el-dropdown-item" />
+            <item index="34" class="java.lang.String" itemvalue="el-radio" />
+            <item index="35" class="java.lang.String" itemvalue="el-tooltip" />
+            <item index="36" class="java.lang.String" itemvalue="el-upload" />
+            <item index="37" class="java.lang.String" itemvalue="el-progress" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="JSUnresolvedFunction" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+  </profile>
+</component>
