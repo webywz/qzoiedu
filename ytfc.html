@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="apple-touch-icon" href="http://www.qzoiedu.com/ytfc/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/ytfc/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/ytfc/images/favicon.ico" type="image/x-icon">
+<title>游艇帆船学院-泉州海洋职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="游艇帆船学院-泉州海洋职业学院">
+<meta name="keywords" content="游艇帆船学院,泉州海洋职业学院">
+
+<link href="static/css/style8.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="static/css/banner1.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/xx-sj-tj.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1938274620)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="static/picture/logoytfc.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83474)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938274620";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li class="dhdqwz">
+                                 <a href="index.htm" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="xygk.htm" title="学院概况">学院概况</a>
+                            </li>
+                            <li>
+                                 <a href="xyzy/ytsjyzz.htm" title="学院专业">学院专业</a>
+                                <div class="two-nav">
+                                    <a href="xyzy/ytsjyzz.htm" title="游艇设计与制造">游艇设计与制造</a>
+                                    <a href="xyzy/xxfwygl.htm" title="休闲服务与管理">休闲服务与管理</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="yxxw.htm" title="院系新闻">院系新闻</a>
+                            </li>
+                            <li>
+                                 <a href="szdw1.htm" title="师资队伍">师资队伍</a>
+                            </li>
+                            <li>
+                                 <a href="ssfc.htm" title="师生风采">师生风采</a>
+                            </li>
+                            <li>
+                                 <a href="jycy.htm" title="就业创业">就业创业</a>
+                            </li>
+                            <li>
+                                 <a href="lxwm.htm" title="联系我们">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+
+<!--banner-->
+<div class="index-banner">
+            <div class="main-visual-wrapper ar_web">
+                <section class="swiper-box1 main-visual-slider">
+                        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/banner5.jpg) no-repeat;">
+                                        <img src="static/picture/banner5.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/banner43.jpg) no-repeat;">
+                                        <img src="static/picture/banner43.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/banner32.jpg) no-repeat;">
+                                        <img src="static/picture/banner32.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ban-dot">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+</div>
+<!--新闻中心开始-->
+<div class="news_box">
+<div class="w1200">
+ <div class="i-title"><h2>院系新闻<span style="display:none;">News</span></h2><a href="yxxw.htm">More+</a></div>
+<!--左图开始-->
+<script language="javascript" src="static/js/centerCutImg.js"></script><script language="javascript" src="static/js/ajax.js"></script><div class="news_box_left">
+            <div class="tj_img"><a href="info/1161/1621.htm" target="_blank" title="团日活动 | 循红色足迹 ，传非遗文化"><img src="static/picture/E01DBF80E87FAFB92404810D78D_4C3F9814_4B3C3.jpg" alt="" class="imghover"></a></div>
+            <div class="tj_title"><a href="info/1161/1621.htm" target="_blank" title="团日活动 | 循红色足迹 ，传非遗文化">团日活动 | 循红色足迹 ，传非遗文化</a> </div>
+            <div class="tj_time" style="display:none;">2023年12月15日 【来源：】</div>
+            <div class="tj_zy" style="display:none;"><a href="info/1161/1621.htm">卢厝村是石狮市域首个成立中国共产党地下组织的村落，也是闻名遐迩的狮阵非遗武术文化村。为加强学生们的精神文明建设，我院开展“循红色足迹，传非遗文化”主题团日活动，组织学生们前往锦尚镇卢厝村综合文化服务中心，学习红色革命精神，感受非遗文化的魅力。近年来，卢厝村聚焦“红色·华侨·非遗”于一体的城乡精神文明融合创建，以独特的乡风文化凝聚发展动力，积极开展各类宣教活动。卢厝村综合文化服务中心配置有狮阵武术演练场、...</a></div>
+        </div>
+<script>_showDynClickBatch(['dynclicks_u5_1621'],[1621],"wbnews", 1938274620)</script>
+
+<div class="news_box_left2"> <div class="main_img">
+                    <div class="swiper-container4">
+                        <div class="swiper-wrapper">
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="info/1161/1621.htm" target="_blank"><img src="static/picture/E01DBF80E87FAFB92404810D78D_4C3F9814_4B3C3.jpg"></a>
+                                    <span><a href="info/1161/1621.htm" target="_blank" title="团日活动 | 循红色足迹 ，传非遗文化">团日活动 | 循红色足迹 ，传非遗文化</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="info/1161/1611.htm" target="_blank"><img src="static/picture/AAD2B33456A9B67EED3B2276BB7_0AEF56E0_2FA5D.jpg"></a>
+                                    <span><a href="info/1161/1611.htm" target="_blank" title="我院团支部委员会成立仪式暨优秀志愿者表彰仪式">我院团支部委员会成立仪式暨优秀志愿者表彰仪式</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="info/1161/1591.htm" target="_blank"><img src="static/picture/DFE9D508C077D5D3492D0D1C69E_62C7588F_21901.jpg"></a>
+                                    <span><a href="info/1161/1591.htm" target="_blank" title="我院开展“反邪教”主题班会">我院开展“反邪教”主题班会</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="info/1161/1561.htm" target="_blank"><img src="static/picture/D4400374CD7EAD0DDF8E410C399_B2D85119_35876.png"></a>
+                                    <span><a href="info/1161/1561.htm" target="_blank" title="海边实训基地首次开展实训课程">海边实训基地首次开展实训课程</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="info/1161/1551.htm" target="_blank"><img src="static/picture/9DF87172A0994D9D116069EBFBD_6E01E854_36CD3.jpg"></a>
+                                    <span><a href="info/1161/1551.htm" target="_blank" title="引领前行，我院行业资讯交流会顺利开展">引领前行，我院行业资讯交流会顺利开展</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+</div>
+                        <div class="container">
+                            <div class="col-xs-12"><div class="swiper-pagination"></div></div>
+                        </div>
+                    </div>
+                </div><script>_showDynClickBatch(['dynclicks_u6_1621','dynclicks_u6_1611','dynclicks_u6_1591','dynclicks_u6_1561','dynclicks_u6_1551'],[1621,1611,1591,1561,1551],"wbnews", 1938274620)</script>
+</div>
+<!--左图结束-->
+  <div class="news_box_right">
+<!--右边首条开始-->
+<div class="top_title"><a href="info/1161/1621.htm" target="_blank" title="团日活动 | 循红色足迹 ，传非遗文化">团日活动 | 循红色足迹 ，传非遗文化</a></div>
+            <div class="top_time" style="display:none;">2023年12月15日 【来源：】</div>
+            <div class="top_zy"><a href="info/1161/1621.htm">卢厝村是石狮市域首个成立中国共产党地下组织的村落，也是闻名遐迩的狮阵非遗武术文化村。为加强学生们的精神文明建设，我院开展“循红色足迹，传非遗文化”主题团日活动，组织学生…</a></div>
+<script>_showDynClickBatch(['dynclicks_u7_1621'],[1621],"wbnews", 1938274620)</script>
+
+
+<!--右边首条结束-->
+<!--右边列表开始-->
+<ul class="n_list" style="margin: 20px 0 0px 0">
+<li><span class="date">2023/12/04</span><a href="info/1161/1611.htm" target="_blank" title="我院团支部委员会成立仪式暨优秀志愿者表彰仪式">我院团支部委员会成立仪式暨优秀志愿者表彰仪式</a> </li>
+<li><span class="date">2023/11/20</span><a href="info/1161/1591.htm" target="_blank" title="我院开展“反邪教”主题班会">我院开展“反邪教”主题班会</a> </li>
+<li><span class="date">2023/11/18</span><a href="info/1161/1561.htm" target="_blank" title="海边实训基地首次开展实训课程">海边实训基地首次开展实训课程</a> </li>
+<li><span class="date">2023/11/16</span><a href="info/1161/1551.htm" target="_blank" title="引领前行，我院行业资讯交流会顺利开展">引领前行，我院行业资讯交流会顺利开展</a> </li>
+<li><span class="date">2023/11/10</span><a href="info/1161/1541.htm" target="_blank" title="“扬帆杯”校企友谊联赛圆满落幕！">“扬帆杯”校企友谊联赛圆满落幕！</a> </li>
+<li><span class="date">2023/11/04</span><a href="info/1161/1531.htm" target="_blank" title="“扬帆杯”校企篮球赛火热进行中！">“扬帆杯”校企篮球赛火热进行中！</a> </li>
+</ul><script>_showDynClickBatch(['dynclicks_u8_1621','dynclicks_u8_1611','dynclicks_u8_1591','dynclicks_u8_1561','dynclicks_u8_1551','dynclicks_u8_1541','dynclicks_u8_1531'],[1621,1611,1591,1561,1551,1541,1531],"wbnews", 1938274620)</script>
+
+<!--右边列表结束-->
+</div>
+</div>
+</div>
+<!--新闻中心结束-->
+<div style="clear: both;"></div>
+<!--tzgg-->
+<div class="i-tzgg">
+    <div class="w1200"><div class="i-title" style="border-bottom: #3e6db5 1px solid"><h2>就业创业<span style="display:none">Notes</span></h2><a href="jycy.htm">More+</a></div>
+ <div class="tz_box_nr">
+ <div class="tz_list">
+                <div class="tz_date"><span>04</span>2023-07</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1162/1351.htm" target="_blank" title="海边实训基地">海边实训基地</a></h1>
+                    <p><a href="info/1162/1351.htm">简介：泉州海洋学院海边实训基地位于泉州湾南侧石狮东北滨海部，毗邻全国五大一级渔港之一——祥芝国家中心渔港。实训基...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>27</span>2023-03</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1162/1331.htm" target="_blank" title="漳州神舟造船工业有限公司">漳州神舟造船工业有限公司</a></h1>
+                    <p><a href="info/1162/1331.htm">简介：漳州神舟造船工业有限公司属外商独资企业，成立于2001年，主要以建造大型游艇为主，产品全部外销。公司现有员工200...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>20</span>2023-03</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1162/1321.htm" target="_blank" title="厦门宝海海洋文化发展有限公司">厦门宝海海洋文化发展有限公司</a></h1>
+                    <p><a href="info/1162/1321.htm">简介：宝海会，一个有思想的游艇会，厦门宝海海洋旗下的游艇文化俱乐部。向热爱海洋游艇文化的商界人士提供游艇俱乐部会...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>14</span>2023-03</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1162/1311.htm" target="_blank" title="哈德森（福建）游艇有限公司">哈德森（福建）游艇有限公司</a></h1>
+                    <p><a href="info/1162/1311.htm">简介：2月28日上午，在厦门游艇行业协会留典芳会长的见证下，泉州海洋职业学院与哈德森游艇有限公司在哈德森游艇有限公司...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+        </div><script>_showDynClickBatch(['dynclicks_u9_1351','dynclicks_u9_1331','dynclicks_u9_1321','dynclicks_u9_1311'],[1351,1331,1321,1311],"wbnews", 1938274620)</script>
+</div>
+</div>
+
+<!--iwyfc-->
+<div class="i-wyfc">
+    <div class="w1200">    <div class="i-title"><h2>师生风采<span style="display:none;">Elegant demeanour</span></h2><a href="ssfc.htm">More+</a></div>
+        <div class="i-wyfc-box">
+            <div class="xysh_nr m-imgtxtq1">
+               
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1461.htm" target="_blank">
+                        
+     <img src="static/picture/574EBE929513E1F973E34450185_6B66112F_529D5.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>“扬帆起航，未来可期”——2...</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1581.htm" target="_blank">
+                        
+     <img src="static/picture/C8BFD2FED6EFA969E00AA3256AE_BC1BEE74_4893E.png" class="imghover ">
+     </a>
+     </div>
+                        <span>劳动周 | 践行劳动，教育于心</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1491.htm" target="_blank">
+                        
+     <img src="static/picture/FB9EEDFA863BB5FB64BE857A9C4_1FE039B9_A4C6C.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>军训特辑 | 直击第一天军训现...</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1421.htm" target="_blank">
+                        
+     <img src="static/picture/B2931C942E0F7BCEF52449C85D0_2E1E92DA_6044B.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>我院开展新生消防安全知识宣讲</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1361.htm" target="_blank">
+                        
+     <img src="static/picture/6BF2FD79C2F9C6088E3BF10F7AC_5328CE76_49680.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>厦门五缘湾专业认知之旅</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1441.htm" target="_blank">
+                        
+     <img src="static/picture/046B52A4B3A846749632B3F59D0_BCC70A1F_320F5.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>我院组织学生参观海权红馆</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1301.htm" target="_blank">
+                        
+     <img src="static/picture/E61CEA99686D4515322965D723C_7E38B881_C9A8C.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>游艇帆船学院召开师生座谈会</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1291.htm" target="_blank">
+                        
+     <img src="static/picture/39FA79A7E52D34A0F6B095F31F5_32A62390_33062B.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>篮球小队赛前准备进行时</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1271.htm" target="_blank">
+                        
+     <img src="static/picture/7E2DF1ED2AE56AB5377E26B6B44_9D03502C_645BB.jpeg" class="imghover ">
+     </a>
+     </div>
+                        <span>漳州东山岛专业认知之旅</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="info/1024/1261.htm" target="_blank">
+                        
+     <img src="static/picture/6E1DA1C0CF973A3DEB3980EBD9F_02552826_9967D.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>我院志愿小队首次出发！</span>
+                    </div>
+        
+        
+                 
+                
+            </div>
+           
+            
+        </div>
+<script>_showDynClickBatch(['dynclicks_u10_1461','dynclicks_u10_1581','dynclicks_u10_1491','dynclicks_u10_1421','dynclicks_u10_1361','dynclicks_u10_1441','dynclicks_u10_1301','dynclicks_u10_1291','dynclicks_u10_1271','dynclicks_u10_1261'],[1461,1581,1491,1421,1361,1441,1301,1291,1271,1261],"wbnews", 1938274620)</script>
+</div>
+</div>
+
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83466)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83467)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83465)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83460)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83461)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83463)">中国禁毒展览馆</a>
+<a href="index.html#/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83464)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938274620, 83462)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+    </table></div>
+    </div>
+</div>
+</div>
+
+
+
+<script type="text/javascript" src="static/js/jquery1.js"></script>
+<script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+ 
+                
+<script type="text/javascript" src="static/js/jquerybdtxk.js"></script>
+<script src="static/js/pub2.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<script src="static/js/slick.js"></script>
+<script>// 校园专题
+                $('.m-imgtxtq1').slick({
+                    rows: 1,
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            dots: true,
+                            arrows: false
+                        }
+                    },
+                        {
+                            breakpoint: 960,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 350,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });</script>
+                
+ <script src="static/js/swiper.min2.js"></script>
+<script>
+    // banner
+    var swiper = new Swiper(".main-visual-slider .swiper-container", {
+        loop: true,
+        speed: 1200,
+        draggable: false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        // allowTouchMove: true,
+        // watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            slideChangeTransitionStart : function(swiper){
+                var swiper = this;
+                // 判断swiper-slide-active是否有视频
+                if($(".main-visual-slider .swiper-slide-active video").length>0){
+                    console.log(1)
+                    // 停止自动切换
+                    swiper.autoplay.stop();
+                    // 动态增加id
+                    setTimeout(function(){
+                        swiper.autoplay.stop();
+                        $(".main-visual-slider .swiper-slide-active video").attr("id","video_01");
+
+                        var _video=document.getElementById("video_01");
+
+                        // 播放视频
+                        _video.play();
+                        // 切换后重新播放视频
+                        _video.currentTime = 0;
+                        // 静音
+                        _video.volume = 0;
+                        // 监听视频播放结束
+                        _video.addEventListener('ended', function () {
+                            swiper.slideNext();
+                            //重新开始轮播banner
+                            swiper.autoplay.start();
+                        });
+                    }, 10);
+                }
+            },
+            slideChangeTransitionEnd: function(swiper){
+                //动态移除id
+                setTimeout(function(){
+                    $(".main-visual-slider .swiper-slide-active video").attr("id","");
+                }, 10);
+            },
+        }
+    });
+</script>
+ <!--新闻轮播图开始-->
+<script src="static/js/swiper.min2.js"></script>
+<script>
+    $(function () {
+        // 轮播初始化
+        new Swiper(".index-banner", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            on: {
+                init: function (swiper) {
+                    var total = "0" + ($(".index-banner .swiper-slide").length - 2);
+                    total = total.substring(total.length - 2);
+                    $(".total").text(total);
+                },
+                slideChangeTransitionEnd: function () {
+                    var current = "0" + (this.realIndex + 1);
+                    current = current.substring(current.length - 2);
+                    $(".current").text(current);
+                },
+            },
+        });
+        new Swiper(".swiper-container4", {
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 5000,
+            }
+
+
+        });
+        new Swiper(".person-sdnu-swiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        $(".ham").on("click", function () {
+            $(".english").toggle();
+
+            if ($(".header-mp-nav").hasClass("active")) {
+                $(".header-mp-nav").removeClass("active");
+                $(this).attr("src", "images/ham.svg");
+            } else {
+                $(".header-mp-nav").addClass("active");
+                $(this).attr("src", "images/x.png");
+            }
+        });
+
+        $(".header-mp-nav").on("click", function (e) {
+            if (e.target.className == "header-mp-nav active") {
+                $(".header-mp-nav").removeClass("active");
+                $(".ham").attr("src", "images/ham.svg");
+            }
+        });
+    });
+</script>
+<!--新闻轮播图结束--> 
+</body>  
+</html>

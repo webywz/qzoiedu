@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="apple-touch-icon" href="http://www.qzoiedu.com/hygc/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/hygc/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/hygc/images/favicon.ico" type="image/x-icon">
+    <title>汽车制造与试验技术-海洋工程学院-泉州海洋职业学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="汽车制造与试验技术">
+<meta name="keywords" content="海洋工程学院,泉州海洋职业学院">
+
+    <link href="static/css/style3.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery1.js"></script>
+    <script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="static/js/jquerybdtxk1.js"></script>
+    <script src="static/js/pub2.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/about.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1353,'/wzzw_list.jsp',-1,1938603011)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="hygc.html"><img src="static/picture/logohygc.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83510)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938603011";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li>
+                                 <a href="hygc.html" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="xyjj.html" title="学院概况">学院概况</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="xyjj.html" title="学院简介">学院简介</a>
+                                    <a href="xrld.html" title="现任领导">现任领导</a>
+                                    <a href="szdw11.html" title="师资队伍">师资队伍</a>
+                                    <a href="jgsz.html" title="机构设置">机构设置</a>
+                                </div>
+                            </li>
+                            <li class="dhdqwz">
+                                 <a href="ljgcjs.html" title="专业建设">专业建设</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="ljgcjs.html" title="轮机工程技术">轮机工程技术</a>
+                                    <a href="cbgcjs.html" title="船舶工程技术">船舶工程技术</a>
+                                    <a href="jdythjs.html" title="机电一体化技术">机电一体化技术</a>
+                                    <a href="hygczbjs.html" title="海洋工程装备技术">海洋工程装备技术</a>
+                                    <a href="znkzjs.html" title="智能控制技术">智能控制技术</a>
+                                    <a href="" title="汽车制造与试验技术">汽车制造与试验技术</a>
+                                    <a href="syhgjs.html" title="石油化工技术">石油化工技术</a>
+                                    <a href="gyjqrjs.html" title="工业机器人技术">工业机器人技术</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jycg.html" title="教学科研">教学科研</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="jycg.html" title="教研成果">教研成果</a>
+                                    <a href="cxyhz.html" title="产学研合作">产学研合作</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="sxsb1.html" title="实训设备">实训设备</a>
+                            </li>
+                            <li>
+                                 <a href="zwcy.html" title="党建工作">党建工作</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="zwcy.html" title="支委成员">支委成员</a>
+                                    <a href="djdt.html" title="党建动态">党建动态</a>
+                                    <a href="xxyd.html" title="学习园地">学习园地</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="xgdw.html" title="学生管理">学生管理</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="xgdw.html" title="学工队伍">学工队伍</a>
+                                    <a href="gzzd.html" title="规章制度">规章制度</a>
+                                    <a href="txhd.html" title="团学活动">团学活动</a>
+                                    <a href="zzgz.html" title="资助工作">资助工作</a>
+                                    <a href="zyfw.html" title="志愿服务">志愿服务</a>
+                                    <a href="jkxl.html" title="健康心理">健康心理</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jycy1.html" title="就业创业">就业创业</a>
+                            </li>
+                            <li>
+                                 <a href="tsqd.html" title="信息公开">信息公开</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="tsqd.html" title="投诉渠道">投诉渠道</a>
+                                    <a href="tzgg1.html" title="通知公告">通知公告</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+<!--listbanner-->
+<div class="list_banner">
+                            <img src="http://www.qzoiedu.com/hygc/js/00000.jpg" border="0">
+                
+            
+</div>
+<div class="this_map">
+    <div class="w1200">
+        <div class="this_name"><h1>专业建设</h1><span></span></div>
+
+        <div class="this_dqwz">
+            
+<h2>汽车制造与试验技术</h2>
+            <a href="#" class="ico_home"><img src="static/picture/ico_home.png" alt=""></a>
+                <a href="hygc.html">首页</a>
+                >>
+                <a href="ljgcjs.html">专业建设</a>
+                >>
+                <a href="">汽车制造与试验技术</a>
+</div>
+    </div>
+</div>
+<!--主要内容开始-->
+<div class="list_main">
+       <div class="list_main_left">
+        <div class="list_sub">
+            <ul>
+ <li><a href="ljgcjs.html">轮机工程技术</a></li>
+ <li><a href="cbgcjs.html">船舶工程技术</a></li>
+ <li><a href="jdythjs.html">机电一体化技术</a></li>
+ <li><a href="hygczbjs.html">海洋工程装备技术</a></li>
+ <li><a href="znkzjs.html">智能控制技术</a></li>
+ <li><a href="" class="on_here">汽车制造与试验技术</a></li>
+ <li><a href="syhgjs.html">石油化工技术</a></li>
+ <li><a href="gyjqrjs.html">工业机器人技术</a></li>
+</ul>
+
+        </div>
+    </div>
+    <div class="list_main_right">
+        <div class="c-content">
+
+
+
+<script language="javascript" src="static/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1938603011,'wbnews','u9')</script>
+<link rel="stylesheet" content-type="text/css" href="static/css/format2.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="static/js/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1938603011,1101)</script>
+<div class="nr-info">
+
+    <div id="vsb_content_2_1101_u91"><div id="vsb_content_2"><p class="vsbcontent_start"><strong>一、专业基本信息</strong></p><p><strong>（一）专业代码：</strong> <strong>460701</strong></p><p><strong>（二）招生对象：</strong>经全国普通高等学校招生考试，达到我院录取分数线的普通高中及同等学力毕业生。</p><p><strong>（三）学制与学习年限：</strong>学制3年,学习年限2-6年。</p><p><strong>（四）学习形式：</strong>全日制</p><p><strong>（五）学历：</strong>大学专科</p><p><strong>二、培养目标与基本规格</strong></p><p><strong>（一）培养目标</strong></p><p>本专业深入落实立德树人根本任务，将社会主义核心价值观教育贯穿人才培养全过程,培养思想政治坚定、德智体美劳全面发展，具有良好的职业道德和综合素质、较强的专业能力和创新创业能力，具有汽车制造与试验技术专业理论知识，具备汽车制造、试验、管理、评估、保险、销售能力等专业技能,能够适应地方经济建设和社会发展需要，面向汽车制造与维修生产与管理一线需要，具备三德、三成和三拼的高素质技术技能人才。让每位学生成为能明大德、守公德、严私德的三德青年，能达标成功、专业精强、成人成己的三成青年，拼技能精熟，拼合作共赢，拼逆境不屈、中国特色社会主义事业的建设者和接班人。</p><p><strong>（二）基本规格</strong></p><p>通过本专业培养，应达到以下规格要求：</p><p><strong>1</strong><strong>.</strong><strong>知识要求:</strong></p><p>具有汽车制造与试验技术专业基础、核心和拓展的知识，具备汽车制造与试验技术专业实践的基础与应用知识，获取中级汽车维修工及CAD等证照所需的知识，以及整合汽车制造与试验技术专业知识的模块。</p><p>（1）文化基础知识：</p><p>熟知新国家发展历程、党的辉煌历史、中国特色社会主义新思想和新理论。具有马列主义、毛泽东思想、邓小平建设有中国特色社会主义和科学发展观等基本理论知识，实用英语、高等数学、体育、计算机应用等文化基础知识；</p><p>（2）专业基本知识：</p><p>具有机械制图，工程力学，机械原理，汽车材料及加工工艺，电工与工业电子学等专业基础知识。</p><p>（3）专业知识：</p><p>掌握汽车构造、原理、维修，汽车电器设备构造、原理、制造、试验、维修，高级轿车电控系统的结构、原理和检修等专业理论知识。</p><p>掌握汽车检测诊断设备的结构和工作原理，掌握汽车综合性能的评价参数和影响因素。</p><p>掌握合理使用汽车和运行材料的理论知识，掌握企业经营管理，汽车及配件营销与售后服务的基本理论知识。</p><p><strong>2.</strong><strong>能力要求:</strong> </p><p>具有汽车制造与试验专业理论知识，具备汽车制造、维修、管理、评估、保险、销售能力等专业技能，以及具备较强自主学习与就业能力。</p><p>（1）专业能力的主要构成</p><p>① 能根据汽车电路知识，看懂各种电路图；会传感器等常见故障的检修；</p><p>② 知晓汽车各部分的工作原理，基本结构，零件名称和作用；</p><p>③ 具备对工具和仪器设备有简单的维护和检修能力，能正确使用；</p><p>④ 能了解机动车新材料、新工艺、新设备和新技术；</p><p>⑤ 掌握发动机、底盘及其控制系统零部件的常规检验方法；工艺规程和竣工验收标准；系统故障诊断原理和方法；</p><p>⑥ 了解常用维修、检测仪器和设备的结构原理。</p><p>⑦ 能运用机械制图、液压传动、极限与配合、机动车常用材料知识解决维修时遇见的问题；</p><p>（2）社会服务能力的主要构成</p><p>① 能及时了解各部门的工作状况；</p><p>② 要协调好各种关系，既要尊重上级也要尊重下级，积极完成好自己的任务，主动去解决下级的实际困难；</p><p>③ 具备较强的服务意识和与客户较好的沟通能力，具备较强的转岗能力</p><p>④ 具备良好的职业道德，准确及时地进行信息沟通和有很强的团队精神。</p><p>⑤ 掌握道路试车的正确方法和安全意识。</p><p>（3）方法创新能力的要求</p><p>① 自主学习，面对繁重而复杂的维修项目，要善于动脑筋；</p><p>② 在判断汽车故障时，要有逻辑思维、推理判断能力；</p><p>③ 要能根据所积累的经验，解决和克服在维修过程中较难解决的问题；</p><p>④ 面对新型车辆，能合理安排维修作业程序，提出维修方案，并能积累工作中的经验和技术知识，进一步提高自身素质。</p><p>⑤ 获取资料信息的能力，并能对获取的知识进行消化分析加以运用。</p><p><strong>3</strong><strong>.</strong><strong>素质要求:</strong></p><p>具备一定的劳模精神、劳动精神和工匠精神，有爱岗敬业、艰苦奋斗的态度，勇于创新、精益求精的品质，忠诚奉献、为国为民的担当。具有从事汽车制造与试验技术专业的职业素养，具备感恩励志、服务关怀和一定的创新创业素质。</p><p>（1）具有正确的世界观、人生观、价值观。坚决拥护中国共产党领导，具有深厚的爱国情感、国家认同感、中华民族自豪感，崇尚宪法、遵守法律、遵规守纪，具有社会责任感和参与意识</p><p>（2）明确的职业理想和良好的职业道德，懂政策，有法律意识，遵纪守法，有较强的社会公德意识，热爱本职工作，勤奋上进；</p><p>（3）具有一定的文化修养，准确的语言、文字表达能力；</p><p>（4）具有良好的身体素质和心理素质，健康的体魄、良好的心理素质和身心保健的知识和能力，良好的生活习惯、意志品质和较强的应变能力，一定的审美能力，心理健全，形成健全的人格和健康的个性；</p><p>（5）具有较强的团结协作精神、敬业精神、创新精神和创业精神，遵守行业规范的工作意识和行为意识。</p><p>（5）具有面向基层、服务基层的思想观点，理论联系实际、实事求是、言行一致的思想作风，踏实肯干、任劳任怨的工作态度，不断追求知识、独立思考、勇于创新的科学精神。</p><p>（6）能在艰苦的工作中不怕困难，奋力进取，不断激发创造热情。掌握本专业技能，有从事艰苦工作的思想准备。</p><p><strong> 三、</strong><strong>主干课程</strong></p><p>（一）汽车机械基础</p><p>教学内容：常用机构和通用机械零件的基本知识、基本理论和基本应用；熟悉液压与液力传动的基本知识和常用典型液压元件的结构、工作原理、应用特点；了解一定的理论力学和材料力学的基础知识。</p><p>（二）汽车电工电子技术</p><p>教学内容：电磁学基本知识；交、直流电路、电动机、发电机及安全用电知识；交直流放大电路和三相桥式整流电路的基本原理和电路分析方法。</p><p>（三）汽车营销</p><p>教学内容：主要讲授汽车营销的基本知识、基本原理与技能，顾客购买行为分析的基本方法与技能，服务顾客的基本知识与技能，以及作为一名营销主管带领团队开展汽车推销、汽车展厅销售、汽车区域销售管理、汽车大客户推销、汽车市场策划活动等工作所需的基本知识及业务技能等。</p><p>（四）汽车新结构与新技术</p><p>教学内容：主要讲授主要内容包括发动机新技术、底盘新技术、汽车电子与电气新技术、汽车安全新技术、丰田第二代混合动力系统筹。在介绍每一种新结构或新技术时，注重理论与实践的紧密结合，并以具体应用车型为例进行分析。</p><p>（五）汽车发动机构造与维修</p><p>教学内容：主要讲授发动机基本组成、结构、工作原理；发动机机械维修工具和设备、维修资料的使用和查询；工作场所的准备、工作安全与环境保护；汽车发动机的使用维护与保养；汽车发动机的拆装检测与维修等。</p><p>（六）汽车电气设备构造与维修</p><p>教学内容：主要讲授汽车电器设备的构造、工作原理、使用维护与维修技术等内容。</p><p><strong><strong><strong> 四、就业面向与证书</strong></strong></strong></p><p><strong>（一）就业面向</strong></p><p>主要就业面向：</p><p>本专业毕业生主要面向汽车制造以及市场服务一线，从事汽车制造、汽车维护、汽车维修、相关企业技术管理等工作。</p><p><strong>初始技术岗位：</strong></p><p>1. 汽车制造企业从事汽车制造生产工作；</p><p>2. 汽车维修企业或汽车销售和售后服务一体化企业汽车机电维修；</p><p>3. 汽车维修企业或汽车销售和售后服务一体化企业技术、或生产管理；</p><p>4. 保险公司车辆事故查勘与定损；</p><p>5. 汽车性能检测企业汽车性能检测、评估与分析。</p><p><strong>发展岗位：</strong></p><p>1. 对汽车及其系统的功能及其相互关系的分析能力；</p><p>2. 汽车及其系统维修方案制定、生产组织、检查和质量控制的能力；</p><p>3. 汽车及其系统技术状况、故障、损伤、事故的检测、鉴定、分析、评估的能力；</p><p>4. 汽车及其维修新技术的学习、应用、转训的能力；</p><p>5. 学习和应用汽车新技术的能力；查找和利用资料的能力；逻辑分析的能力。</p><p><strong>（二）基本技能与职业资格证书</strong></p><p>该培养方案既强调基本技能要求，同时也融入了岗位职业资格证书的要求，在学习期间，可以参加下列基本技能与职业资格证书考试：</p><p><strong>1．基本技能证书</strong></p><div><table border="1" cellspacing="0" width="574"><tbody><tr class="firstRow"><td width="305" valign="center"><p><strong>证书项目</strong></p></td><td width="282" valign="center"><p><strong>发证部门</strong></p></td><td width="129" valign="center"><p><strong>建议考证时间</strong></p></td></tr><tr><td width="305" valign="center"><p>高等学校英语应用能力考试B级证书</p></td><td width="282" valign="center"><p>高等学校英语应用能力考试委员会</p></td><td width="129" valign="center"><p>第2学期后</p></td></tr><tr><td width="305" valign="center"><p>全国英语等级考试4级证书</p></td><td width="282" valign="center"><p>教育部考试中心</p></td><td width="129" valign="center"><p>第4学期后</p></td></tr></tbody></table></div><p><strong> </strong></p><p><strong> </strong></p><p><strong>2．职业资格证书</strong></p><div><table border="1" cellspacing="0" width="572"><tbody><tr class="firstRow"><td width="271" valign="center"><p><strong>证书项目</strong></p></td><td width="234" valign="center"><p><strong>发证部门</strong></p></td><td width="210" valign="center"><p><strong>建议考证时间</strong></p></td></tr><tr><td width="271" valign="top"><p>汽车维修工四级</p></td><td width="234" valign="top"><p>人力资源与社会社会保障部</p></td><td width="210" valign="center"><p>第4学期</p></td></tr><tr><td width="271" valign="top"><p>汽车驾驶证</p></td><td width="234" valign="top"><p>交警部门</p></td><td width="210" valign="center"><p class="vsbcontent_end">第5学期</p></td></tr></tbody></table></div></div></div>
+    <span id="vsb_content_2_1101_u9" name="vsb_content_2_1101_u9"></span>
+    
+
+</div>           
+     
+</div>
+    </div>
+</div>
+<!--主要内容结束-->
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83508)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83509)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83507)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83502)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83503)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83505)">中国禁毒展览馆</a>
+<a href="index.html#/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83506)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83504)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+            <tr>
+                <td align="center" style="color:#fff;">
+                        <img src="static/picture/wenmomingpian.png" border="0" height="110">
+                     
+                </td>
+        </tr>
+</table></div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

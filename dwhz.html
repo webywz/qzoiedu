@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>对外合作部-泉州海洋职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="对外合作部-泉州海洋职业学院">
+<meta name="keywords" content="对外合作部,泉州海洋职业学院">
+
+<link type="text/css" rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/xx-sj-tj.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1938584117)</script>
+</head>
+<body style=" background:#f3f3f3;">
+
+<!--顶部开始-->
+
+<div class="wrap" style=" background:#3e6db5;border-bottom:solid 1px #2f61ac;">
+  <div class="w">
+    <div class="toubu"> 
+      
+      <!--logo开始-->
+      <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="" title="对外合作部"><img src="static/picture/logo.png"></a></div>
+      <!--logo结束-->
+      
+      <div class="search fr"> 
+        
+        <!--设为首页/加入收藏开始-->
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83528)">学校主页</a>
+</div>
+        <div class="clearfix"></div>
+        <!--设为首页/加入收藏结束--> 
+        
+        <!--搜索开始-->
+      <div class="search_box">
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+       
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938584117";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <!--搜索结束--> 
+        
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!--顶部结束--> 
+
+<!--导航开始-->
+
+<div class="wrap bg_color">
+  <div class="w Navigation"><div id="navbar" class="menubox">
+                    <div class="nav">
+                        <ul>
+                                                        <li class="dhdqwz">
+                                 <a href="" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="bmjj.html" title="部门简介">部门简介</a>
+                            </li>
+                            <li>
+                                 <a href="jlhz.html" title="交流合作">交流合作</a>
+                            </li>
+                            <li>
+                                 <a href="jczx.html" title="就业创业">就业创业</a>
+                                <div class="two-nav">
+                                    <a href="jczx.html" title="新闻动态">新闻动态</a>
+                                    <a href="jyxx.html" title="就业信息">就业信息</a>
+                                    <a href="jyzd.html" title="就业指南">就业指南</a>
+                                    <a href="cyzd.html" title="创业指南">创业指南</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jdgk.html" title="乡村振兴">乡村振兴</a>
+                                <div class="two-nav">
+                                    <a href="jdgk.html" title="基地概况">基地概况</a>
+                                    <a href="jdxw.html" title="扶贫动态">扶贫动态</a>
+                                    <a href="zcwj.html" title="政策文件">政策文件</a>
+                                    <a href="jdfg.html" title="基地风光">基地风光</a>
+                                    <a href="lxwm1.html" title="联系我们">联系我们</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="hzdw.html" title="合作单位">合作单位</a>
+                            </li>
+                            <li>
+                                 <a href="lxfs.html" title="联系方式">联系方式</a>
+                            </li>
+                        </ul>
+                    </div>
+</div>
+            
+</div>
+</div>
+
+<!--导航结束--> 
+
+<!--Banner开始-->
+<div class="index-banner">
+            <div class="main-visual-wrapper ar_web">
+                <section class="swiper-box1 main-visual-slider">
+                        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/555.jpg) no-repeat;">
+                                        <img src="static/picture/555.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/444.jpg) no-repeat;">
+                                        <img src="static/picture/444.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/333.jpg) no-repeat;">
+                                        <img src="static/picture/333.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ban-dot">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+</div>
+
+
+
+<!--Banner结束-->
+
+<div class="clearfix"></div>
+
+<!--container开始-->
+
+  <div class="w">
+  <div class="clearfix">
+    <div class="w380 fl mt15" style="background:#ffffff;height:418px;">
+      <div class="menu_bt">
+        <h3 class="fl kcjs_bg">就业创业</h3>
+            <div class="fr more"> <a href="jczx.html"><img src="static/picture/ga_13.png" width="107" height="10"> </a></div>
+      </div>
+      <div class="clearfix"></div><script language="javascript" src="static/js/centerCutImg.js"></script><script language="javascript" src="static/js/ajax.js"></script>  
+
+ <div class="Notifications2 mt20">
+        <p>2023年10月31日 </p>
+        <h3><a href="info/1403/8611.htm">泉州市石狮埃安汽车销售服务有限公司</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2023年09月28日 </p>
+        <h3><a href="info/1403/8461.htm">九牧公司招聘</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2023年09月21日 </p>
+        <h3><a href="info/1403/8451.htm">宁德厦钨新能源材料有限公司</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20" style="border:none;">
+        <p>2023年08月31日 </p>
+        <h3><a href="info/1403/8421.htm">福建慧芯激光科技有限公司</a></h3>
+      </div>
+
+<script>_showDynClickBatch(['dynclicks_u5_8611','dynclicks_u5_8461','dynclicks_u5_8451','dynclicks_u5_8421'],[8611,8461,8451,8421],"wbnews", 1938584117)</script>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fl ml30 mt15" style="background:#ffffff;">
+      <div class="menu_bt">
+        <h3 class="fl kcjs_bg">交流合作</h3>
+        <div class="fr more"> <a href="jlhz.html"><img src="static/picture/ga_13.png" width="107" height="10">  </a></div>
+      </div>
+      <div class="clearfix"></div>
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">11.15</li>
+            <li style="color:#333; background:#f2f2f2;">2023</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/8621.htm">访企拓岗|我校走访福建医佰汇医药有...</a></h3>
+          <p>访企拓岗Visiting Enterprises and Expanding Posts为深化校...</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">03.28</li>
+            <li style="color:#333; background:#f2f2f2;">2023</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/1101.htm">校企合作 开启新篇｜中国人力资源和...</a></h3>
+          <p>    3月22日，中国人力资源和社会保障出版集团、全美在线（北...</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">03.23</li>
+            <li style="color:#333; background:#f2f2f2;">2023</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/1091.htm">HOMEY寓健身来啦！</a></h3>
+          <p>      3月15日下午，“HOMEY寓健身”举行开业盛典，副校长刘...</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">03.07</li>
+            <li style="color:#333; background:#f2f2f2;">2023</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/1081.htm">北体职技董事长王伟一行莅临我校调...</a></h3>
+          <p>（新闻中心讯&amp;nbsp;党政办公室席文晋供稿&amp;nbsp;校党委宣传部...</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+<script>_showDynClickBatch(['dynclicks_u6_8621','dynclicks_u6_1101','dynclicks_u6_1091','dynclicks_u6_1081'],[8621,1101,1091,1081],"wbnews", 1938584117)</script>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fr mt15" style="background:#FFF;">
+      <div class="menu_bt">
+        <h3 class="fl kcjs_bg">乡村振兴</h3>
+        <div class="fr more"> <a href="jdgk.html"><img src="static/picture/ga_13.png" width="107" height="10"> </a> </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div>  
+
+ <div class="Notifications2 mt20">
+        <p>2023年11月15日 </p>
+        <h3><a href="info/1513/8631.htm">我校被授予“中国乡村振兴产业带头人培养工...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2021年03月24日 </p>
+        <h3><a href="info/1513/4621.htm">国务院扶贫办中国扶贫志愿服务促进会周显刚...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2021年01月13日 </p>
+        <h3><a href="info/1513/4611.htm">泉州海洋职业学院参与国家教育扶贫获肯定</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20" style="border:none;">
+        <p>2020年12月22日 </p>
+        <h3><a href="info/1513/4601.htm">我校回访望谟县创业致富带头人培训学员</a></h3>
+      </div>
+
+<script>_showDynClickBatch(['dynclicks_u7_8631','dynclicks_u7_4621','dynclicks_u7_4611','dynclicks_u7_4601'],[8631,4621,4611,4601],"wbnews", 1938584117)</script>
+</div>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+  </div>
+</div>
+<div class="w txhd mt15" style="background:#FFF;">
+<div class="menu_bt menu_bt2">
+        <h3 class="fl kcjs_bg">合作单位</h3>
+        <div class="fr more"> <a href="hzdw.html" target=""><img src="static/picture/ga_14.png" width="107" height="10"> </a></div>
+      </div>
+  <div class="txhd_nr"><div class="xysh_nr m-imgtxtq1">
+                    <div class="pic">
+                        <div class="img"><a class="a" href="https://www.fj99.org.cn/bys/" target="_blank" title="福建省公共就业服务网高校毕业生求职招聘专区" style="background: url(static/image/1458BA97FFD25DF7353B13D222E_A1E99EEB_3DD4.jpg) center"><img src="static/picture/1458BA97FFD25DF7353B13D222E_A1E99EEB_3DD4.jpg"></a></div>
+                        <span>福建省公共就业服务网...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/8641.htm" target="_blank" title="​厦门泛海国际船舶管理有限公司" style="background: url(static/image/020C1F84C84B00370766D655821_F8834860_6446.jpg) center"><img src="static/picture/020C1F84C84B00370766D655821_F8834860_6446.jpg"></a></div>
+                        <span>​厦门泛海国际船舶管...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1441.htm" target="_blank" title="金拱门（中国）有限公司" style="background: url(static/image/832EC90383DE7C4AC303BE76013_7EE89113_F2C.jpg) center"><img src="static/picture/832EC90383DE7C4AC303BE76013_7EE89113_F2C.jpg"></a></div>
+                        <span>金拱门（中国）有限公司</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1431.htm" target="_blank" title="北京鑫裕盛船舶管理有限公司" style="background: url(static/image/A7A15BBA97DB6C16CB2412741D2_9EE6CAD9_F86.jpg) center"><img src="static/picture/A7A15BBA97DB6C16CB2412741D2_9EE6CAD9_F86.jpg"></a></div>
+                        <span>北京鑫裕盛船舶管理有...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1421.htm" target="_blank" title="泉州中泉国际经济技术合作(集团)有限公司" style="background: url(static/image/B40668442ABFB5A49539300C44C_EA085A20_7A2B.jpg) center"><img src="static/picture/B40668442ABFB5A49539300C44C_EA085A20_7A2B.jpg"></a></div>
+                        <span>泉州中泉国际经济技术...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1411.htm" target="_blank" title="国际海洋工程科学研究院及国际培训中心" style="background: url(static/image/6336A5AD9468FD07CF97B5499EB_FBED5FF2_5C97.jpg) center"><img src="static/picture/6336A5AD9468FD07CF97B5499EB_FBED5FF2_5C97.jpg"></a></div>
+                        <span>国际海洋工程科学研究...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1401.htm" target="_blank" title="Hammonia Reederei（德国公司）简介" style="background: url(static/image/6EDA753CE8DD11359B1C24D94A8_AF027AB3_374F.jpg) center"><img src="static/picture/6EDA753CE8DD11359B1C24D94A8_AF027AB3_374F.jpg"></a></div>
+                        <span>Hammonia Reederei（德...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1391.htm" target="_blank" title="英国克兰菲尔德大学简介" style="background: url(static/image/6A30B87657B27287FC2D8CF8C0F_AC366531_47DB9.png) center"><img src="static/picture/6A30B87657B27287FC2D8CF8C0F_AC366531_47DB9.png"></a></div>
+                        <span>英国克兰菲尔德大学简介</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1381.htm" target="_blank" title="山海关船舶重工有限责任公司简介" style="background: url(static/image/18EE620ED9E709EE9712B5C99EC_2251802D_28141.png) center"><img src="static/picture/18EE620ED9E709EE9712B5C99EC_2251802D_28141.png"></a></div>
+                        <span>山海关船舶重工有限责...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1371.htm" target="_blank" title="上海外高桥造船有限公司简介" style="background: url(static/image/14DCBE645D3EDA6BCFD320DF5A8_133ADBB7_295E8.png) center"><img src="static/picture/14DCBE645D3EDA6BCFD320DF5A8_133ADBB7_295E8.png"></a></div>
+                        <span>上海外高桥造船有限公...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1361.htm" target="_blank" title="中海油服泛太平洋钻井有限公司简介" style="background: url(static/image/52A16D59BA59F6C1F9718363DB1_9ECED0C1_4F7D0.png) center"><img src="static/picture/52A16D59BA59F6C1F9718363DB1_9ECED0C1_4F7D0.png"></a></div>
+                        <span>中海油服泛太平洋钻井...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1351.htm" target="_blank" title="招商局工业集团有限公司简介" style="background: url(static/image/E14C80709F0B50D34895D9D8556_FBD9B7F8_221CD.png) center"><img src="static/picture/E14C80709F0B50D34895D9D8556_FBD9B7F8_221CD.png"></a></div>
+                        <span>招商局工业集团有限公...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a class="a" href="info/1281/1451.htm" target="_blank" title="斯宾塞-奥格登能源招聘公司简介" style="background: url(static/image/BB2E3E4CAE13ECF868785EF8EAD_6C5848B5_14793.png) center"><img src="static/picture/BB2E3E4CAE13ECF868785EF8EAD_6C5848B5_14793.png"></a></div>
+                        <span>斯宾塞-奥格登能源招聘...</span>
+                    </div>
+                </div><script>_showDynClickBatch(['dynclicks_u8_8691','dynclicks_u8_8641','dynclicks_u8_1441','dynclicks_u8_1431','dynclicks_u8_1421','dynclicks_u8_1411','dynclicks_u8_1401','dynclicks_u8_1391','dynclicks_u8_1381','dynclicks_u8_1371','dynclicks_u8_1361','dynclicks_u8_1351','dynclicks_u8_1451'],[8691,8641,1441,1431,1421,1411,1401,1391,1381,1371,1361,1351,1451],"wbnews", 1938584117)</script>
+</div>    
+      
+      
+</div>
+
+ 
+
+<div class="clearfix"></div>
+<div style="background:#e6e6e6;">
+  <div class="jz">
+    <div class="menu_bt">
+      <h3 class="fl kcjs_bg mt10"> 友情链接 </h3>
+    </div>
+    <div class="clearfix"></div> <ul class="yqlj">
+
+ <li><a href="http://jyt.fujian.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83526)">福建省教育厅</a></li>
+
+
+  
+
+ <li><a href="http://jyj.quanzhou.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83527)">泉州市教育局</a></li>
+
+
+  
+
+ <li><a href="https://www.fj.msa.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83525)">福建海事局</a></li>
+
+
+  
+
+ <li><a href="http://www.cmaritime.com.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83520)">中国海事服务中心</a></li>
+
+
+  
+
+ <li><a href="http://www.mot.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83521)">中华人民共和国交通运输部</a></li>
+
+
+  
+
+ <li><a href="http://www.626china.com/" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83523)">中国禁毒展览馆</a></li>
+
+
+  
+
+ <li><a href="index.html#/" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83524)">一站式办事大厅</a></li>
+
+
+  
+
+ <li><a href="https://exmail.qq.com/login" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83522)">邮箱系统</a></li>
+
+
+  
+</ul>
+  </div>
+     <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="wrap" style="background: #3e6db5;">
+  <div class="w footer">
+    <div class="ac">
+    
+    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p>
+    
+   
+    </div>
+  </div>
+</div>
+
+
+
+<!--jquery-->
+
+<script type="text/javascript" src="static/js/bdtxk.min.js"></script>
+<script src="static/js/pub.js" type="text/javascript"></script>
+<script src="static/js/slick.js"></script>
+<!--左滚动特效--> 
+  <script>// 校园专题
+                $('.m-imgtxtq1').slick({
+                    rows: 1,
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            dots: true,
+                            arrows: false
+                        }
+                    },
+                        {
+                            breakpoint: 960,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 350,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });</script><!--左滚动特效--> 
+
+
+
+<script src="static/js/swiper.min3.js"></script>
+<script>
+    // banner
+    var swiper = new Swiper(".main-visual-slider .swiper-container", {
+        loop: true,
+        speed: 1200,
+        draggable: false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        // allowTouchMove: true,
+        // watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            slideChangeTransitionStart : function(swiper){
+                var swiper = this;
+                // 判断swiper-slide-active是否有视频
+                if($(".main-visual-slider .swiper-slide-active video").length>0){
+                    console.log(1)
+                    // 停止自动切换
+                    swiper.autoplay.stop();
+                    // 动态增加id
+                    setTimeout(function(){
+                        swiper.autoplay.stop();
+                        $(".main-visual-slider .swiper-slide-active video").attr("id","video_01");
+
+                        var _video=document.getElementById("video_01");
+
+                        // 播放视频
+                        _video.play();
+                        // 切换后重新播放视频
+                        _video.currentTime = 0;
+                        // 静音
+                        _video.volume = 0;
+                        // 监听视频播放结束
+                        _video.addEventListener('ended', function () {
+                            swiper.slideNext();
+                            //重新开始轮播banner
+                            swiper.autoplay.start();
+                        });
+                    }, 10);
+                }
+            },
+            slideChangeTransitionEnd: function(swiper){
+                //动态移除id
+                setTimeout(function(){
+                    $(".main-visual-slider .swiper-slide-active video").attr("id","");
+                }, 10);
+            },
+        }
+    });
+</script>
+
+<!--焦点图特效--> 
+<script type="text/javascript" src="static/js/bdtxk.yx_rotaion.js"></script> 
+<script type="text/javascript">
+    $(".yx-rotaion").yx_rotaion({auto:true});
+</script> 
+
+
+
+<!--选项卡-->
+
+
+</body>
+</html>

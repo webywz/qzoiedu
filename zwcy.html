@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="apple-touch-icon" href="http://www.qzoiedu.com/hygc/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/hygc/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/hygc/images/favicon.ico" type="image/x-icon">
+    <title>支委成员-海洋工程学院-泉州海洋职业学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="支委成员">
+<meta name="keywords" content="海洋工程学院,泉州海洋职业学院">
+
+    <link href="static/css/style3.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery1.js"></script>
+    <script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="static/js/jquerybdtxk1.js"></script>
+    <script src="static/js/pub2.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/about.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1272,'/wzzw_list.jsp',-1,1938603011)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="hygc.html"><img src="static/picture/logohygc.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83510)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938603011";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li>
+                                 <a href="hygc.html" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="xyjj.html" title="学院概况">学院概况</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="xyjj.html" title="学院简介">学院简介</a>
+                                    <a href="xrld.html" title="现任领导">现任领导</a>
+                                    <a href="szdw11.html" title="师资队伍">师资队伍</a>
+                                    <a href="jgsz.html" title="机构设置">机构设置</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="ljgcjs.html" title="专业建设">专业建设</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="ljgcjs.html" title="轮机工程技术">轮机工程技术</a>
+                                    <a href="cbgcjs.html" title="船舶工程技术">船舶工程技术</a>
+                                    <a href="jdythjs.html" title="机电一体化技术">机电一体化技术</a>
+                                    <a href="hygczbjs.html" title="海洋工程装备技术">海洋工程装备技术</a>
+                                    <a href="znkzjs.html" title="智能控制技术">智能控制技术</a>
+                                    <a href="qczzysyjs.html" title="汽车制造与试验技术">汽车制造与试验技术</a>
+                                    <a href="syhgjs.html" title="石油化工技术">石油化工技术</a>
+                                    <a href="gyjqrjs.html" title="工业机器人技术">工业机器人技术</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jycg.html" title="教学科研">教学科研</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="jycg.html" title="教研成果">教研成果</a>
+                                    <a href="cxyhz.html" title="产学研合作">产学研合作</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="sxsb1.html" title="实训设备">实训设备</a>
+                            </li>
+                            <li class="dhdqwz">
+                                 <a href="" title="党建工作">党建工作</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="" title="支委成员">支委成员</a>
+                                    <a href="djdt.html" title="党建动态">党建动态</a>
+                                    <a href="xxyd.html" title="学习园地">学习园地</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="xgdw.html" title="学生管理">学生管理</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="xgdw.html" title="学工队伍">学工队伍</a>
+                                    <a href="gzzd.html" title="规章制度">规章制度</a>
+                                    <a href="txhd.html" title="团学活动">团学活动</a>
+                                    <a href="zzgz.html" title="资助工作">资助工作</a>
+                                    <a href="zyfw.html" title="志愿服务">志愿服务</a>
+                                    <a href="jkxl.html" title="健康心理">健康心理</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jycy1.html" title="就业创业">就业创业</a>
+                            </li>
+                            <li>
+                                 <a href="tsqd.html" title="信息公开">信息公开</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="tsqd.html" title="投诉渠道">投诉渠道</a>
+                                    <a href="tzgg1.html" title="通知公告">通知公告</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+<!--listbanner-->
+<div class="list_banner">
+                            <img src="http://www.qzoiedu.com/hygc/js/00000.jpg" border="0">
+                
+            
+</div>
+<div class="this_map">
+    <div class="w1200">
+        <div class="this_name"><h1>党建工作</h1><span></span></div>
+
+        <div class="this_dqwz">
+            
+<h2>支委成员</h2>
+            <a href="#" class="ico_home"><img src="static/picture/ico_home.png" alt=""></a>
+                <a href="hygc.html">首页</a>
+                >>
+                <a href="">党建工作</a>
+                >>
+                <a href="">支委成员</a>
+</div>
+    </div>
+</div>
+<!--主要内容开始-->
+<div class="list_main">
+       <div class="list_main_left">
+        <div class="list_sub">
+            <ul>
+ <li><a href="" class="on_here">支委成员</a></li>
+ <li><a href="djdt.html">党建动态</a></li>
+ <li><a href="xxyd.html">学习园地</a></li>
+</ul>
+
+        </div>
+    </div>
+    <div class="list_main_right">
+        <div class="c-content">
+
+
+
+<script language="javascript" src="static/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1938603011,'wbnews','u9')</script>
+<link rel="stylesheet" content-type="text/css" href="static/css/format2.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="static/js/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1938603011,2841)</script>
+<div class="nr-info">
+
+    <div id="vsb_content_2_2841_u91"><div id="vsb_content_2"><p class="vsbcontent_start">为进一步加强党的基层组织建设，增强支部凝聚力和战斗力。10月11日，海洋工程学院党支部在行政楼2楼智慧教室召开全体党员大会，全体党员参加。大会由党支部书记周甜主持。</p><p class="vsbcontent_img"><img src="static/picture/C30E3D55CD48D2607F0B48CD5B0_7FCEC510_11F13.jpeg" width="500" vsbhref="vurl" vurl="/_vsl/9A826C30E3D55CD48D2607F0B48CD5B0/7FCEC510/11F13" vheight="" vwidth="500" orisrc="/__local/6/96/49/736451D55070E8BB5F8DEA02B3E_214DE463_12707.jpeg" class="img_vsb_content"></p><p>会议伊始，全体与会人员肃立，奏唱《中华人民共和国国歌》。</p><p class="vsbcontent_img"><img src="static/picture/EA02A71E1109644E8E221090612_24AC0DFE_32F59.png" width="500" vsbhref="vurl" vurl="/_vsl/6364CEA02A71E1109644E8E221090612/24AC0DFE/32F59" vheight="" vwidth="500" orisrc="/__local/2/C6/56/69C8F32128F64102D267783D174_7051F90C_A4769.png" class="img_vsb_content"></p><p>周甜书记宣读了校党委批复文件，与会正式党员举手表决通过了《中共泉州海洋职业学院海洋工程学院支部委员会委员补选选举办法（草案）》、党支部补选委员候选人预备人选名单以及监票人、计票人名单。</p><p class="vsbcontent_img"><img src="static/picture/BD9114C4B21F6365F3B817E0DBC_73D303FB_43CF6.png" width="500" vsbhref="vurl" vurl="/_vsl/CE441BD9114C4B21F6365F3B817E0DBC/73D303FB/43CF6" vheight="" vwidth="500" orisrc="/__local/4/7B/7F/B3280083B009A39E90EF001D3E0_7F545007_101730.png" class="img_vsb_content"></p><p class="vsbcontent_img"><img src="static/picture/F74C6F1FBA37B22E086447D7DBF_DD4AD1CF_45D2B.png" width="500" vsbhref="vurl" vurl="/_vsl/4E277F74C6F1FBA37B22E086447D7DBF/DD4AD1CF/45D2B" vheight="" vwidth="500" orisrc="/__local/7/9A/F0/0D1047FFE446F7E40AD2AE94675_5734D375_F1E0E.png" class="img_vsb_content"> </p><p>会议采用无记名投票和差额选举方式，补选2名同志为中共泉州海洋职业学院海洋工程学院支部委员会委员。</p><p class="vsbcontent_img"><img src="static/picture/51457BD854632D756C43118D45E_56139EC0_4E26F.png" width="500" vsbhref="vurl" vurl="/_vsl/1731B51457BD854632D756C43118D45E/56139EC0/4E26F" vheight="" vwidth="500" orisrc="/__local/4/A3/C1/DACD33D1E80920C67A9A93A88D6_F5477D85_FA706.png" class="img_vsb_content"></p><p class="vsbcontent_img"><img src="static/picture/D44A9E631039F22452E5EB16552_778F91D3_132BA.jpeg" width="500" vsbhref="vurl" vurl="/_vsl/55273D44A9E631039F22452E5EB16552/778F91D3/132BA" vheight="" vwidth="500" orisrc="/__local/9/5E/EB/E7A647DE78E1B9215FEB9150A23_59CCE5E6_13A5C.jpeg" class="img_vsb_content"> </p><p>随后，党支部召开了支委会，讨论新补选的2名委员的分工事宜。最后由周甜书记向全体党员宣布讨论结果。</p><p class="vsbcontent_img"><img src="static/picture/F553A2559C0888B97FFBBE26BCC_FD09D9AF_16314.jpeg" width="500" vsbhref="vurl" vurl="/_vsl/28B03F553A2559C0888B97FFBBE26BCC/FD09D9AF/16314" vheight="" vwidth="500" orisrc="/__local/2/0D/26/17C250C0B9A18159C789538A360_07FC4E14_16BB2.jpeg" class="img_vsb_content"> </p><p class="vsbcontent_end">本次党员大会进一步加强了党的组织建设，不断深化党建引领的作用，切实提高党组织的凝聚力、创造力、战斗力。</p></div></div>
+    <span id="vsb_content_2_2841_u9" name="vsb_content_2_2841_u9"></span>
+    
+
+</div>           
+     
+</div>
+    </div>
+</div>
+<!--主要内容结束-->
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83508)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83509)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83507)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83502)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83503)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83505)">中国禁毒展览馆</a>
+<a href="index.html#/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83506)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83504)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+            <tr>
+                <td align="center" style="color:#fff;">
+                        <img src="static/picture/wenmomingpian.png" border="0" height="110">
+                     
+                </td>
+        </tr>
+</table></div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

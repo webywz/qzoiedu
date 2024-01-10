@@ -1,0 +1,99 @@
+.header {width: 100%;}
+.list .header{height: auto;}
+.list #header{}
+.tu1{transition:all 0.3s ease-out 0s;background:linear-gradient(rgba(18,64,143,1),rgba(18,64,143,0));padding:5px 0px 15px;}
+.top{transition: all 0.7s ease-out 0s;background-size:100% 100%;width: 100%;position: fixed;top: 0;z-index: 10;}
+.small  .header{transition: all 0.5s ease-out 0s; overflow: hidden;margin-top: 0px; border-top: none;}
+#header .inner{height: 143px;position:relative;}
+.small .top{ display: none;}
+
+.list #header .inner{height: 40px;}
+/*默认主导航样式*/
+#nav{position: relative;z-index: 50;}
+.list #nav{box-shadow: 0 2px 0 #ddd;}
+#nav .inner{position: relative;}
+.list #nav .inner .wp-panel{margin-top: 0px;width:auto;}/*导航*/
+#nav .inner .wp-panel .wp-window{}
+#nav .inner .wp-panel .navbg{position:absolute; z-index:-1;left:0;right:0;top:0;bottom:0; width:auto; height:100%;background:#fff;opacity:.7;filter:alpha(opacity=70);}
+/*导航样式：后台绑定时也可以定义配置*/
+.nav .wp-menu {margin:0 auto;text-align: center;position: relative;}
+
+.nav .wp-menu .menu-item {display: inline-block; vertical-align: middle;margin: 0;float: left; width:14.2%;text-align: center;}
+.list .nav .wp-menu .menu-item {display: inline-block; vertical-align: middle;margin: 0;float: left;}
+.nav .wp-menu .menu-item.i1 { background:none;}
+.nav .wp-menu .menu-item a > .menu-switch-arrow{ display:none; width:20px; height:20px; vertical-align:middle; }
+.nav .wp-menu .menu-item a.menu-link {display: inline-block;line-height:52px;color: #FFFFFF;font-size: 18px; font-weight: 600; margin-top:20px;margin-bottom:20px;}
+.nav .wp-menu .menu-item a.menu-link:after{content:"";width:00px;height:2px;display:block;background:#144276;margin:0 auto;transition:all 0.4s ease;margin-top:-5px;}
+.header.small .hdcl .nav .menu-item a.menu-link{color: #222;}
+/*新加*/
+
+.list .nav .menu-item a.menu-link{color: #2c2c2c;display: inline-block;line-height: 50px;font-size: 18px;}
+.nav .wp-menu .menu-item.hover a.menu-link,
+.nav .wp-menu .menu-item a.hover{ text-decoration: none;}
+.nav .wp-menu .menu-item.hover a.menu-link:after{width:100%;}
+.nav .sub-menu {display: none;position: absolute;left: 0;top: 69px;min-width: 100%;z-index: 100;border-radius: 0px;background: #fff; }
+.small  .nav .sub-menu {top: 69px;box-shadow: 0 3px 6px #ddd;width:1072px;min-width:auto;}
+.small  .nav .wp-menu{position:static;}
+.small  .nav .i5 .sub-menu,.small  .nav .i6 .sub-menu,.small  .nav .i7 .sub-menu,.body_b .nav .i8 .sub-menu{left:auto;right:0;}
+.list .nav .sub-menu{box-shadow: 0 3px 6px #ddd;top:67px;}
+.nav .sub-menu .sub-item { position: relative; white-space: nowrap; vertical-align: top; _zoom:1;text-align: left;float: left;width: 33.33%;display: inline-block;}
+.nav .sub-menu .sub_text{width: 67.91%; float: left;}
+.nav .sub-menu .sub_texts{margin: 32px 50px 20px 80px;}
+.nav .sub-menu .sub_img{width: 23.35%;position: relative;margin: 20px 0 20px;z-index: 100;    border-radius:  0px;
+	overflow: hidden;float: left;}
+.nav .sub-menu .sub_img img{width: 100%;}
+.nav .sub-menu .sub_img .nav_bg{position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: auto;margin: auto;}
+.nav .sub-menu .sub-item a {display: block;color: #333;height: 36px;line-height: 36px;padding: 0 8px;font-size: 16px;background:none;}
+.nav .sub-menu .sub-item a span:first-child{margin-right: 15px;}
+.nav .sub-menu .sub-item.hover> a,
+.nav .sub-menu .sub-item a:hover{ color: #cc0033;  display: block; }
+
+.nav .sub-menu .sub-menu { left: 100%; top:0px; z-index: 200; background:#fff;}
+
+.list.small { position: static;}
+.small  .header{top: 0;}
+.header.small .hdcl{background: #2454a6; display: block;transition: all 0.7s ease-out 0s;background-size:100% 100%;width: 100%;position: fixed;top: 0;z-index: 99;}
+
+.list.body_b .head{background: #2454a6;
+
+}
+.list.body_b .hdcl{ width: 100%;}
+. #nav .container{ background: none}
+.list .logo {margin-top: 10px;}
+.list #nav{background:#e0f0ff;box-shadow: 0 0 10px rgba(0,0,0,0.15);}
+.list .nav .wp-menu .menu-item a.menu-link {line-height:67px;margin-top:0px;}
+
+
+
+.body_b #nav .wp-panel{margin-top:20px;}
+.body_b #nav .wp-panel{margin-top:0px;}
+.body_b .nav .wp-menu {width: auto;}
+.body_b .nav .wp-menu .menu-item{width: 9%;}
+.body_b .nav .wp-menu .menu-item a.menu-link{line-height:67px;margin-top:0px;}
+.body_b .head-bottom{margin-top:4px;}
+.body_b .sitelogo img{height:60px;margin-top:5px;}
+.body_b .scroll{position: fixed;right: 2.5%; top: 40%;width: 10px;transform: translate(80px,0px);transition: all 1s ease-out 0s;opacity: 0;filter:Alpha(opacity=0);z-index:999}
+.body_b.showdiv .scroll{transform: none;opacity: 1;filter:Alpha(opacity=100);}
+.body_b .scroll ul li{width:10px; height: 10px;padding: 2px; border: 1px solid #007bb6;border-radius: 50%;margin:10px 0;}
+.body_b .scroll ul li a{display:block;height:100%;border-radius: 50%;}
+.body_b .scroll ul li.selected a{background:#007bb6;}
+
+.head,.mbanner,.mbanner .inner,.mbanner .inner > div,.focus,.focus>ul,.mbanner .slick-list,.mbanner .slick-track{height: 100%;}
+
+
+.searchbtn{width:44px;height:44px;border-radius:50%;border:1px solid #fff; position: relative;z-index: 999; background:url(../image/ss1.png) no-repeat center;float:right;display:inline-block;cursor:pointer;margin-right:25px;margin-top:1%;}
+.wp_search{ display:inline-block;position:relative;padding-left:15px;border: 0px solid #d0d0d0;background:#fff;width:100%;}
+.wp_search .keyword{ outline: none; width:100%!important;padding: 10px 0; border:none;height:45px; line-height:45px; background:transparent; font-size:16px;color:#666;}
+.wp_search .search{width:111px;height: 45px;border:0px; background: #007bb6;cursor: pointer; vertical-align:top;position:absolute;right:0;  color:#fff; font-size:16px;top:0;}
+/*自定义输入框*/
+.searchbox{    position: fixed;  width: 100%;  height: 100%;  top: 0;  left: 0;  display: none;  z-index:99;}
+.searchbox .search_bg{position: absolute;  width: 100%;  height: 100%;  background: #000;  opacity: 0.6;  filter:Alpha(opacity=60);}
+.searchbox .close{ position: absolute;  color: #fff;  font-size: 50px;  right: 10%;  top: 15%;  cursor:pointer; opacity: 0.8;}
+.searchbox .form{width: 50%;  margin: auto;  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0;  display: block;  height: 45px;}
+
+.wp-search {position: relative;border: 1px solid #d0d0d0;}
+.wp-search form {display: block;}
+.wp-search .search-input {margin-left:4px; margin-right: 40px;}
+.wp-search .search-input input.search-title {width: 100%;height: 22px;padding: 4px 0;line-height: 22px;background: none;color: #FFFFFF;font-size: 14px;border:0;outline: 0;}
+.wp-search .search-btn {width:32px;height: 32px;position: absolute;right: 0;top:0%;}
+.wp-search .search-btn input.search-submit {width:32px;height: 30px;border:0;outline: 0;background: #FFFFFF url(../image/ss1.png) no-repeat center;cursor: pointer;}

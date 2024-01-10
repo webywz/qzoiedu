@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="apple-touch-icon" href="http://www.qzoiedu.com/hhjtxy/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/hhjtxy/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/hhjtxy/images/favicon.ico" type="image/x-icon">
+    <title>实训船——“育航号”-航海交通学院-泉州海洋职业学院</title><meta name="pageType" content="3">
+<meta name="pageTitle" content="实训船——“育航号”">
+<meta name="keywords" content="航海交通学院,泉州海洋职业学院,团学天地,实训船——“育航号”">
+<meta name="description" content="“育航”轮是目前国内航海院校唯一一艘可以在校内进行实际操纵的实体船。它船长49米，船宽9.2米，排水量965吨，满载吃水2.9米，价值700多万元。可同时满足60位师生在船实习。主要用于开展航海教学技能培训、国防教育...">
+
+    <link href="static/css/style2.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery1.js"></script>
+    <script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="static/js/jquerybdtxk.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/content.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1021,'/content.jsp',3009,1936451120)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="hhjtxy.html"><img src="static/picture/logohhjt.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83392)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1936451120";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li>
+                                 <a href="hhjtxy.html" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="xygk1.html" title="学院概况">学院概况</a>
+                            </li>
+                            <li>
+                                 <a href="hhjszy.html" title="学院专业">学院专业</a>
+                                <div class="two-nav">
+                                    <a href="hhjszy.html" title="航海技术专业">航海技术专业</a>
+                                    <a href="kzcwzy.html" title="空中乘务专业">空中乘务专业</a>
+                                    <a href="gstlkycwzy.html" title="高速铁路客运乘务专业">高速铁路客运乘务专业</a>
+                                    <a href="gjylcwglzy.html" title="国际邮轮乘务管理专业">国际邮轮乘务管理专业</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="szdw1.html" title="师资队伍">师资队伍</a>
+                            </li>
+                            <li class="dhdqwz">
+                                 <a href="sxsb.html" title="实训设备">实训设备</a>
+                            </li>
+                            <li>
+                                 <a href="jycy.html" title="就业创业">就业创业</a>
+                            </li>
+                            <li>
+                                 <a href="zyzs.html" title="职业证书">职业证书</a>
+                            </li>
+                            <li>
+                                 <a href="ssfc.html" title="师生风采">师生风采</a>
+                            </li>
+                            <li>
+                                 <a href="zlzx.html" title="资料中心">资料中心</a>
+                            </li>
+                            <li>
+                                 <a href="lxwm2.html" title="联系我们">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+<!--banner-->
+<div class="list_banner">
+                            <img src="static/picture/list_banner01.jpg" border="0">
+                
+            
+</div>
+<!--主要内容开始-->
+<div class="icontent">
+    <div class="lm_name clearfix">
+        
+<h2>实训设备</h2>
+          
+        <span>
+    当前位置: 
+                        <a href="hhjtxy.html">首页</a>
+                >
+                <a href="sxsb.html">实训设备</a>
+                >
+                正文
+</span>
+    </div>
+    <div class="c-content">
+
+<script language="javascript" src="static/js/NewsvoteDWR.js"></script><script language="javascript" src="static/js/engine2.js"></script><script language="javascript" src="static/js/newscontent.js"></script><link href="static/css/photoswipe.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/pw.js"></script><script language="javascript" src="static/js/ajax.js"></script><form name="_newscontent_fromname">
+    <h1 class="c-title">实训船——“育航号”</h1>
+        <div class="other-s">发布日期：2023-03-21&nbsp;&nbsp;&nbsp;&nbsp;作者： &nbsp;&nbsp;&nbsp;&nbsp;来源： 
+    &nbsp;&nbsp;&nbsp;&nbsp;点击：<script>_showDynClicks("wbnews", 1936451120, 3009)</script></div>
+    <div id="vsb_content" class="nr-info"><div class="v_news_content">
+<p>
+	“育航”轮是目前国内航海院校唯一一艘可以在校内进行实际操纵的实体船。它船长49米，船宽9.2米，排水量965吨，满载吃水2.9米，价值700多万元。可同时满足60位师生在船实习。主要用于开展航海教学技能培训、国防教育、士官训练、民兵训练。“育航号”作为新时代文明实践点，先后获评为泉州市科普基地、泉州市国防教育基地、石狮市科普基地、石狮市中小学生素质教育基地。
+</p>
+<p>
+	<img src="static/picture/55E8CE685D61206C16CC0A73A47_FD0C881E_1337A.jpg" alt="" width="600" height="445" title="">
+</p>
+<p>
+	<br>
+</p>
+<p>
+	本船原为“天津中石海丰燃料公司”的一艘在航油船，2016年学校斥资购买，经过半月的海上航行，抵达泉州祥芝港。学校利用枕木、绞缆的原始陆上拖船方式，把船从祥芝的石狮宏泰船厂途经石狮大道陆运至此。育航号运抵学校以后，董事会投入100多万元，对船进行了升级改造。此船是专门针对航海类专业学生教学而设计建造的，去掉了传统的生活区并合理设置各类特种船舶教学和科研场所。
+</p>
+<p>
+	<img src="static/picture/2B0A19AAD6533ABC38C001604DB_DF8C3B1E_1552A.jpg" alt="" width="600" height="450" title="">
+</p>
+<p>
+	<img src="static/picture/6A45F8E14F7918BFC2904D76410_DB6655DB_14F84.jpg" alt="" width="600" height="450" title="">
+</p>
+<p>
+	目前，船上驾驶台主要设备有雷达、自动识别系统、自动操舵仪、电子海图、气象传真机、罗经等设备；机舱主要设备有主机2台，辅机2台，生活污水处理装置及各种泵浦等设备；甲板主要设备有舷梯，锚机，甲板水封，高速透气阀等设备。自2018年3月20日投入使用以来。累计培养特种船舶方面人才上万人。并面向全省中小学生开展国防教育、综合素质拓展、研学、夏令营等为一体的教育培训。接待各类幼儿园、中小学生、泉州市海上民兵、全国扶贫就业创业培训班学员参观“育航号”达7千多人次。感受海之魂，丰富船舶与海洋知识，开阔眼界，重点参观了船舶驾驶台、机舱、船舶主机处所，近距离了解船舶构造和功能。该轮经过升级改造后，不仅可以开展油船的相关教学培训，还可以开展化学品船、液化气船和客船相关的培训；以及开展三副驾驶台航海仪器的操作，救生和消防设备维护保养；三管轮机舱动力设备操作及拆装，各种水泵，甲板应急设备和各种管系的使用和维护保养等项目。让学生真实的体会到各职位职能等。自从党在十八大中提出“海洋强国”战略以来，海洋事业的重要性逐步提高，习近平同志在十九大中着重强调“坚持海陆统筹，加快海洋强国”，其重视程度更是不言而喻。国防教育、研学参观等学习活动为大家带来了绝佳的认知体验，更丰富了大家的海洋探索之梦。
+</p>
+<p>
+	<img src="static/picture/4696A05FE20D41944CE91B5A2D8_5A0ABD64_C19DD.jpg" alt="" width="600" height="270" title="">
+</p>
+<p>
+	<br>
+</p>
+<p>
+	<br>
+</p></div>
+</div></form></div><div id="div_vote_id"></div>
+    
+  <div class="i-sxt">
+            <div class="wafx">
+                <!-- JiaThis Button BEGIN -->
+                <div class="jiathis_style_24x24">
+                    <a class="jiathis_button_qzone"></a>
+                    <a class="jiathis_button_tsina"></a>
+                    <a class="jiathis_button_tqq"></a>
+                    <a class="jiathis_button_weixin"></a>
+                    <a class="jiathis_button_renren"></a>
+                    <a class="jiathis_counter_style"></a>
+                </div>
+             
+                <!-- JiaThis Button END -->
+            </div>
+              <p><a href="3019.html"><strong>上一篇：</strong>计算机综合实训室</a></p>
+             <p><a href="2999.htm"><strong>下一篇：</strong>我院航海体能训练基地正式投入使用</a></p>
+        </div>
+
+</form>
+</div>
+
+<!--主要内容结束-->
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83384)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83385)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83391)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83386)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83387)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83389)">中国禁毒展览馆</a>
+<a href="index.html#/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83390)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83388)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+            <tr>
+                <td align="center" style="color:#fff;">
+                        <img src="static/picture/wx.jpg" border="0" height="110">
+                    微信 
+                </td>
+                <td align="center" style="color:#fff;">
+                        <img src="static/picture/jf.jpg" border="0" height="110">
+                    缴费 
+                </td>
+        </tr>
+</table></div>
+    </div>
+</div>
+</div>
+   <script src="static/js/jia.js" type="text/javascript"></script>
+   <script src="static/js/pub2.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

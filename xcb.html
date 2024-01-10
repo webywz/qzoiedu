@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>党委宣传部-泉州海洋职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="党委宣传部-泉州海洋职业学院">
+<meta name="keywords" content="党委宣传部,泉州海洋职业学院">
+
+<link type="text/css" rel="stylesheet" href="static/css/style14.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/xx-sj-tj.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1939651209)</script>
+</head>
+<body style=" background:#f3f3f3;">
+
+<!--顶部开始-->
+
+<div class="wrap" style=" background:#3e6db5;border-bottom:solid 1px #2f61ac;">
+  <div class="w">
+    <div class="toubu"> 
+      
+      <!--logo开始-->
+      <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="党委宣传部"><img src="static/picture/logo6.png"></a></div>
+      <!--logo结束-->
+      
+      <div class="search fr"> 
+        
+        <!--设为首页/加入收藏开始-->
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83636)">学校主页</a>
+</div>
+        <div class="clearfix"></div>
+        <!--设为首页/加入收藏结束--> 
+        
+        <!--搜索开始-->
+      <div class="search_box">
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1939651209";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <!--搜索结束--> 
+        
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!--顶部结束--> 
+
+<!--导航开始-->
+
+<div class="wrap bg_color">
+  <div class="w Navigation"><div id="navbar" class="menubox">
+                    <div class="nav">
+                        <ul>
+                                                        <li class="dhdqwz">
+                                 <a href="index.htm" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="bmjj.htm" title="部门简介">部门简介</a>
+                            </li>
+                            <li>
+                                 <a href="tzgg.htm" title="通知公告">通知公告</a>
+                            </li>
+                            <li>
+                                 <a href="xyxw.htm" title="校园新闻">校园新闻</a>
+                            </li>
+                            <li>
+                                 <a href="mtjj.htm" title="媒体聚焦">媒体聚焦</a>
+                            </li>
+                            <li>
+                                 <a href="ztjy.html" title="主题教育">主题教育</a>
+                            </li>
+                            <li>
+                                 <a href="xxyd.htm" title="学习园地">学习园地</a>
+                            </li>
+                            <li>
+                                 <a href="jswm.htm" title="精神文明">精神文明</a>
+                            </li>
+                            <li>
+                                 <a href="bszn/gzzd.htm" title="办事指南">办事指南</a>
+                                <div class="two-nav">
+                                    <a href="bszn/gzzd.htm" title="规章制度">规章制度</a>
+                                    <a href="bszn/bslc.htm" title="办事流程">办事流程</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+</div>
+            
+</div>
+</div>
+
+<!--导航结束--> 
+
+<!--Banner开始-->
+<div class="index-banner">
+            <div class="main-visual-wrapper ar_web">
+                <section class="swiper-box1 main-visual-slider">
+                        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/555.jpg) no-repeat;">
+                                        <img src="static/picture/555.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/444.jpg) no-repeat;">
+                                        <img src="static/picture/444.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/333.jpg) no-repeat;">
+                                        <img src="static/picture/333.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ban-dot">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+</div>
+
+
+
+<!--Banner结束-->
+
+<div class="clearfix"></div>
+
+<!--container开始-->
+
+  <div class="w">
+  <div class="clearfix">
+    <div class="w380 fl mt15" style="background:#ffffff;height:418px;">
+     
+     <div class="menu_bt">
+        <h3 class="fl kcjs_bg">通知公告</h3>
+        <div class="fr more"> <a href="tzgg.htm"><img src="static/picture/ga_13.png" width="107" height="10">  </a></div>
+      </div>
+      <div class="clearfix"></div><script language="javascript" src="static/js/centerCutImg.js"></script>
+
+      <div style="height:10px;"></div>
+     
+     
+    </div>
+    
+    <div class="w380 fl ml30 mt15" style="background:#ffffff;">
+     <div class="menu_bt">
+        <h3 class="fl kcjs_bg">校园新闻</h3>
+        <div class="fr more"> <a href="xyxw.htm"><img src="static/picture/ga_13.png" width="107" height="10"> </a></div>
+      </div>
+      <div class="clearfix"></div><script language="javascript" src="static/js/ajax.js"></script>  
+
+ <div class="Notifications2 mt20">
+        <p>2024年01月08日 </p>
+        <h3><a href="info/1281/4581.htm">喜报 | 我校在2023年“读懂中国”活动中获多...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2024年01月08日 </p>
+        <h3><a href="info/1281/4591.htm">迎新春 | 信息工程学院送春联啦~</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2024年01月06日 </p>
+        <h3><a href="info/1281/4601.htm">国防教育学院开展2024年春节期间反对“四风...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20" style="border:none;">
+        <p>2024年01月05日 </p>
+        <h3><a href="info/1281/4611.htm">海洋工程学院团委2023年度总结表彰大会</a></h3>
+      </div>
+
+<script>_showDynClickBatch(['dynclicks_u6_4581','dynclicks_u6_4591','dynclicks_u6_4601','dynclicks_u6_4611'],[4581,4591,4601,4611],"wbnews", 1939651209)</script>
+
+      <div style="height:10px;"></div>
+      
+      
+      
+    </div>
+    
+    <div class="w380 fr mt15" style="background:#FFF;">
+      <div class="menu_bt">
+        <h3 class="fl kcjs_bg">媒体聚焦</h3>
+        <div class="fr more"> <a href="mtjj.htm"><img src="static/picture/ga_13.png" width="107" height="10"> </a> </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div>  
+
+ <div class="Notifications2 mt20">
+        <p>2024年01月03日 </p>
+        <h3><a href="info/1291/4541.htm">【石狮融媒体中心】泉州海洋职业学院东南校...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2024年01月03日 </p>
+        <h3><a href="info/1291/4551.htm">【石狮日报】“政行校企”产教融合 培养电商...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2024年01月03日 </p>
+        <h3><a href="info/1291/4561.htm">【中国食品安全网】“政行校企”产教融合培...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20" style="border:none;">
+        <p>2024年01月03日 </p>
+        <h3><a href="info/1291/4571.htm">【新福建】“政行校企”产教融合 培养电商人才</a></h3>
+      </div>
+
+<script>_showDynClickBatch(['dynclicks_u7_4541','dynclicks_u7_4551','dynclicks_u7_4561','dynclicks_u7_4571'],[4541,4551,4561,4571],"wbnews", 1939651209)</script>
+</div>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+  </div>
+</div>
+
+
+ <div class="w">
+  <div class="clearfix">
+    <div class="w380 fl mt15" style="background:#ffffff;">
+      <div class="menu_bt menu_bt2">
+        <h3 class="fl kcjs_bg">学习园地</h3>
+        <div class="fr more"> <a href="xxyd.htm"><img src="static/picture/ga_14.png" width="107" height="10"> </a></div>
+      </div>
+      <div class="clearfix"></div>
+      <div> <ul class="n_list">
+</ul>
+</div>
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fl ml30 mt15" style="background:#ffffff;">
+      <div class="menu_bt  menu_bt2">
+        <h3 class="fl kcjs_bg">精神文明</h3>
+        <div class="fr more"> <a href="jswm.htm"><img src="static/picture/ga_14.png" width="107" height="10">  </a></div>
+      </div>
+      <div class="clearfix"></div><div> <ul class="n_list">
+</ul>
+</div>
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fr mt15" style="background:#FFF;">
+      <div class="menu_bt  menu_bt2">
+        <h3 class="fl kcjs_bg">办事指南</h3>
+        <div class="fr more"> <a href="bszn/gzzd.htm"><img src="static/picture/ga_14.png" width="107" height="10"> </a> </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div> <ul class="n_list">
+</ul>
+</div>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="w txhd mt15" style="background:#FFF;">
+<div class="menu_bt menu_bt2">
+        <h3 class="fl kcjs_bg">图片新闻</h3>
+        <div class="fr more"> <a href="xyxw.htm" target=""><img src="static/picture/ga_14.png" width="107" height="10"> </a></div>
+      </div>
+  <div class="txhd_nr"><div class="xysh_nr m-imgtxtq1">
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4581.htm" target="_blank" title="喜报 | 我校在2023年“读懂中国”活动中获多项荣誉！"><img src="static/picture/EA8B5D6DC93D91E1E4C23D722FD_71D72B50_1927C.png"></a></div>
+                        <span>喜报 | 我校在2023年“...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4591.htm" target="_blank" title="迎新春 | 信息工程学院送春联啦~"><img src="static/picture/98DC97D66C3FE268417A7442578_FF9F7E42_1B434.jpg"></a></div>
+                        <span>迎新春 | 信息工程学院...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4601.htm" target="_blank" title="国防教育学院开展2024年春节期间反对“四风”树新风精神工作部署会议"><img src="static/picture/44AE217A34D1469CBBA768C2D6C_DBFFDC14_29C23.jpg"></a></div>
+                        <span>国防教育学院开展2024...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4611.htm" target="_blank" title="海洋工程学院团委2023年度总结表彰大会"><img src="static/picture/4A407A80F6B4D7C557C10B4A028_F335A5AC_143B4.jpg"></a></div>
+                        <span>海洋工程学院团委2023...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4621.htm" target="_blank" title="学校召开学习贯彻习近平新时代中国特色社会主义思想主题教育暨理论学习中心组学习会"><img src="static/picture/BB0CD0A6AC188FA108CADDE9FFC_86FACBF4_1E4A3.jpg"></a></div>
+                        <span>学校召开学习贯彻习近...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4521.htm" target="_blank" title="喜报 | 我校学子在首届中国航海创新创业大赛中荣获二等奖"><img src="static/picture/EA8B5D6DC93D91E1E4C23D722FD_71D72B50_1927C.png"></a></div>
+                        <span>喜报 | 我校学子在首届...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4531.htm" target="_blank" title="凝心聚力，奋楫扬帆｜海洋工程学院召开辅导员年终述职大会"><img src="static/picture/D4D3FA8D1ACF12206D1A12C00F5_6299AD67_1371D.jpg"></a></div>
+                        <span>凝心聚力，奋楫扬帆｜...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4461.htm" target="_blank" title="我校召开2024年元旦、春节及寒假期间校园安全工作专题会"><img src="static/picture/EFAA7030088685617D24E49EC66_329B1799_69C03.png"></a></div>
+                        <span>我校召开2024年元旦、...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4471.htm" target="_blank" title="经济管理学院党支部赴闽南科技学院开展联学交流活动"><img src="static/picture/0ED4B62D2F389D4412146256FCA_DFB38D8E_3BE3B.png"></a></div>
+                        <span>经济管理学院党支部赴...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4481.htm" target="_blank" title="经济管理学院党支部开展“赓续红色血脉，弘扬革命精神”主题党日活动"><img src="static/picture/8BE93A1EB821498488CF9EB9F20_6999AC0C_34B25.jpg"></a></div>
+                        <span>经济管理学院党支部开...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4491.htm" target="_blank" title="我校举办2023年辅导员谈心谈话大赛总决赛"><img src="static/picture/EA3BAEB27E8CE216312B4FC8D8A_2D8D200C_581F1.png"></a></div>
+                        <span>我校举办2023年辅导员...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4501.htm" target="_blank" title="我校举办“迎新年、庆元旦”书法作品线上展览"><img src="static/picture/A8EB7950ED4D86ACF93F499D4BE_B41508A6_EA49.jpg"></a></div>
+                        <span>我校举办“迎新年、庆...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4441.htm" target="_blank" title="喜报丨我校多位教师入选县市级科技特派员"><img src="static/picture/AD3D5922A6875C4BD7014B931BA_E0061653_A9AB.jpg"></a></div>
+                        <span>喜报丨我校多位教师入...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4451.htm" target="_blank" title="喜报 | 我校7位教职工入选泉州市科协科技专家库"><img src="static/picture/EA8B5D6DC93D91E1E4C23D722FD_71D72B50_1927C.png"></a></div>
+                        <span>喜报 | 我校7位教职工...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4301.htm" target="_blank" title="学校组织开展学习贯彻习近平新时代中国特色社会主义思想主题教育现场教学活动"><img src="static/picture/3887FA9F36D51BC0E06CCD22B21_35C6E697_14789.jpg"></a></div>
+                        <span>学校组织开展学习贯彻...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4331.htm" target="_blank" title="学生街5号热气来袭，“暖冬”buff已加满，快来查看！"><img src="static/picture/86BC617FD3873B24FF550112DD0_572945E4_1FFD8.jpg"></a></div>
+                        <span>学生街5号热气来袭，“...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4281.htm" target="_blank" title="喜报 | 我校教师在福建省军事课教师微课教学竞赛中获奖"><img src="static/picture/EA8B5D6DC93D91E1E4C23D722FD_71D72B50_1927C.png"></a></div>
+                        <span>喜报 | 我校教师在福建...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4291.htm" target="_blank" title="青春肆意飞扬，热爱经久不息 | 航海交通学院成人礼暨感恩教育文艺汇演精彩落幕"><img src="static/picture/2335A2758562DFBB968503C182A_929E129C_4AA25.jpg"></a></div>
+                        <span>青春肆意飞扬，热爱经...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4141.htm" target="_blank" title="主题教育丨海工支部党员走进永春，重启初心之旅"><img src="static/picture/54929BCC4561A8850AEDE9C1F46_A092B593_23A07.jpg"></a></div>
+                        <span>主题教育丨海工支部党...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/4151.htm" target="_blank" title="我校获批第一批福建省退役军人思想政治教育基地"><img src="static/picture/559585AE12373B58F064564C124_F0F0A3F4_51D16.png"></a></div>
+                        <span>我校获批第一批福建省...</span>
+                    </div>
+                </div>
+<script>_showDynClickBatch(['dynclicks_u11_4581','dynclicks_u11_4591','dynclicks_u11_4601','dynclicks_u11_4611','dynclicks_u11_4621','dynclicks_u11_4521','dynclicks_u11_4531','dynclicks_u11_4461','dynclicks_u11_4471','dynclicks_u11_4481','dynclicks_u11_4491','dynclicks_u11_4501','dynclicks_u11_4441','dynclicks_u11_4451','dynclicks_u11_4301','dynclicks_u11_4331','dynclicks_u11_4281','dynclicks_u11_4291','dynclicks_u11_4141','dynclicks_u11_4151'],[4581,4591,4601,4611,4621,4521,4531,4461,4471,4481,4491,4501,4441,4451,4301,4331,4281,4291,4141,4151],"wbnews", 1939651209)</script>
+</div>    
+      
+      
+</div>
+
+<div class="clearfix"></div>
+<div style="background:#e6e6e6;">
+  <div class="jz">
+    <div class="menu_bt">
+      <h3 class="fl kcjs_bg mt10"> 友情链接 </h3>
+    </div>
+    <div class="clearfix"></div> <ul class="yqlj">
+
+ <li><a href="http://jyt.fujian.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83634)">福建省教育厅</a></li>
+
+
+  
+
+ <li><a href="http://jyj.quanzhou.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83635)">泉州市教育局</a></li>
+
+
+  
+
+ <li><a href="https://www.fj.msa.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83633)">福建海事局</a></li>
+
+
+  
+
+ <li><a href="http://www.cmaritime.com.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83628)">中国海事服务中心</a></li>
+
+
+  
+
+ <li><a href="http://www.mot.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83629)">中华人民共和国交通运输部</a></li>
+
+
+  
+
+ <li><a href="http://www.626china.com/" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83631)">中国禁毒展览馆</a></li>
+
+
+  
+
+ <li><a href="index.html#/" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83632)">一站式办事大厅</a></li>
+
+
+  
+
+ <li><a href="https://exmail.qq.com/login" onclick="_addDynClicks(&#34;wburl&#34;, 1939651209, 83630)">邮箱系统</a></li>
+
+
+  
+</ul>
+  </div>
+     <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="wrap" style="background: #3e6db5;">
+  <div class="w footer">
+    <div class="ac">
+    
+    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p>
+    
+   
+    </div>
+  </div>
+</div>
+
+
+
+<!--jquery-->
+
+<script type="text/javascript" src="static/js/bdtxk.min.js"></script>
+<script src="static/js/pub.js" type="text/javascript"></script>
+<script src="static/js/slick.js"></script>
+<!--左滚动特效--> 
+  <script>// 校园专题
+                $('.m-imgtxtq1').slick({
+                    rows: 1,
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            dots: true,
+                            arrows: false
+                        }
+                    },
+                        {
+                            breakpoint: 960,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 350,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });</script><!--左滚动特效--> 
+
+
+
+<script src="static/js/swiper.min3.js"></script>
+<script>
+    // banner
+    var swiper = new Swiper(".main-visual-slider .swiper-container", {
+        loop: true,
+        speed: 1200,
+        draggable: false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        // allowTouchMove: true,
+        // watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            slideChangeTransitionStart : function(swiper){
+                var swiper = this;
+                // 判断swiper-slide-active是否有视频
+                if($(".main-visual-slider .swiper-slide-active video").length>0){
+                    console.log(1)
+                    // 停止自动切换
+                    swiper.autoplay.stop();
+                    // 动态增加id
+                    setTimeout(function(){
+                        swiper.autoplay.stop();
+                        $(".main-visual-slider .swiper-slide-active video").attr("id","video_01");
+
+                        var _video=document.getElementById("video_01");
+
+                        // 播放视频
+                        _video.play();
+                        // 切换后重新播放视频
+                        _video.currentTime = 0;
+                        // 静音
+                        _video.volume = 0;
+                        // 监听视频播放结束
+                        _video.addEventListener('ended', function () {
+                            swiper.slideNext();
+                            //重新开始轮播banner
+                            swiper.autoplay.start();
+                        });
+                    }, 10);
+                }
+            },
+            slideChangeTransitionEnd: function(swiper){
+                //动态移除id
+                setTimeout(function(){
+                    $(".main-visual-slider .swiper-slide-active video").attr("id","");
+                }, 10);
+            },
+        }
+    });
+</script>
+
+<!--焦点图特效--> 
+<script type="text/javascript" src="static/js/bdtxk.yx_rotaion.js"></script> 
+<script type="text/javascript">
+    $(".yx-rotaion").yx_rotaion({auto:true});
+</script> 
+
+
+
+<!--选项卡-->
+
+
+</body>
+</html>

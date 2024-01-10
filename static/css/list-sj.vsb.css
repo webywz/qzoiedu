@@ -1,0 +1,6 @@
+.n_erji{ display: flex; justify-content: center; align-items: center; flex-wrap: wrap; position: relative; z-index: 1; width: 100%;}
+.n_erji::before{content: "";position: absolute;top: 50%;height: 1px;border-bottom: rgba(0,0,0,.1) 1px dashed;z-index: -1;width: 100%;left: 0;}
+.n_erji li{ padding: 0 10px;}
+.n_erji li a{min-width: 120px;height: 46px;border: #dce2e8 1px solid;display: flex;background: #fff;border-radius: 25px;align-items: center;justify-content: center;font-size: 17px;color: #666666;transition: .5s;}
+.n_erji li.on a, .n_erji li a:hover{ border:#4e80ce1px solid; background:#4e80ce; color:#fff;}
+

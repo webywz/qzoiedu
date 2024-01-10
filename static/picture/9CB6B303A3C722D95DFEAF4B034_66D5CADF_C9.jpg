@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Error</title>
+</head>
+<body>
+	<h1>输入错误</h1>
+	<p>您的输入包含非法字符，请重新输入。</p>
+</body>
+</html>

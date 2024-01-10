@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="apple-touch-icon" href="http://www.qzoiedu.com/scxy/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/scxy/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/scxy/images/favicon.ico" type="image/x-icon">
+<title>创意创新创业学院-泉州海洋职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="创意创新创业学院-泉州海洋职业学院">
+<meta name="keywords" content="创意创新创业学院,泉州海洋职业学院">
+
+<link href="static/css/style9.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="static/css/banner1.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/xx-sj-tj.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1938587505)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="static/picture/logoscxy.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83492)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938587505";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li class="dhdqwz">
+                                 <a href="index.htm" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="xygk/xyjj.htm" title="学院概况">学院概况</a>
+                                <div class="two-nav">
+                                    <a href="xygk/xyjj.htm" title="学院简介">学院简介</a>
+                                    <a href="xygk/xrld.htm" title="现任领导">现任领导</a>
+                                    <a href="xygk/szdw1.htm" title="师资队伍">师资队伍</a>
+                                    <a href="xygk/jgsz.htm" title="机构设置">机构设置</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="kcjs.htm" title="课程建设">课程建设</a>
+                            </li>
+                            <li>
+                                 <a href="scjs.htm" title="三创竞赛">三创竞赛</a>
+                            </li>
+                            <li>
+                                 <a href="cyfh/zczc.htm" title="创业孵化">创业孵化</a>
+                                <div class="two-nav">
+                                    <a href="cyfh/zczc.htm" title="政策支持">政策支持</a>
+                                    <a href="cyfh/jdrz.htm" title="基地入驻">基地入驻</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="sjxs/zdwj.htm" title="实践学时">实践学时</a>
+                                <div class="two-nav">
+                                    <a href="sjxs/zdwj.htm" title="制度文件">制度文件</a>
+                                    <a href="sjxs/xssq.htm" title="学时申请">学时申请</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="cyzx.htm" title="创业之星">创业之星</a>
+                            </li>
+                            <li>
+                                 <a href="index2.html" target="_blank" title="招生就业">招生就业</a>
+                                <div class="two-nav">
+                                    <a href="index2.html" target="_blank" title="招生网">招生网</a>
+                                    <a href="jczx.html" target="_blank" title="就业创业">就业创业</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+
+<!--banner-->
+<div class="index-banner">
+            <div class="main-visual-wrapper ar_web">
+                <section class="swiper-box1 main-visual-slider">
+                        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/sanchuangwangzhanfengmiantu3.jpg) no-repeat;">
+                                        <img src="static/picture/sanchuangwangzhanfengmiantu3.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/sanchuangerjiyemianfengmiantu.jpg) no-repeat;">
+                                        <img src="static/picture/sanchuangerjiyemianfengmiantu.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/chuangyechengjiumengxiang.jpg) no-repeat;">
+                                        <img src="static/picture/chuangyechengjiumengxiang.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ban-dot">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+</div>
+<!--新闻中心开始-->
+<div class="news_box">
+<div class="w1200">
+ <div class="i-title"><h2>学院动态<span style="display:none;">News</span></h2><a href="xydt.htm">More+</a></div>
+<!--左图开始-->
+<script language="javascript" src="static/js/centerCutImg.js"></script><script language="javascript" src="static/js/ajax.js"></script><div class="news_box_left">
+            <div class="tj_img"><a href="info/1161/1181.htm" target="_blank" title="喜报 | 我校荣获2022年福建省高校毕业生就业创业工作先进单位"><img src="static/picture/39AE0B39A4B8CB9DBEC457DCC6E_72DBE40A_1A53F.jpg" alt="" class="imghover"></a></div>
+            <div class="tj_title"><a href="info/1161/1181.htm" target="_blank" title="喜报 | 我校荣获2022年福建省高校毕业生就业创业工作先进单位">喜报 | 我校荣获2022年福建省高校毕业生就业创业工作先进单…</a> </div>
+            <div class="tj_time" style="display:none;">2023年06月26日 【来源：】</div>
+            <div class="tj_zy" style="display:none;"><a href="info/1161/1181.htm">4 月 27 日，福建省高校毕业生就业创业工作年会在福建工程学院召开，会上表彰了福建省高校就业创业工作先进单位和个人。我校首次获评“2022年全省高校毕业生就业创业工作先进单位”，对外合作部（三创学院）黄海斌同志、郑天明同志获评“2022年福建省高校毕业生就业创业先进个人"，省教育厅学生工作处李俊玮处长为获奖单位和个人颁奖。学校致力搭建多元平台，发挥校园招聘主渠道作用，强化校企、校地合作，积极联系和邀请用人单位，...</a></div>
+        </div>
+<script>_showDynClickBatch(['dynclicks_u5_1181'],[1181],"wbnews", 1938587505)</script>
+
+<div class="news_box_left2"> <div class="main_img">
+                    <div class="swiper-container4">
+                        <div class="swiper-wrapper">
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="info/1161/1181.htm" target="_blank"><img src="static/picture/39AE0B39A4B8CB9DBEC457DCC6E_72DBE40A_1A53F.jpg"></a>
+                                    <span><a href="info/1161/1181.htm" target="_blank" title="喜报 | 我校荣获2022年福建省高校毕业生就业创业工作先进单位">喜报 | 我校荣获2022年福建省高校毕业生就业创业工作先进单位</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+</div>
+                        <div class="container">
+                            <div class="col-xs-12"><div class="swiper-pagination"></div></div>
+                        </div>
+                    </div>
+                </div><script>_showDynClickBatch(['dynclicks_u6_1181'],[1181],"wbnews", 1938587505)</script>
+</div>
+<!--左图结束-->
+  <div class="news_box_right">
+<!--右边首条开始-->
+<div class="top_title"><a href="info/1161/1671.htm" target="_blank" title="访企拓岗|我校走访福建八马茶业有限公司">访企拓岗|我校走访福建八马茶业有限公司</a></div>
+            <div class="top_time" style="display:none;">2023年12月08日 【来源：】</div>
+            <div class="top_zy"><a href="info/1161/1671.htm">为贯彻落实高校毕业生就业工作精神，全面深化校企合作、产教融合，促进毕业生高质量就业，确保实习既就业的政策落地。12月7日上午，我校对外合作部就业创业中心黄海斌主任带队赴福…</a></div>
+<script>_showDynClickBatch(['dynclicks_u7_1671'],[1671],"wbnews", 1938587505)</script>
+
+
+<!--右边首条结束-->
+<!--右边列表开始-->
+<ul class="n_list" style="margin: 20px 0 0px 0">
+<li><span class="date">2023/12/08</span><a href="info/1161/1661.htm" target="_blank" title="喜报 | 我校在“全国智慧交通智能网联汽车行业产教融合共同体”成立大会当选副理事长单位">喜报 | 我校在“全国智慧交通智能网联汽车行业产教融合共同体”成立大…</a> </li>
+<li><span class="date">2023/12/04</span><a href="info/1161/1651.htm" target="_blank" title="“弘鑫汇”杯直播大赛表彰大会圆满成功！">“弘鑫汇”杯直播大赛表彰大会圆满成功！</a> </li>
+<li><span class="date">2023/12/01</span><a href="info/1161/1641.htm" target="_blank" title="名企导师训练营 | 我校开展智能制造与创业专题培训班">名企导师训练营 | 我校开展智能制造与创业专题培训班</a> </li>
+<li><span class="date">2023/11/30</span><a href="info/1161/1631.htm" target="_blank" title="活动集锦|三创学院开展系列讲座">活动集锦|三创学院开展系列讲座</a> </li>
+<li><span class="date">2023/11/22</span><a href="info/1161/1621.htm" target="_blank" title="校企合作|泉州海洋职业学院与福建航盾无人机科技有限公司举行合作签约仪式">校企合作|泉州海洋职业学院与福建航盾无人机科技有限公司举行合作签约…</a> </li>
+<li><span class="date">2023/11/21</span><a href="info/1161/1611.htm" target="_blank" title="主题宣讲|三创学院开展系列讲座营造创业氛围">主题宣讲|三创学院开展系列讲座营造创业氛围</a> </li>
+</ul><script>_showDynClickBatch(['dynclicks_u8_1671','dynclicks_u8_1661','dynclicks_u8_1651','dynclicks_u8_1641','dynclicks_u8_1631','dynclicks_u8_1621','dynclicks_u8_1611'],[1671,1661,1651,1641,1631,1621,1611],"wbnews", 1938587505)</script>
+
+<!--右边列表结束-->
+</div>
+</div>
+</div>
+<!--新闻中心结束-->
+<div style="clear: both;"></div>
+<!--tzgg-->
+<div class="i-tzgg">
+    <div class="w1200"><div class="i-title" style="border-bottom: #3e6db5 1px solid"><h2>三创竞赛<span style="display:none">Notes</span></h2><a href="scjs.htm">More+</a></div>
+ <div class="tz_box_nr">
+ <div class="tz_list">
+                <div class="tz_date"><span>24</span>2023-10</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1022/1541.htm" target="_blank" title="三创学院课程实践学时认定细则（修订）">三创学院课程实践学时认定细则（修订）</a></h1>
+                    <p><a href="info/1022/1541.htm">简介：三创学院课程实践认定系统详细介绍：三创学院课程实践认定系统上线啦~<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>18</span>2023-10</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1022/1571.htm" target="_blank" title="鸟助飞 伴你成长 | 石狮市大学生短视频带货训练营邀你报名啦">鸟助飞 伴你成长 | 石狮市大学生短视频带货训练营邀你报名啦</a></h1>
+                    <p><a href="info/1022/1571.htm">简介：<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>26</span>2023-06</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1022/1121.htm" target="_blank" title="校赛通知 | 2023年“互联网+”大学生创新创业大赛">校赛通知 | 2023年“互联网+”大学生创新创业大赛</a></h1>
+                    <p><a href="info/1022/1121.htm">简介：为深入贯彻落实习近平总书记关于教育的重要论述和给第三届中国“互联网＋”大学生创新创业大赛“青年红色筑梦之旅...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>26</span>2023-06</div>
+                <div class="tz_txt">
+                    <h1><a href="info/1022/1081.htm" target="_blank" title="关于举办2023年海峡两岸女大学生创新创业大赛的通知">关于举办2023年海峡两岸女大学生创新创业大赛的通知</a></h1>
+                    <p><a href="info/1022/1081.htm">简介：<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+        </div><script>_showDynClickBatch(['dynclicks_u9_1541','dynclicks_u9_1571','dynclicks_u9_1121','dynclicks_u9_1081'],[1541,1571,1121,1081],"wbnews", 1938587505)</script>
+</div>
+</div>
+<!--bksjy-->
+<div class="i-xsgz" style="margin: 0 auto 40px auto">
+    <div class="w1200">
+        <div class="i-xsgz-left">            <div class="i-title"><h2>创业孵化<span style="display:none;">Student work</span></h2><a href="cyfh/zczc.htm">More+</a></div>
+            <ul class="n_list" style="margin: 20px 0 0px 0">
+   <li><span class="date">2023/07/07</span><a href="info/1202/1331.htm" target="_blank" title="关注！泉州市出台就业创业十条措施">关注！泉州市出台就业创业十条措施</a></li>           
+   <li><span class="date">2023/07/03</span><a href="info/1202/1321.htm" target="_blank" title="24条政策！石狮这类人创业扶持、生活补贴、购房补助">24条政策！石狮这类人创业扶持、生活补贴、购房补助</a></li>           
+   <li><span class="date">2023/07/03</span><a href="info/1202/1311.htm" target="_blank" title="福建省进一步支持大学生创新创业若干措施">福建省进一步支持大学生创新创业若干措施</a></li>           
+   <li><span class="date">2023/07/03</span><a href="info/1202/1301.htm" target="_blank" title="泉州市开展“涌泉”行动集聚各类人才在泉创业就业的若干措施">泉州市开展“涌泉”行动集聚各类人才在泉创业就业的若干措施</a></li>           
+   <li><span class="date">2023/07/03</span><a href="info/1202/1291.htm" target="_blank" title="泉州市人民政府关于推进大众创业万众创新的若干意见（试行）">泉州市人民政府关于推进大众创业万众创新的若干意见（试行）</a></li>           
+   <li><span class="date">2023/06/27</span><a href="info/1212/1211.htm" target="_blank" title="关于征集优质项目入驻三创基地的通知">关于征集优质项目入驻三创基地的通知</a></li>           
+</ul><script>_showDynClickBatch(['dynclicks_u10_1331','dynclicks_u10_1321','dynclicks_u10_1311','dynclicks_u10_1301','dynclicks_u10_1291','dynclicks_u10_1211'],[1331,1321,1311,1301,1291,1211],"wbnews", 1938587505)</script>
+</div>
+        <div class="i-xsgz-right">            <div class="i-title"><h2>实践学时<span style="display:none;">Graduate education</span></h2><a href="sjxs/zdwj.htm">More+</a></div>
+            <ul class="n_list" style="margin: 20px 0 0px 0">
+   <li><span class="date">2023/06/29</span><a href="info/1272/1251.htm" target="_blank" title="创意创新创业学院课程实践学时认定细则（试行）">创意创新创业学院课程实践学时认定细则（试行）</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u11_1251'],[1251],"wbnews", 1938587505)</script>
+</div>
+    </div>
+</div>
+<!--iwyfc-->
+<div class="i-wyfc">
+    <div class="w1200">    <div class="i-title"><h2>创业之星<span style="display:none;">Elegant demeanour</span></h2><a href="cyzx.htm">More+</a></div>
+        <div class="i-wyfc-box">
+            <div class="xysh_nr m-imgtxtq1">
+               
+                
+            </div>
+           
+            
+        </div>
+
+</div>
+</div>
+
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83490)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83491)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83489)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83484)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83485)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83487)">中国禁毒展览馆</a>
+<a href="index.html#/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83488)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938587505, 83486)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+    </table></div>
+    </div>
+</div>
+</div>
+
+
+
+<script type="text/javascript" src="static/js/jquery1.js"></script>
+<script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+ 
+                
+<script type="text/javascript" src="static/js/jquerybdtxk.js"></script>
+<script src="static/js/pub2.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<script src="static/js/slick.js"></script>
+<script>// 校园专题
+                $('.m-imgtxtq1').slick({
+                    rows: 1,
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            dots: true,
+                            arrows: false
+                        }
+                    },
+                        {
+                            breakpoint: 960,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 350,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });</script>
+                
+ <script src="static/js/swiper.min2.js"></script>
+<script>
+    // banner
+    var swiper = new Swiper(".main-visual-slider .swiper-container", {
+        loop: true,
+        speed: 1200,
+        draggable: false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        // allowTouchMove: true,
+        // watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            slideChangeTransitionStart : function(swiper){
+                var swiper = this;
+                // 判断swiper-slide-active是否有视频
+                if($(".main-visual-slider .swiper-slide-active video").length>0){
+                    console.log(1)
+                    // 停止自动切换
+                    swiper.autoplay.stop();
+                    // 动态增加id
+                    setTimeout(function(){
+                        swiper.autoplay.stop();
+                        $(".main-visual-slider .swiper-slide-active video").attr("id","video_01");
+
+                        var _video=document.getElementById("video_01");
+
+                        // 播放视频
+                        _video.play();
+                        // 切换后重新播放视频
+                        _video.currentTime = 0;
+                        // 静音
+                        _video.volume = 0;
+                        // 监听视频播放结束
+                        _video.addEventListener('ended', function () {
+                            swiper.slideNext();
+                            //重新开始轮播banner
+                            swiper.autoplay.start();
+                        });
+                    }, 10);
+                }
+            },
+            slideChangeTransitionEnd: function(swiper){
+                //动态移除id
+                setTimeout(function(){
+                    $(".main-visual-slider .swiper-slide-active video").attr("id","");
+                }, 10);
+            },
+        }
+    });
+</script>
+ <!--新闻轮播图开始-->
+<script src="static/js/swiper.min2.js"></script>
+<script>
+    $(function () {
+        // 轮播初始化
+        new Swiper(".index-banner", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            on: {
+                init: function (swiper) {
+                    var total = "0" + ($(".index-banner .swiper-slide").length - 2);
+                    total = total.substring(total.length - 2);
+                    $(".total").text(total);
+                },
+                slideChangeTransitionEnd: function () {
+                    var current = "0" + (this.realIndex + 1);
+                    current = current.substring(current.length - 2);
+                    $(".current").text(current);
+                },
+            },
+        });
+        new Swiper(".swiper-container4", {
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 5000,
+            }
+
+
+        });
+        new Swiper(".person-sdnu-swiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        $(".ham").on("click", function () {
+            $(".english").toggle();
+
+            if ($(".header-mp-nav").hasClass("active")) {
+                $(".header-mp-nav").removeClass("active");
+                $(this).attr("src", "images/ham.svg");
+            } else {
+                $(".header-mp-nav").addClass("active");
+                $(this).attr("src", "images/x.png");
+            }
+        });
+
+        $(".header-mp-nav").on("click", function (e) {
+            if (e.target.className == "header-mp-nav active") {
+                $(".header-mp-nav").removeClass("active");
+                $(".ham").attr("src", "images/ham.svg");
+            }
+        });
+    });
+</script>
+<!--新闻轮播图结束--> 
+</body>  
+</html>
+ 

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>人才招聘-人事处-泉州海洋职业学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="人才招聘">
+<meta name="keywords" content="人事处,泉州海洋职业学院">
+
+
+
+    <link type="text/css" rel="stylesheet" href="static/css/style12.css">
+    <link type="text/css" rel="stylesheet" href="static/css/styles.css">
+
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/xx-sj-tj.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1403,'/list.jsp',-1,1938605847)</script>
+</head>
+<body style=" background:#f3f3f3;">
+
+<div class="wrap" style="background:#3e6db5;border-bottom:solid 1px #2f61ac;">
+  <div class="w">
+    <div class="toubu"> 
+      
+      <!--logo开始-->
+      <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="人事处"><img src="static/picture/renshichulogo_01.png"></a></div>
+      <!--logo结束-->
+      
+      <div class="search fr"> 
+        
+   <!--设为首页/加入收藏开始-->
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938605847, 83546)">学校主页</a>
+</div>
+        <div class="clearfix"></div>
+        <!--设为首页/加入收藏结束--> 
+        
+        <!--搜索开始-->
+      <div class="search_box">
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+       
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938605847";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <!--搜索结束--> 
+        
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!--顶部结束--> 
+
+<!--导航开始-->
+
+<div class="wrap bg_color">
+  <div class="w Navigation">
+ <div id="navbar" class="menubox">
+                    <div class="nav">
+                        <ul>
+                                                        <li>
+                                 <a href="index.htm" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="bmjj.htm" title="部门简介">部门简介</a>
+                            </li>
+                            <li>
+                                 <a href="tzgg.htm" title="通知公告">通知公告</a>
+                            </li>
+                            <li>
+                                 <a href="xwzx.htm" title="新闻中心">新闻中心</a>
+                            </li>
+                            <li>
+                                 <a href="rczc.htm" title="人才政策">人才政策</a>
+                            </li>
+                            <li>
+                                 <a href="jsfzzx/zxjj.htm" title="教师发展中心">教师发展中心</a>
+                                <div class="two-nav">
+                                    <a href="jsfzzx/zxjj.htm" title="中心简介">中心简介</a>
+                                    <a href="jsfzzx/jspx.htm" title="教师培训">教师培训</a>
+                                    <a href="jsfzzx/sdsf.htm" title="师德师风">师德师风</a>
+                                    <a href="jsfzzx/msfc.htm" title="名师风采">名师风采</a>
+                                    <a href="jsfzzx/jxsl.htm" title="教学沙龙">教学沙龙</a>
+                                </div>
+                            </li>
+                            <li class="dhdqwz">
+                                 <a href="" title="人才招聘">人才招聘</a>
+                            </li>
+                            <li>
+                                 <a href="lxwm.htm" title="联系我们">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+</div>
+            
+
+  </div>
+</div>
+
+<!--导航结束--> 
+<div class="clearfix"></div>
+
+<div class="w">
+    <div class="Route">
+   <div>
+    当前位置: 
+                        <a href="index.htm">首页</a>
+                >>
+                <a href="">人才招聘</a>
+</div>
+    </div>
+    
+    <div class="clearfix"></div>
+
+   
+    
+    <div class="container_right2 fr mb20">
+        
+        <div class="container_right_title">
+人才招聘</div>
+        
+        <div class="clearfix"></div><script language="javascript" src="static/js/centerCutImg.js"></script><script language="javascript" src="static/js/ajax.js"></script> <div class="new_list3 mt10">
+<dl>
+
+           
+ <dd id="line_u6_0">
+
+
+                    <a href="info/1403/2761.htm" class="fl">泉州海洋职业学院招聘简章</a>
+                    <span class="fr gray">2023-11-06</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_1">
+
+
+                    <a href="info/1403/2751.htm" class="fl">泉州海洋职业学院2023年招聘简章</a>
+                    <span class="fr gray">2023-07-21</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_2">
+
+
+                    <a href="info/1403/2481.htm" class="fl">航海类毕业生和培训学员校友专项招聘简章</a>
+                    <span class="fr gray">2023-06-13</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_3">
+
+
+                    <a href="info/1403/2471.htm" class="fl">泉州海洋职业学院2023年招聘简章</a>
+                    <span class="fr gray">2023-06-06</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_4">
+
+
+                    <a href="info/1403/2461.htm" class="fl">泉州海洋职业学院2023年招聘简章</a>
+                    <span class="fr gray">2023-04-18</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_5">
+
+
+                    <a href="info/1403/2451.htm" class="fl">泉州海洋职业学院2023年涉海类专业外聘教师招聘简章</a>
+                    <span class="fr gray">2023-03-16</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_6">
+
+
+                    <a href="info/1403/2441.htm" class="fl">泉州海洋职业学院2023年航海类人才招聘简章</a>
+                    <span class="fr gray">2023-03-03</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_7">
+
+
+                    <a href="info/1403/2431.htm" class="fl">泉州海洋职业学院招聘启事</a>
+                    <span class="fr gray">2023-01-21</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_8">
+
+
+                    <a href="info/1403/2421.htm" class="fl">泉州海洋职业学院招聘启事</a>
+                    <span class="fr gray">2022-12-06</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_9">
+
+
+                    <a href="info/1403/2401.htm" class="fl">泉州海洋职业学院思政教师招聘启事</a>
+                    <span class="fr gray">2022-09-20</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_10">
+
+
+                    <a href="info/1403/2391.htm" class="fl">泉州海洋职业学院航海类人才招聘启事</a>
+                    <span class="fr gray">2022-09-13</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_11">
+
+
+                    <a href="info/1403/2381.htm" class="fl">泉州海洋职业学院招聘启事</a>
+                    <span class="fr gray">2022-08-23</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_12">
+
+
+                    <a href="info/1403/2591.htm" class="fl">泉州海洋职业学院计算机类人才招聘简章</a>
+                    <span class="fr gray">2022-05-06</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_13">
+
+
+                    <a href="info/1403/2581.htm" class="fl">泉州海洋职业学院  2022年航海类人才招聘简章</a>
+                    <span class="fr gray">2022-04-07</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_14">
+
+
+                    <a href="info/1403/2571.htm" class="fl">泉州海洋职业学院航海类人才招聘启事</a>
+                    <span class="fr gray">2021-11-24</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_15">
+
+
+                    <a href="info/1403/2561.htm" class="fl">泉州海洋职业学院2021年下半年招聘简章</a>
+                    <span class="fr gray">2021-09-20</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_16">
+
+
+                    <a href="info/1403/2551.htm" class="fl">科技处处长、教育教学督导主任岗位招聘启事</a>
+                    <span class="fr gray">2021-04-01</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_17">
+
+
+                    <a href="info/1403/2541.htm" class="fl">泉州海洋职业学院2021年急聘启事</a>
+                    <span class="fr gray">2021-03-18</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_18">
+
+
+                    <a href="info/1403/2531.htm" class="fl">泉州海洋职业学院2021年招聘启事</a>
+                    <span class="fr gray">2021-01-17</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+       
+ <dd id="line_u6_19">
+
+
+                    <a href="info/1403/2521.htm" class="fl">泉州海洋职业学院人才招聘公告</a>
+                    <span class="fr gray">2020-07-07</span>
+                    <div class="clearfix"></div>
+                </dd>
+
+
+
+   
+   </dl>
+   <br></div>
+<link rel="stylesheet" content-type="text/css" href="static/css/sys.css"><div class="pb_sys_common pb_sys_normal pb_sys_style1" style="margin-top:10px;text-align:center;"><span class="p_pages"><span class="p_first_d p_fun_d">首页</span><span class="p_prev_d p_fun_d">上页</span><span class="p_no_d">1</span><span class="p_no"><a href="rczp/1.htm">2</a></span><span class="p_next p_fun"><a href="rczp/1.htm">下页</a></span><span class="p_last p_fun"><a href="rczp/1.htm">尾页</a></span></span></div>
+<script>_showDynClickBatch(['dynclicks_u6_2761','dynclicks_u6_2751','dynclicks_u6_2481','dynclicks_u6_2471','dynclicks_u6_2461','dynclicks_u6_2451','dynclicks_u6_2441','dynclicks_u6_2431','dynclicks_u6_2421','dynclicks_u6_2401','dynclicks_u6_2391','dynclicks_u6_2381','dynclicks_u6_2591','dynclicks_u6_2581','dynclicks_u6_2571','dynclicks_u6_2561','dynclicks_u6_2551','dynclicks_u6_2541','dynclicks_u6_2531','dynclicks_u6_2521'],[2761,2751,2481,2471,2461,2451,2441,2431,2421,2401,2391,2381,2591,2581,2571,2561,2551,2541,2531,2521],"wbnews", 1938605847)</script>
+    </div>
+    
+</div>
+
+
+
+<div class="clearfix"></div>
+<div class="wrap" style="background: #3e6db5;">
+  <div class="w footer">
+    <div class="ac">
+   
+   <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p>
+    </div>
+  </div>
+</div>
+
+
+
+    <!--jquery-->
+    <script type="text/javascript" src="static/js/bdtxk.min.js"></script>
+   <script src="static/js/pub.js" type="text/javascript"></script>
+    
+    <!--二级侧栏-->
+    <script type="text/javascript" src="static/js/bdtxk.tools.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    
+    
+    
+    
+    
+<script type="text/javascript" src="static/js/bdtxk.hoverIntent.minified.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        function megaHoverOver(){
+            $(this).find(".sub").stop().fadeTo('fast', 1).show();
+
+            //Calculate width of all uls
+            (function($) {
+                jQuery.fn.calcSubWidth = function() {
+                    rowWidth = 0;
+                    //Calculate row
+                    $(this).find("ul").each(function() {
+                        rowWidth += $(this).width();
+                    });
+                };
+            })(jQuery);
+
+            if ( $(this).find(".row").length > 0 ) { //If row exists...
+                var biggestRow = 0;
+                //Calculate each row
+                $(this).find(".row").each(function() {
+                    $(this).calcSubWidth();
+                    //Find biggest row
+                    if(rowWidth > biggestRow) {
+                        biggestRow = rowWidth;
+                    }
+                });
+                //Set width
+                $(this).find(".sub").css({'width' :biggestRow});
+                $(this).find(".row:last").css({'margin':'0'});
+
+            } else { //If row does not exist...
+
+                $(this).calcSubWidth();
+                //Set Width
+                $(this).find(".sub").css({'width' : rowWidth});
+
+            }
+        }
+
+        function megaHoverOut(){
+            $(this).find(".sub").stop().fadeTo('fast', 0, function() {
+                $(this).hide();
+            });
+        }
+
+
+        var config = {
+            sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)
+            interval: 100, // number = milliseconds for onMouseOver polling interval
+            over: megaHoverOver, // function = onMouseOver callback (REQUIRED)
+            timeout: 500, // number = milliseconds delay before onMouseOut
+            out: megaHoverOut // function = onMouseOut callback (REQUIRED)
+        };
+
+        $("ul#topnav li .sub").css({'opacity':'0'});
+        $("ul#topnav li").hoverIntent(config);
+
+
+
+    });
+
+</script> 
+
+
+<!--选项卡-->
+
+</body>
+</html>
+
+
+
+
+
+

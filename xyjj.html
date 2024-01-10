@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="apple-touch-icon" href="http://www.qzoiedu.com/hygc/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/hygc/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/hygc/images/favicon.ico" type="image/x-icon">
+    <title>学院简介-海洋工程学院-泉州海洋职业学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="海洋工程学院,泉州海洋职业学院">
+
+    <link href="static/css/style3.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery1.js"></script>
+    <script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="static/js/jquerybdtxk1.js"></script>
+    <script src="static/js/pub2.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/about.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1111,'/wzzw_list.jsp',-1,1938603011)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="hygc.html"><img src="static/picture/logohygc.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83510)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938603011";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li>
+                                 <a href="hygc.html" title="首页">首页</a>
+                            </li>
+                            <li class="dhdqwz">
+                                 <a href="" title="学院概况">学院概况</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="" title="学院简介">学院简介</a>
+                                    <a href="xrld.html" title="现任领导">现任领导</a>
+                                    <a href="szdw11.html" title="师资队伍">师资队伍</a>
+                                    <a href="jgsz.html" title="机构设置">机构设置</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="ljgcjs.html" title="专业建设">专业建设</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="ljgcjs.html" title="轮机工程技术">轮机工程技术</a>
+                                    <a href="cbgcjs.html" title="船舶工程技术">船舶工程技术</a>
+                                    <a href="jdythjs.html" title="机电一体化技术">机电一体化技术</a>
+                                    <a href="hygczbjs.html" title="海洋工程装备技术">海洋工程装备技术</a>
+                                    <a href="znkzjs.html" title="智能控制技术">智能控制技术</a>
+                                    <a href="qczzysyjs.html" title="汽车制造与试验技术">汽车制造与试验技术</a>
+                                    <a href="syhgjs.html" title="石油化工技术">石油化工技术</a>
+                                    <a href="gyjqrjs.html" title="工业机器人技术">工业机器人技术</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jycg.html" title="教学科研">教学科研</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="jycg.html" title="教研成果">教研成果</a>
+                                    <a href="cxyhz.html" title="产学研合作">产学研合作</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="sxsb1.html" title="实训设备">实训设备</a>
+                            </li>
+                            <li>
+                                 <a href="zwcy.html" title="党建工作">党建工作</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="zwcy.html" title="支委成员">支委成员</a>
+                                    <a href="djdt.html" title="党建动态">党建动态</a>
+                                    <a href="xxyd.html" title="学习园地">学习园地</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="xgdw.html" title="学生管理">学生管理</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="xgdw.html" title="学工队伍">学工队伍</a>
+                                    <a href="gzzd.html" title="规章制度">规章制度</a>
+                                    <a href="txhd.html" title="团学活动">团学活动</a>
+                                    <a href="zzgz.html" title="资助工作">资助工作</a>
+                                    <a href="zyfw.html" title="志愿服务">志愿服务</a>
+                                    <a href="jkxl.html" title="健康心理">健康心理</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jycy1.html" title="就业创业">就业创业</a>
+                            </li>
+                            <li>
+                                 <a href="tsqd.html" title="信息公开">信息公开</a>
+                                <div class="two-nav" style="width:180px; margin-left:-30px;">
+                                    <a href="tsqd.html" title="投诉渠道">投诉渠道</a>
+                                    <a href="tzgg1.html" title="通知公告">通知公告</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+<!--listbanner-->
+<div class="list_banner">
+                            <img src="http://www.qzoiedu.com/hygc/js/00000.jpg" border="0">
+                
+            
+</div>
+<div class="this_map">
+    <div class="w1200">
+        <div class="this_name"><h1>学院概况</h1><span></span></div>
+
+        <div class="this_dqwz">
+            
+<h2>学院简介</h2>
+            <a href="#" class="ico_home"><img src="static/picture/ico_home.png" alt=""></a>
+                <a href="hygc.html">首页</a>
+                >>
+                <a href="">学院概况</a>
+                >>
+                <a href="">学院简介</a>
+</div>
+    </div>
+</div>
+<!--主要内容开始-->
+<div class="list_main">
+       <div class="list_main_left">
+        <div class="list_sub">
+            <ul>
+ <li><a href="" class="on_here">学院简介</a></li>
+ <li><a href="xrld.html">现任领导</a></li>
+ <li><a href="szdw11.html">师资队伍</a></li>
+ <li><a href="jgsz.html">机构设置</a></li>
+</ul>
+
+        </div>
+    </div>
+    <div class="list_main_right">
+        <div class="c-content">
+
+
+
+<script language="javascript" src="static/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1938603011,'wbnews','u9')</script>
+<link rel="stylesheet" content-type="text/css" href="static/css/format2.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="static/js/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1938603011,1001)</script>
+<div class="nr-info">
+
+    <div id="vsb_content_2_1001_u91"><div id="vsb_content_2"><div><p class="vsbcontent_start">海洋工程学院始于爱国华侨蔡天真先生2009年创办的泰山航海学院轮机系，是学校重点建设和优先发展的学院之一，也是我校最具特色的二级学院之一。通过不断投入建设与发展，顺应国家“海洋强国”战略需要，逐渐形成以海洋船舶机械、电气、控制、设计专业为特色，在国内外具有影响力的船舶修造工程技术类综合性学院。学院开设轮机工程技术、船舶工程技术、机电一体化技术、海洋工程装备技术、汽车制造与试验技术、智能控制技术、石油化工技术、工业机器人技术等8个专业，是培育轮机工程、船舶工程、电气工程、控制工程及其相关工程领域技术技能型高素质人才的重要基地。其中轮机工程技术、机电一体化专业是“福建省高水平专业群”建设专业和泉州市产教融合特色专业群重要支撑专业，轮机工程技术是学校的首批升本重点建设专业之一；船舶工程技术为福建省高职示范专业。此外，机电一体化技术被国家列为二十一世纪社会发展最急需的十大专业之一，融机、电、液、信息技术于一体，在工业上广泛应用，是就业领域最宽专业；智能控制技术是泉州市新兴支柱产业紧缺人才培养计划专业，是紧跟国家发展战略，聚焦智能航运发展方向，产教融合试点办学，实现《中国制造2025》智能航运战略目标的支撑专业；石油化工技术和工业机器人技术两个专业是福建省新兴支柱产业紧缺人才培养计划专业。</p></div><p>学院拥有一支德才兼备、专业实践能力过硬、教学科研能力较强的“双师双能”型师资队伍，学院现有船舶主机、船舶辅机、电气控制、智能装备4个教学创新团队，专兼职教师共有83人，其中“双师型”教师占比82.5%，高级职称占比30%以上，博士及硕士研究生学历占比40%以上。</p><p>海洋工程学院注重学术研究与实践教学并重，致力于船舶机械、电气、控制、海洋污染防治与海洋清洁能源开发技术研究，办学水平和整体实力在国内职业院校处于领先地位。学院拥有1个省级生产性实训基地，1艘全国唯一在校园内可开航的实训船和1个省内一流、行业特色鲜明的海上技能综合实训基地，建有现代化轮机实训中心，总投资达四千多万元，下设金工实训车间、动力设备拆装实训室、动力设备操作实训室、电工与电子实训室、世界船舶展览厅、VLCC全任务轮机模拟器、船舶电站实训室和船舶轮机自动化机舱及AVR实验室，学院还拥有汽车维修技术、石油化工技术等校内实训基地和石狮怡运船厂、九牧集团、玖龙纸业等校外实践基地。</p><p>近年来学院教师在教科研方面成绩斐然，完成《主推进动力装置》《电工电子技术》2门省级在线精品课程建设；担任交通运输部海事局组织编写的《中华人民共和国海船船员适任考试培训教材》审定委员会和编写委员会委员；参与编写航海教育专业核心课程全国统教材和适任考试题库建设，其中《主推进动力装置》《船舶辅机》课程为主编单位，《船舶管理》《轮机英语》《船舶电气与自动化》课程为参编单位；取得“一主线、双主体、三驱动、四融合的轮机工程技术专业综合改革与实践”教学成果奖；申请专利10项、软件著作权1项；完成石狮市哲学社会科学重点课题《文旅深度融合，以“软实力”筑牢古浮湾发展“硬支撑”》，获得福建省教育科学“十四五”规划2022年度常规课题1项，福建省中青年教师教育科研项目1项、福建省教育厅青年科技类项目1项。</p><p>学院彰显“产教深度融合、校企共育良才”、“工学结合、理实合一”的办学特色，为学生提供优质的教育，在涉海类学生中实行准军事化管理，与国内多家知名航运企业实现深度合作，构建了校企专业共建、课程共担、教材共编、师资共享、基地共用的校企命运共同体，其中轮机工程技术专业与厦门泛海、中泉国际，机电一体化技术、智能控制技术与九牧集团开展“订单式”人才培养模式试点，着力打造“省内一流、行业认可、特色鲜明”的海洋特色高水平品牌学院，已经为社会培养了数以万计的船舶修造工程技术类专门人才，受到社会的广泛好评和国内外企业的关注。</p><p>学院学子积极参加国赛省赛，在全国职业院校焊接大赛中获得个人三等奖2个，集体优秀组织奖1个；在全国职业院校“船舶主机与轴系安装”大赛获得优秀奖1项；在福建省汽车专业职业技能大赛获得三等奖多次。2015届轮机工程技术专业毕业生洪振业校友获福布斯中国30位30岁以下精英榜，福建省互联网经济优秀人才、厦门市“双百计划”领军型创业人才、泉州市优秀毕业生等荣誉称号。</p><p>学院坚持将信息化、数字化、智能化的价值素养纳入学生综合素质培养全过程，注重培养具有数字思维和信息素养的创新型人才。学院以学生学习和成长为中心，借助学校信息化建设成果，打造集成长规划、学业监测、社交活动、技能提升为一体的多维学生成长体系；学院积极探索以“互联网+”智慧教学为核心的人才培养模式，支持学生个性化发展和职业能力提升。</p><p>学院大力抢抓数字教育发展战略机遇，以高水平教育信息化引领教育现代化，将学生成长学习表现、职业技能等情况形成实时动态评价机制，真正做到“以评促改、以改培优”，实现过程性评价与结果性评价有机结合，贯彻执行“以管促教、以教促升、以升促优”学生管理育人理念；学院深入推进智慧平安校园建设，构建立体防护体系，形成学校、家庭、社会“三位一体教育理念，打造学院安全社区，维护校园安全，营造和谐环境。</p><p class="vsbcontent_end">学院与中国教育在线平台合作创建航海类思政线上共建共享平台；正在建设“机电一体化技术”省域高水平专业群和“船舶修造工程技术”、“机电一体化技术”泉州市产教融特色专业群；启动专业群建设“提质培优”三年行动计划、师资队伍“十个一能力提升”计划，致力于新时代职业教育高质量发展，努力建设成为具有全球视野、中国特色的船舶修造工程技术类人才教育改革与实践示范区，自办学以来累计向国内外社会输送高水平技术技能型人才3.6万人，支持国家、区域及行业的“海洋发展”战略需求。</p></div></div>
+    <span id="vsb_content_2_1001_u9" name="vsb_content_2_1001_u9"></span>
+    
+
+</div>           
+     
+</div>
+    </div>
+</div>
+<!--主要内容结束-->
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83508)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83509)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83507)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83502)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83503)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83505)">中国禁毒展览馆</a>
+<a href="index.html#/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83506)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938603011, 83504)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+            <tr>
+                <td align="center" style="color:#fff;">
+                        <img src="static/picture/wenmomingpian.png" border="0" height="110">
+                     
+                </td>
+        </tr>
+</table></div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

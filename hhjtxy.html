@@ -1,0 +1,767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="apple-touch-icon" href="http://www.qzoiedu.com/hhjtxy/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/hhjtxy/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/hhjtxy/images/favicon.ico" type="image/x-icon">
+<title>航海交通学院-泉州海洋职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="航海交通学院-泉州海洋职业学院">
+<meta name="keywords" content="航海交通学院,泉州海洋职业学院">
+
+<link href="static/css/style2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="static/css/banner1.css">
+<link rel="stylesheet" href="static/css/swiper.min1.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/xx-sj-tj.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1936451120)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href=""><img src="static/picture/logohhjt.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83392)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1936451120";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li class="dhdqwz">
+                                 <a href="" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="xygk1.html" title="学院概况">学院概况</a>
+                            </li>
+                            <li>
+                                 <a href="hhjszy.html" title="学院专业">学院专业</a>
+                                <div class="two-nav">
+                                    <a href="hhjszy.html" title="航海技术专业">航海技术专业</a>
+                                    <a href="kzcwzy.html" title="空中乘务专业">空中乘务专业</a>
+                                    <a href="gstlkycwzy.html" title="高速铁路客运乘务专业">高速铁路客运乘务专业</a>
+                                    <a href="gjylcwglzy.html" title="国际邮轮乘务管理专业">国际邮轮乘务管理专业</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="szdw1.html" title="师资队伍">师资队伍</a>
+                            </li>
+                            <li>
+                                 <a href="sxsb.html" title="实训设备">实训设备</a>
+                            </li>
+                            <li>
+                                 <a href="jycy.html" title="就业创业">就业创业</a>
+                            </li>
+                            <li>
+                                 <a href="zyzs.html" title="职业证书">职业证书</a>
+                            </li>
+                            <li>
+                                 <a href="ssfc.html" title="师生风采">师生风采</a>
+                            </li>
+                            <li>
+                                 <a href="zlzx.html" title="资料中心">资料中心</a>
+                            </li>
+                            <li>
+                                 <a href="lxwm2.html" title="联系我们">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+
+<!--banner-->
+<div class="index-banner">
+            <div class="main-visual-wrapper ar_web">
+                <section class="swiper-box1 main-visual-slider">
+                        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/11.jpg) no-repeat;">
+                                        <img src="static/picture/1.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/21.jpg) no-repeat;">
+                                        <img src="static/picture/21.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/3.jpg) no-repeat;">
+                                        <img src="static/picture/3.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ban-dot">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                       
+                        
+                        
+                    </div>
+                </section>
+            </div>
+
+</div>
+<!--新闻中心开始-->
+<div class="news_box">
+<div class="w1200">
+ <div class="i-title"><h2>学院动态<span style="display:none;">News</span></h2><a href="xydt.html">More+</a></div>
+<!--左图开始-->
+<script language="javascript" src="static/js/centerCutImg.js"></script><script language="javascript" src="static/js/ajax.js"></script><div class="news_box_left">
+            <div class="tj_img"><a href="6149.html" target="_blank" title="航海交通学院组织开展实训室安全检查工作"><img src="static/picture/D4B89CA18D6EFF55306F5FFFDC1_985263AB_13249.png" alt="" class="imghover"></a></div>
+            <div class="tj_title"><a href="6149.html" target="_blank" title="航海交通学院组织开展实训室安全检查工作">航海交通学院组织开展实训室安全检查工作</a> </div>
+            <div class="tj_time" style="display:none;">2023年08月31日 【来源：】</div>
+            <div class="tj_zy" style="display:none;"><a href="6149.html">8月31日上午九点，为了保障开学工作稳定，校园安全，航海交通学院院长携院长助理、实训室管理员等深入航海教学实验楼、水上训练中心、育航轮和教学楼开展了实训室安全检查工作。 本次检查过程中，我院重点关注火灾防控、电器安全、水源管理以及仪器设备的维护保养等方面。对于检查中发现的问题，学院将及时向相关管理部门反馈，并督促其做出相应的整改，做到“安全始于细节，责任落实为先”。 据悉，遵循高等院校安全教育的相关指导文件，...</a></div>
+        </div>
+<script>_showDynClickBatch(['dynclicks_u5_6149'],[6149],"wbnews", 1936451120)</script>
+
+<div class="news_box_left2"> <div class="main_img">
+                    <div class="swiper-container4">
+                        <div class="swiper-wrapper">
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="6149.html" target="_blank"><img src="static/picture/D4B89CA18D6EFF55306F5FFFDC1_985263AB_13249.png"></a>
+                                    <span><a href="6149.html" target="_blank" title="航海交通学院组织开展实训室安全检查工作">航海交通学院组织开展实训室安全检查工作</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="6099.html" target="_blank"><img src="static/picture/10AA3BB13B3D7608A7BDC17D865_C41738BA_15480.png"></a>
+                                    <span><a href="6099.html" target="_blank" title="航海交通学院举行雷锋月表彰大会暨班委聘任大会">航海交通学院举行雷锋月表彰大会暨班委聘任大会</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="3569.html" target="_blank"><img src="static/picture/AEC2C5B17637816E1F5F7CF1EC1_B49A9874_16DA2.jpg"></a>
+                                    <span><a href="3569.html" target="_blank" title="航海交通学院开展“缅怀革命先烈，赓续红色基因”清明节祭扫英烈活动">航海交通学院开展“缅怀革命先烈，赓续红色基因”清明节祭扫英烈活动</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="3559.html" target="_blank"><img src="static/picture/9A0D3F5143C3C050A2CE83E9125_1A2C72BF_1D9F9.jpg"></a>
+                                    <span><a href="3559.html" target="_blank" title="凝聚共识，砥砺前行｜航海交通学院团委学生会第一次全体会议顺利召开">凝聚共识，砥砺前行｜航海交通学院团委学生会第一次全体会议顺利召开</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+   <div class="swiper-slide">
+                                <div class="image">
+                                    <a href="3549.html" target="_blank"><img src="static/picture/24591725C675C7F074E0BC22381_2233FE58_487E5.png"></a>
+                                    <span><a href="3549.html" target="_blank" title="学院新闻|航海交通学院举办辅导员主题班会讲课大赛">学院新闻|航海交通学院举办辅导员主题班会讲课大赛</a></span>
+                                    <div class="swiperimg3"></div>
+                                </div>
+                            </div>
+</div>
+                        <div class="container">
+                            <div class="col-xs-12"><div class="swiper-pagination"></div></div>
+                        </div>
+                    </div>
+                </div><script>_showDynClickBatch(['dynclicks_u6_6149','dynclicks_u6_6099','dynclicks_u6_3569','dynclicks_u6_3559','dynclicks_u6_3549'],[6149,6099,3569,3559,3549],"wbnews", 1936451120)</script>
+</div>
+<!--左图结束-->
+  <div class="news_box_right">
+<!--右边首条开始-->
+<div class="top_title"><a href="6369.html" target="_blank" title="我院在首届中国航海创新创业大赛中荣获二等奖">我院在首届中国航海创新创业大赛中荣获二等奖</a></div>
+            <div class="top_time" style="display:none;">2024年01月01日 【来源：】</div>
+            <div class="top_zy"><a href="6369.html">     12月29日，“郑和杯”中国航海创新创业大赛决赛的20支参赛团队经过近5个小时路演、答辩环节的激烈角逐，最终航海交通学院王洁铃老师、三创学院郑天明老师指导的《“解”海--国内便携…</a></div>
+<script>_showDynClickBatch(['dynclicks_u7_6369'],[6369],"wbnews", 1936451120)</script>
+
+
+<!--右边首条结束-->
+<!--右边列表开始-->
+<ul class="n_list" style="margin: 20px 0 0px 0">
+<li><span class="date">2023/12/28</span><a href="6359.html" target="_blank" title="我院1项课题获2023年福建省中青年教师教育科研项目（科技类）立项">我院1项课题获2023年福建省中青年教师教育科研项目（科技类）立项</a> </li>
+<li><span class="date">2023/12/28</span><a href="6349.html" target="_blank" title="我院两门课程通过省级职业教育精品在线课程验收">我院两门课程通过省级职业教育精品在线课程验收</a> </li>
+<li><span class="date">2023/12/26</span><a href="6339.html" target="_blank" title="喜报！我院教师在福建省军事课教师微课教学竞赛中获奖">喜报！我院教师在福建省军事课教师微课教学竞赛中获奖</a> </li>
+<li><span class="date">2023/12/21</span><a href="6329.html" target="_blank" title="喜报！我院课题成功入选2023年度福建省中青年教师教育科研项目（科技类）拟立项名单">喜报！我院课题成功入选2023年度福建省中青年教师教育科研项目（科技类…</a> </li>
+<li><span class="date">2023/12/16</span><a href="6309.html" target="_blank" title="航海交通学院党支部中共预备党员拟转正名单的公示">航海交通学院党支部中共预备党员拟转正名单的公示</a> </li>
+<li><span class="date">2023/12/05</span><a href="6269.html" target="_blank" title="喜报！我院课题成功入选泉州市产教融合研究院2023年度第二批研究课题名单">喜报！我院课题成功入选泉州市产教融合研究院2023年度第二批研究课题名…</a> </li>
+</ul><script>_showDynClickBatch(['dynclicks_u8_6369','dynclicks_u8_6359','dynclicks_u8_6349','dynclicks_u8_6339','dynclicks_u8_6329','dynclicks_u8_6309','dynclicks_u8_6269'],[6369,6359,6349,6339,6329,6309,6269],"wbnews", 1936451120)</script>
+
+<!--右边列表结束-->
+</div>
+</div>
+</div>
+<!--新闻中心结束-->
+<div style="clear: both;"></div>
+<!--tzgg-->
+<div class="i-tzgg">
+    <div class="w1200"><div class="i-title" style="border-bottom: #3e6db5 1px solid"><h2>学院专业<span style="display:none">Notes</span></h2><a href="hhjszy.html">More+</a></div>
+ <div class="tz_box_nr">
+ <div class="tz_list">
+                <div class="tz_date"><span>14</span>2023-05</div>
+                <div class="tz_txt">
+                    <h1><a href="2969.html" target="_blank" title="空中乘务专业介绍">空中乘务专业介绍</a></h1>
+                    <p><a href="2969.html">简介：简介：空中乘务专业设立于2013年，2016年引进泉州市唯一的一架空乘模拟舱，同年有了第一届毕业生，经不断改革与发...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>16</span>2023-04</div>
+                <div class="tz_txt">
+                    <h1><a href="2989.html" target="_blank" title="国际邮轮乘务管理专业介绍">国际邮轮乘务管理专业介绍</a></h1>
+                    <p><a href="2989.html">简介：专业简介：不掏一分钱，周游世界，还能月赚约1000美金。这样的工作，听起来是不是超赞？国际邮轮乘务就是这样一个...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>16</span>2023-04</div>
+                <div class="tz_txt">
+                    <h1><a href="2959.html" target="_blank" title="航海技术专业介绍">航海技术专业介绍</a></h1>
+                    <p><a href="2959.html">简介：专业特色：航海交通学院以校训“感恩怀天下，立志铸英才”为根本任务，以航运经济市场需求为导向，践行海洋强国战...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+ <div class="tz_list">
+                <div class="tz_date"><span>04</span>2023-04</div>
+                <div class="tz_txt">
+                    <h1><a href="2979.html" target="_blank" title="高速铁路客运服务专业介绍">高速铁路客运服务专业介绍</a></h1>
+                    <p><a href="2979.html">简介：专业特色：本专业坚持“校企合作、课证训赛四维融合”的人才培养模式。全面倡导“校企合作共育人，以赛助教促成才...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+        </div><script>_showDynClickBatch(['dynclicks_u9_2969','dynclicks_u9_2989','dynclicks_u9_2959','dynclicks_u9_2979'],[2969,2989,2959,2979],"wbnews", 1936451120)</script>
+</div>
+</div>
+<!--xsgz-->
+<div class="i-xsgz">
+    <div class="w1200">
+        <div class="i-xsgz-left">            <div class="i-title"><h2>职业证书<span style="display:none;">Student work</span></h2><a href="zyzs.html">More+</a></div>
+            <ul class="n_list" style="margin: 20px 0 0px 0">
+   <li><span class="date">2023/03/29</span><a href="3239.html" target="_blank" title="航海技术专业技能证书考试简介">航海技术专业技能证书考试简介</a></li>
+   <li><span class="date">2023/03/29</span><a href="3229.html" target="_blank" title="保安意识、负有指定保安职责合格证培训">保安意识、负有指定保安职责合格证培训</a></li>
+   <li><span class="date">2023/03/19</span><a href="3219.html" target="_blank" title="船舶值班水手">船舶值班水手</a></li>
+   <li><span class="date">2023/03/18</span><a href="3209.html" target="_blank" title="国际货运代理行业从业人员岗位专业证书">国际货运代理行业从业人员岗位专业证书</a></li>
+   <li><span class="date">2023/03/10</span><a href="3199.html" target="_blank" title="基本安全合格证培训">基本安全合格证培训</a></li>
+   <li><span class="date">2023/03/09</span><a href="3189.html" target="_blank" title="外经贸单证专业证书">外经贸单证专业证书</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u10_3239','dynclicks_u10_3229','dynclicks_u10_3219','dynclicks_u10_3209','dynclicks_u10_3199','dynclicks_u10_3189'],[3239,3229,3219,3209,3199,3189],"wbnews", 1936451120)</script>
+</div>
+        <div class="i-xsgz-right"><div class="i-title"><h2>实训设备<span style="display:none;">Mass work</span></h2><a href="sxsb.html">More+</a></div>
+
+ <div class="tpwz_list">
+                <a href="3029.html" class="imgqy"><img src="static/picture/19B9283CBAEAE248950F8AA2356_9EBADAB9_361F2.jpg" class="imghover"></a>
+                <div class="tpwz_txt">
+                    <h1>  <a href="3029.html" target="_blank" title="ECDIS实验室">ECDIS实验室</a></h1>
+                    <p><a href="3029.html">简介：电子海图实验室（ECDIS电子海图显示与信息系统）于2009年建立...<span style=" color: #4c77b8">[查看]</span></a></p>
+                </div>
+            </div>
+            <ul class="n_list">  
+  <li> <span class="date">2023/03/30</span> <a href="3039.html" target="_blank" title="360度视景全任务船舶操纵模拟器">360度视景全任务船舶操纵模拟器</a> </li>
+  
+  <li> <span class="date">2023/03/29</span> <a href="3019.html" target="_blank" title="计算机综合实训室">计算机综合实训室</a> </li>
+  
+  <li> <span class="date">2023/03/21</span> <a href="3009.html" target="_blank" title="实训船——“育航号”">实训船——“育航号”</a> </li>
+      </ul>
+<script>_showDynClickBatch(['dynclicks_u11_3029','dynclicks_u11_3039','dynclicks_u11_3019','dynclicks_u11_3009'],[3029,3039,3019,3009],"wbnews", 1936451120)</script>
+</div>
+    </div>
+</div>
+<!--iwyfc-->
+<div class="i-wyfc">
+    <div class="w1200">    <div class="i-title"><h2>师生风采<span style="display:none;">Elegant demeanour</span></h2><a href="ssfc.html">More+</a></div>
+        <div class="i-wyfc-box">
+            <div class="xysh_nr m-imgtxtq1">
+               
+         <div class="pic">
+                        <div class="img">
+                        <a href="6049.html" target="_blank">
+                        
+     <img src="static/picture/0477B127651DA9AF3503086E2C7_7F8FBD5C_11BC4.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>喜讯！我院教师在指导2023年...</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="6019.html" target="_blank">
+                        
+     <img src="static/picture/75AC116278B15C86B9E8E5290BD_1967CBE7_453CA.png" class="imghover ">
+     </a>
+     </div>
+                        <span>团学活动 | 航海物流学院“第...</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="6009.html" target="_blank">
+                        
+     <img src="static/picture/A396160DE8536F6AB09B3F75158_AAA52438_45DB.png" class="imghover ">
+     </a>
+     </div>
+                        <span>团学活动|青春“篮”不住，热...</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="5999.html" target="_blank">
+                        
+     <img src="static/picture/4F21166678AC0DDF7FD2D27EF6A_64CD914E_1A54B.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>书香溢满园，细嗅蔷薇香 | 读...</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="6059.html" target="_blank">
+                        
+     <img src="static/picture/6624E219FB44E97706CF2E9A0B4_B5B52542_2288.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>怦然“新”动  终于等到你</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="5989.html" target="_blank">
+                        
+     <img src="static/picture/3ACAC8411AA2A8DD12C1BC1A1DC_EA221E01_C206A.png" class="imghover ">
+     </a>
+     </div>
+                        <span>航海体能训练基地</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="5979.html" target="_blank">
+                        
+     <img src="static/picture/DFC51C59EE254CC142F19CF8315_CE720916_C8C7A.png" class="imghover ">
+     </a>
+     </div>
+                        <span>育航号的实训</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="5969.html" target="_blank">
+                        
+     <img src="static/picture/4564408C08E79EB8FA32E0819B7_A75AFCE2_E79F.jpg" class="imghover ">
+     </a>
+     </div>
+                        <span>航海物流学院学生日常风采篇</span>
+                    </div>
+        
+        
+                 
+         <div class="pic">
+                        <div class="img">
+                        <a href="5959.html" target="_blank">
+                        
+     <img src="static/picture/3214D8A38F0FAB2AA591204CF6D_DD7F6B08_BCEAE.png" class="imghover ">
+     </a>
+     </div>
+                        <span>学院学生风采</span>
+                    </div>
+        
+        
+                 
+                
+            </div>
+           
+            
+        </div>
+<script>_showDynClickBatch(['dynclicks_u12_6049','dynclicks_u12_6019','dynclicks_u12_6009','dynclicks_u12_5999','dynclicks_u12_6059','dynclicks_u12_5989','dynclicks_u12_5979','dynclicks_u12_5969','dynclicks_u12_5959'],[6049,6019,6009,5999,6059,5989,5979,5969,5959],"wbnews", 1936451120)</script>
+</div>
+</div>
+<!--bksjy-->
+<div class="i-xsgz" style="margin: 0 auto 40px auto">
+    <div class="w1200">
+        <div class="i-xsgz-left">            <div class="i-title"><h2>就业创业<span style="display:none;">Student work</span></h2><a href="jycy.html">More+</a></div>
+            <ul class="n_list" style="margin: 20px 0 0px 0">
+   <li><span class="date">2023/02/25</span><a href="3169.html" target="_blank" title="航海交通学院开展就业创业指导课暨办公软件技能培训会">航海交通学院开展就业创业指导课暨办公软件技能培训会</a></li>           
+   <li><span class="date">2022/11/21</span><a href="3159.html" target="_blank" title="航海交通学院开展高校就业创业指导活动讲座">航海交通学院开展高校就业创业指导活动讲座</a></li>           
+   <li><span class="date">2022/11/16</span><a href="3149.html" target="_blank" title="学院新闻 | 航海交通学院开展就业创业指导活动">学院新闻 | 航海交通学院开展就业创业指导活动</a></li>           
+   <li><span class="date">2020/09/29</span><a href="3139.html" target="_blank" title="航海在线：2021届毕业生双选会">航海在线：2021届毕业生双选会</a></li>           
+   <li><span class="date">2018/12/08</span><a href="3129.html" target="_blank" title="我院成功举行2019届毕业生校园双选会">我院成功举行2019届毕业生校园双选会</a></li>           
+   <li><span class="date">2018/10/09</span><a href="3119.html" target="_blank" title="福建海运集团有限责任公司">福建海运集团有限责任公司</a></li>           
+</ul><script>_showDynClickBatch(['dynclicks_u13_3169','dynclicks_u13_3159','dynclicks_u13_3149','dynclicks_u13_3139','dynclicks_u13_3129','dynclicks_u13_3119'],[3169,3159,3149,3139,3129,3119],"wbnews", 1936451120)</script>
+</div>
+        <div class="i-xsgz-right">            <div class="i-title"><h2>资料中心<span style="display:none;">Graduate education</span></h2><a href="zlzx.html">More+</a></div>
+            <ul class="n_list" style="margin: 20px 0 0px 0">
+   <li><span class="date">2023/05/10</span><a href="3339.html" target="_blank" title="泉州海洋职业学院 航海技术专业人才培养方案">泉州海洋职业学院 航海技术专业人才培养方案</a></li>
+   <li><span class="date">2021/04/20</span><a href="3329.html" target="_blank" title="海事核心价值体系">海事核心价值体系</a></li>
+   <li><span class="date">2021/04/20</span><a href="3319.html" target="_blank" title="中华人民共和国海船船员适任考试和发证规则">中华人民共和国海船船员适任考试和发证规则</a></li>
+   <li><span class="date">2020/12/03</span><a href="3309.html" target="_blank" title="航海英语 — 航路指南">航海英语 — 航路指南</a></li>
+   <li><span class="date">2018/09/06</span><a href="3299.html" target="_blank" title="《中华人民共和国海船船员适任考试 和发证规则》实施办法">《中华人民共和国海船船员适任考试 和发证规则》实施办法</a></li>
+   <li><span class="date">2018/06/14</span><a href="3289.html" target="_blank" title="中华人民共和国海事局关于进一步明确 STCW公约履约过渡期考试发证相关事项的通知">中华人民共和国海事局关于进一步明确 STCW公约履约过渡期...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u14_3339','dynclicks_u14_3329','dynclicks_u14_3319','dynclicks_u14_3309','dynclicks_u14_3299','dynclicks_u14_3289'],[3339,3329,3319,3309,3299,3289],"wbnews", 1936451120)</script>
+</div>
+    </div>
+</div>
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83384)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83385)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83391)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83386)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83387)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83389)">中国禁毒展览馆</a>
+<a href="index.html#/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83390)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1936451120, 83388)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+            <tr>
+                <td align="center" style="color:#fff;">
+                        <img src="static/picture/wx.jpg" border="0" height="110">
+                    微信 
+                </td>
+                <td align="center" style="color:#fff;">
+                        <img src="static/picture/jf.jpg" border="0" height="110">
+                    缴费 
+                </td>
+        </tr>
+</table></div>
+    </div>
+</div>
+</div>
+
+
+
+<script type="text/javascript" src="static/js/jquery1.js"></script>
+<script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+ 
+                
+<script type="text/javascript" src="static/js/jquerybdtxk.js"></script>
+<script src="static/js/pub2.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<script src="static/js/slick.js"></script>
+<script>// 校园专题
+                $('.m-imgtxtq1').slick({
+                    rows: 1,
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            dots: true,
+                            arrows: false
+                        }
+                    },
+                        {
+                            breakpoint: 960,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 350,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });</script>
+                
+                                
+ <script src="static/js/swiper.min1.js"></script>
+
+<script>
+    // banner
+    var swiper = new Swiper(".main-visual-slider .swiper-container", {
+        loop: true,
+        speed: 1200,
+        draggable: false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        // allowTouchMove: true,
+        // watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            slideChangeTransitionStart : function(swiper){
+                var swiper = this;
+                // 判断swiper-slide-active是否有视频
+                if($(".main-visual-slider .swiper-slide-active video").length>0){
+                    console.log(1)
+                    // 停止自动切换
+                    swiper.autoplay.stop();
+                    // 动态增加id
+                    setTimeout(function(){
+                        swiper.autoplay.stop();
+                        $(".main-visual-slider .swiper-slide-active video").attr("id","video_01");
+
+                        var _video=document.getElementById("video_01");
+
+                        // 播放视频
+                        _video.play();
+                        // 切换后重新播放视频
+                        _video.currentTime = 0;
+                        // 静音
+                        _video.volume = 0;
+                        // 监听视频播放结束
+                        _video.addEventListener('ended', function () {
+                            swiper.slideNext();
+                            //重新开始轮播banner
+                            swiper.autoplay.start();
+                        });
+                    }, 10);
+                }
+            },
+            slideChangeTransitionEnd: function(swiper){
+                //动态移除id
+                setTimeout(function(){
+                    $(".main-visual-slider .swiper-slide-active video").attr("id","");
+                }, 10);
+            },
+        }
+    });
+</script>
+<!--新闻轮播图开始-->
+<script src="static/js/swiper.min1.js"></script>
+<script>
+    $(function () {
+        // 轮播初始化
+        new Swiper(".index-banner", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            on: {
+                init: function (swiper) {
+                    var total = "0" + ($(".index-banner .swiper-slide").length - 2);
+                    total = total.substring(total.length - 2);
+                    $(".total").text(total);
+                },
+                slideChangeTransitionEnd: function () {
+                    var current = "0" + (this.realIndex + 1);
+                    current = current.substring(current.length - 2);
+                    $(".current").text(current);
+                },
+            },
+        });
+        new Swiper(".swiper-container4", {
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 5000,
+            }
+
+
+        });
+        new Swiper(".person-sdnu-swiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        $(".ham").on("click", function () {
+            $(".english").toggle();
+
+            if ($(".header-mp-nav").hasClass("active")) {
+                $(".header-mp-nav").removeClass("active");
+                $(this).attr("src", "images/ham.svg");
+            } else {
+                $(".header-mp-nav").addClass("active");
+                $(this).attr("src", "images/x.png");
+            }
+        });
+
+        $(".header-mp-nav").on("click", function (e) {
+            if (e.target.className == "header-mp-nav active") {
+                $(".header-mp-nav").removeClass("active");
+                $(".ham").attr("src", "images/ham.svg");
+            }
+        });
+    });
+</script>
+<!--新闻轮播图结束--> 
+</body>  
+</html>

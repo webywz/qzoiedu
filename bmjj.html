@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>部门简介-对外合作部-泉州海洋职业学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="部门简介">
+<meta name="keywords" content="对外合作部,泉州海洋职业学院,部门简介">
+
+
+
+    <link type="text/css" rel="stylesheet" href="static/css/style.css">
+    <link type="text/css" rel="stylesheet" href="static/css/styles.css">
+
+   
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/about.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1261,'/about.jsp',-1,1938584117)</script>
+</head>
+<body style=" background:#f3f3f3;">
+
+<div class="wrap" style="background:#3e6db5;border-bottom:solid 1px #2f61ac;">
+  <div class="w">
+    <div class="toubu"> 
+      
+      <!--logo开始-->
+      <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="dwhz.html" title="对外合作部"><img src="static/picture/logo.png"></a></div>
+      <!--logo结束-->
+      
+      <div class="search fr"> 
+        
+        <!--设为首页/加入收藏开始-->
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938584117, 83528)">学校主页</a>
+</div>
+        <div class="clearfix"></div>
+        <!--设为首页/加入收藏结束-->  
+        
+        <!--搜索开始-->
+        <div class="search_box">
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938584117";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        <!--搜索结束--> 
+        
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!--顶部结束--> 
+
+<!--导航开始-->
+
+<div class="wrap bg_color">
+  <div class="w Navigation"><div id="navbar" class="menubox">
+                    <div class="nav">
+                        <ul>
+                                                        <li>
+                                 <a href="dwhz.html" title="首页">首页</a>
+                            </li>
+                            <li class="dhdqwz">
+                                 <a href="" title="部门简介">部门简介</a>
+                            </li>
+                            <li>
+                                 <a href="jlhz.html" title="交流合作">交流合作</a>
+                            </li>
+                            <li>
+                                 <a href="jczx.html" title="就业创业">就业创业</a>
+                                <div class="two-nav">
+                                    <a href="jczx.html" title="新闻动态">新闻动态</a>
+                                    <a href="jyxx.html" title="就业信息">就业信息</a>
+                                    <a href="jyzd.html" title="就业指南">就业指南</a>
+                                    <a href="cyzd.html" title="创业指南">创业指南</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jdgk.html" title="乡村振兴">乡村振兴</a>
+                                <div class="two-nav">
+                                    <a href="jdgk.html" title="基地概况">基地概况</a>
+                                    <a href="jdxw.html" title="扶贫动态">扶贫动态</a>
+                                    <a href="zcwj.html" title="政策文件">政策文件</a>
+                                    <a href="jdfg.html" title="基地风光">基地风光</a>
+                                    <a href="lxwm1.html" title="联系我们">联系我们</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="hzdw.html" title="合作单位">合作单位</a>
+                            </li>
+                            <li>
+                                 <a href="lxfs.html" title="联系方式">联系方式</a>
+                            </li>
+                        </ul>
+                    </div>
+</div>
+            
+</div>
+</div>
+
+<!--导航结束--> 
+<div class="clearfix"></div>
+
+<div class="w">
+    <div class="Route"><div>
+    当前位置: 
+                        <a href="dwhz.html">首页</a>
+                >>
+                <a href="">部门简介</a>
+</div></div>
+    
+    <div class="clearfix"></div>
+
+   
+    
+    
+    <div class="container_right2 fr mb20">
+        
+        <div class="container_right_title">
+部门简介</div>
+        
+        <div class="clearfix"></div>
+
+
+
+<script language="javascript" src="static/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1938584117,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="static/js/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1938584117,1001)</script>
+<div class="mt10 gray2 ziti">
+
+   
+    <div id="vsb_content_1001_u61"><div id="vsb_content"><p style="text-align:center;margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 2em; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; background: white;"><strong>对外合作部</strong></p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 21pt; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;">对外合作部是泉州海洋职业学院下属行政管理部门，主要负责学校对外交流合作、创新创业、就业服务工作。在董事会和校长的领导下，围绕服务学校中心工作和发展大局，主动掌握高等职业教育改革的新形势，促使学校对外合作的整合、效能、创新；依据学校发展规划系统规划、深化对外合作，确保有效达成发展规划目标；依据各单位前瞻规划的工作，横向整合纳入对外合作系统，有机整合单位化工作，提升各单位业务效能。负责推进学校与产业资源要素集聚融合，落实国家、省关于促进产教融合的各项政策措施，发挥学校在职教改革中的社会服务职能，建设和维持与政府、行业、企业间的长期合作关系，构建政校行企命运共同体，实现对外开展服务社会、学院共建、专业共建、人才培养、课程共担、教材共编、师资共享、基地共用等目标；推动学校对外承担更多产教融合、乡村振兴与培训任务，积极开展市场导向、供需匹配、服务精准、运作规范的对外合作项目；负责学校就业工作，以及由就业工作产生的各级部门对接、校企合作对接、校内各部门对接等工作；负责建立健全对外合作各项工作制度，建置对外合作标准作业流程与管考机制，增强对外合作的预警、稽催、管考、追踪等效能；负责对外合作项目的申报和管理；负责开拓对外合作交流渠道、依托信息化手段构建开放高效的对外合作平台，建立与保持学校与合作单位的交流与合作关系，牵头或协助做好合作项目的协议签订、沟通协调工作，并对合作项目的实施与运转进行跟踪管理。</p><p style="text-align:center;margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 2em; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; background: white;"><strong>创意创新创业学院（三创学院）</strong></p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 21pt; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;">创意创新创业学院(简称“三创学院”)设立于2022年，与对外合作部合署。作为学校创新型人才培养的综合改革试验区，坚持“产教融合、服务产业、引领创业、带动就业”的职教精神，以培养具有创意思维、创新意识、创业能力的高素质技术技能型人才为目标，深入推进创新创业创造教育与专业教育相结合，将“思创、专创、科创、技创、产创”五大创新要素融入到人才培养全过程。负责推动全校创新创业教育的发展，规划并落实创新创业教育新模式与理念，包括创新创业理论教育、双创赛事、实践教育及双创协会等开展的相关业务，构建创新创业网络信息平台，实现专利资源的集合、转化和推广。积极组织参加各级政府部门和行业机构的赛事活动，扩大学校影响力；负责创新创业课程的教学工作、创新创业主题赛事的组织工作和创业园区的管理工作；通过全面实施创新创业教育，实现从应试教育向素质教育的转变，从以教师为中心的教育向以学生为本的教育转变，从以知识为中心的教育向以能力为本的教育转变，最终实现职业院校培养模式的根本转变。</p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 21pt; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;">学院根据职责设有三创教研中心、三创训练中心、三创孵化中心以及综合办公室等，有效保障学院日常工作的开展与推动。学院遵循“集聚资源、综合改革”的总体思路，致力于开展大学生创新创业普适教育、创客培育、项目孵化、创业沙龙、创新创业赛事举办、创业资金对接，以及其他与创意创新创业相关的教育、实践、研究和服务工作。</p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 2em; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;"><strong>三创教研中心</strong></p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 21pt; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;">中心设有就业创业教研室，承担全校《生涯规划》《创新创业教育》《就业指导》等课程教学任务，现有专兼职教师22人，校内外创新创业导师40余人，学院教学团队由具有专业知识、实践经验和创新精神教师构成，并积极开展创新创业教学能力培训，不断提升师资队伍的教学能力。先后立项多项省市级课题、申报多项软件著作、积极发表就业创业相关论文。首次推动教学改革，实施“理论+实践”课程教学模式，颁发实践学时认定细则，采用“轮换制”“企业进课堂”等多形式多元化授课模式。</p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 2em; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;"><strong>三创训练中心</strong></p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 21pt; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;">中心主要负责学院就业创业相关活动，指导“创新创业协会”工作开展；负责“大讲堂”“主题沙龙活动”等讲座的组织与实施工作；负责就业创业校级比赛的组织、选拔、推荐、培训、管理；负责组织和开展其他相关培训业务，推进创新成果的孵化与转化等。2022年度组织校内讲座、训练营、项目竞选、沙龙活动40余场，累计涉及在校学生5000人次。成立三创赛事指导小组，组织校内三创赛、互联网+、学创杯等创新创业大赛3场。组织师生参加校外省/市双创大赛9场，如“互联网+”“中国创翼”“学创杯”“三创赛”“创响福建”等热门赛事，其中获得市级奖项3项、省级奖项10项。</p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 2em; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;"><strong>三创孵化中心</strong></p><p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: rgb(102, 102, 102); line-height: 32px; text-indent: 21pt; font-family: &quot;Microsoft Yahei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Tahoma, sans-serif; white-space: normal; text-align: justify; background: white;">泉海三创基地场所总面积3162平方米，其中创业办公面积1973平方米、公共服务场地面积496平方米。为创业者提供107个工位，同时可容纳50余个创业项目。先后获评“全国扶贫就业创业培训基地”“省级退役军人就业创业园地”“省级众创空间”“泉州市公益性创业学院”等荣誉称号。三创基地设有基地展厅、商业服务区、一专一项示范区、校企创业区、创业苗圃区、创业广场等功能区域。成立三创基地项目评审中心，2022年度累计新入驻创业项目21项，涉及实践学生100余人。基地通过“校（师）-企-生”共创模式，基于有效整合资源、集成落实政策、鼓励全民创新创业、激发市场活力、推动高等学校作为创新创业的力量建设发展，为创业者提供资源共享空间、社交空间、网络空间和工作空间，打造一个开放式的创业生态系统；为大学生创业者和社会初创者提供成长和服务的平台；设置就业创业服务窗口，为入驻团队、企业提供全方位产业服务，如媒体资讯、法律财务、工商注册、政策申请、团队融合、商业模式构建、投融资对接、创业培训及合作企业资源等。</p><p><br></p></div></div>
+    <span id="vsb_content_1001_u6" name="vsb_content_1001_u6"></span><br><br>
+    
+
+ </div>
+    </div>
+    
+</div>
+
+
+
+<div class="clearfix"></div>
+<div class="wrap" style="background: #3e6db5;">
+ <div class="w footer">
+    <div class="ac"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+  </div>
+</div>
+
+ <!--jquery-->
+    <script type="text/javascript" src="static/js/bdtxk.min.js"></script>
+    
+    <script src="static/js/pub.js" type="text/javascript"></script>
+    <!--二级侧栏-->
+    <script type="text/javascript" src="static/js/bdtxk.tools.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    
+    
+    
+<script type="text/javascript" src="static/js/bdtxk.hoverIntent.minified.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        function megaHoverOver(){
+            $(this).find(".sub").stop().fadeTo('fast', 1).show();
+
+            //Calculate width of all uls
+            (function($) {
+                jQuery.fn.calcSubWidth = function() {
+                    rowWidth = 0;
+                    //Calculate row
+                    $(this).find("ul").each(function() {
+                        rowWidth += $(this).width();
+                    });
+                };
+            })(jQuery);
+
+            if ( $(this).find(".row").length > 0 ) { //If row exists...
+                var biggestRow = 0;
+                //Calculate each row
+                $(this).find(".row").each(function() {
+                    $(this).calcSubWidth();
+                    //Find biggest row
+                    if(rowWidth > biggestRow) {
+                        biggestRow = rowWidth;
+                    }
+                });
+                //Set width
+                $(this).find(".sub").css({'width' :biggestRow});
+                $(this).find(".row:last").css({'margin':'0'});
+
+            } else { //If row does not exist...
+
+                $(this).calcSubWidth();
+                //Set Width
+                $(this).find(".sub").css({'width' : rowWidth});
+
+            }
+        }
+
+        function megaHoverOut(){
+            $(this).find(".sub").stop().fadeTo('fast', 0, function() {
+                $(this).hide();
+            });
+        }
+
+
+        var config = {
+            sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)
+            interval: 100, // number = milliseconds for onMouseOver polling interval
+            over: megaHoverOver, // function = onMouseOver callback (REQUIRED)
+            timeout: 500, // number = milliseconds delay before onMouseOut
+            out: megaHoverOut // function = onMouseOut callback (REQUIRED)
+        };
+
+        $("ul#topnav li .sub").css({'opacity':'0'});
+        $("ul#topnav li").hoverIntent(config);
+
+
+
+    });
+
+</script> 
+
+
+<!--选项卡-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+

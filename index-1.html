@@ -1,0 +1,228 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <!-- 全局变量pageMeta-->
+    <script type="text/javascript">
+        var pageMeta = {"datas":{},"models":[],"routes":{},"params":{"userId":null,"dqrq":"2024-01-10 12:54:13","roleId":null}};
+        var contextPath = "/xsfw";
+        var roleId = pageMeta.params.roleId;
+		var userId = pageMeta.params.userId;
+		var dqrq = pageMeta.params.dqrq;
+		//页面全局变量
+		var zsnfdm = '';
+		var zspcdm = '';
+		var zssfdm = '';
+		var zssfmc = '';
+		var fj = '';
+		var sfxz = '';
+        window.WIS_CONFIG = {
+			ROOT_PATH: "http://xs.qzoiedu.com:80/xsfw/sys/zssjclapp",
+			PATH: "/xsfw",
+			APPID: "4937176059456867",
+			APPNAME:"zssjclapp",
+			RES_SERVER: "https://res.qzoiedu.com/1.8.1_TR32",
+			TITLE: "高招数据处理",
+			INDEXHREF : "http://xs.qzoiedu.com:80/xsfw/sys/zssjclapp"+"/*default/index.do"
+		}
+    </script>
+    <script>
+if('undefined' != typeof  WIS_CONFIG.ROOT_PATH ){
+	WIS_CONFIG.ROOT_PATH = WIS_CONFIG.ROOT_PATH.replace("http:",window.location.protocol); 
+	WIS_CONFIG.ROOT_PATH = WIS_CONFIG.ROOT_PATH.replace(":80/",":"+window.location.port+"/");
+	WIS_CONFIG.ROOT_PATH = WIS_CONFIG.ROOT_PATH.replace(":443/",":"+window.location.port+"/");
+}
+if('undefined' != typeof  WIS_CONFIG.PATH ){
+	WIS_CONFIG.PATH = WIS_CONFIG.PATH.replace("http:",window.location.protocol); 
+	WIS_CONFIG.PATH = WIS_CONFIG.PATH.replace(":80/",":"+window.location.port+"/");
+	WIS_CONFIG.PATH = WIS_CONFIG.PATH.replace(":443/",":"+window.location.port+"/");
+}
+if(userId != null){
+	window.xgconfig = {
+
+		/*
+	     * 前端部门开发模式
+	     */
+	    "FE_DEBUG_MODE": false,
+
+	    /*
+	      	业务线开发模式，转测时置false
+	     */
+	    "DEBUG_MODE": false,
+
+		/*
+			资源服务器地址
+		 */
+		"RESOURCE_SERVER": WIS_CONFIG.RES_SERVER,
+		
+		/*
+		 * bh前端组件版本
+		 */
+		"BH_VERSION": "1.2",
+		/*
+		 * 主题 blue purple
+		 */
+		"THEME": "blue",
+
+		/*
+			服务器端生成配置API(API_BASE_PATH目录下)
+			@example "/config.do" ./mock/serverconfig.json
+		 */
+		"SERVER_CONFIG_API": WIS_CONFIG.PATH + "/sys/ggpubapp/indexmenu/getAppConfig.do?appId="+ WIS_CONFIG.APPID  + "&appName="+WIS_CONFIG.APPNAME,
+		/*
+			APP默认路由
+		 */
+		'APP_ENTRY': "",
+
+		/*
+		 	APP标题
+		 */
+		"APP_TITLE": WIS_CONFIG.TITLE,
+
+		/*
+			应用底部说明文本
+		 */
+		"FOOTER_TEXT": "",
+
+		
+
+		/*
+			头部配置
+		 */
+		"HEADER": {
+			"dropMenuCallback":function(item){
+				if (item.id == roleId){
+					return false;
+				}
+				
+				var url = WIS_CONFIG.PATH + "/sys/funauthapp/api/changeAppRole/" + WIS_CONFIG.APPNAME + "/" + item.id + ".do";
+			    $.ajax({
+			        url: url,
+			        type: 'post',
+			        async: false,
+			        error: function() 
+			        {
+			        	$.bhDialog({title:'切换失败',iconType:'warning'});
+			        },
+			        success: function(data) 
+			        {
+			        	if (data && data.success == true)
+			        	{
+			        		  $.ajax({
+						        url: WIS_CONFIG.PATH +'/sys/ggpubapp/userinfo/setXgCommonAppRole.do',
+						        type: 'post',
+						        async: false,
+						        data:{"ROLEID":item.id},
+						        success: function(data){}
+						     });
+			        		location.href = WIS_CONFIG.INDEXHREF;
+			        	}
+			        	else
+			        	{
+			        		$.bhDialog({title:'切换失败',iconType:'warning'});
+			        		window.location.reload();
+			        	}
+			        }
+			    });
+			}
+		}
+	};
+}else{
+	window.xgconfig = {
+
+		/*
+	     * 前端部门开发模式
+	     */
+	    "FE_DEBUG_MODE": false,
+
+	    /*
+	      	业务线开发模式，转测时置false
+	     */
+	    "DEBUG_MODE": false,
+
+		/*
+			资源服务器地址
+		 */
+		"RESOURCE_SERVER": WIS_CONFIG.RES_SERVER,
+		
+		/*
+		 * bh前端组件版本
+		 */
+		"BH_VERSION": "1.2",
+		/*
+		 * 主题 blue purple
+		 */
+		"THEME": "blue",
+
+		/*
+			APP默认路由
+		 */
+		'APP_ENTRY': "",
+
+		/*
+		 	APP标题
+		 */
+		"APP_TITLE": WIS_CONFIG.TITLE,
+
+		/*
+			应用底部说明文本
+		 */
+		"FOOTER_TEXT": "",
+
+		
+
+		/*
+			头部配置
+		 */
+		"HEADER": {
+			"dropMenuCallback":function(item){
+				if (item.id == roleId){
+					return false;
+				}
+				
+				var url = WIS_CONFIG.PATH + "/sys/funauthapp/api/changeAppRole/" + WIS_CONFIG.APPNAME + "/" + item.id + ".do";
+			    $.ajax({
+			        url: url,
+			        type: 'post',
+			        async: false,
+			        error: function() 
+			        {
+			        	$.bhDialog({title:'切换失败',iconType:'warning'});
+			        },
+			        success: function(data) 
+			        {
+			        	if (data && data.success == true)
+			        	{
+			        		location.href = WIS_CONFIG.INDEXHREF;
+			        	}
+			        	else
+			        	{
+			        		$.bhDialog({title:'切换失败',iconType:'warning'});
+			        		window.location.reload();
+			        	}
+			        }
+			    });
+			}
+		}
+	};
+}
+
+</script>
+
+    <script src="static/js/commonlib.js"></script>
+    <script src="static/js/cropper.min.js"></script>
+    <script src="static/js/appcore-min.js"></script>
+</head>
+<script src="static/js/frontFunctions.js"></script>
+<script src="static/js/des.js"></script>
+<script src="https://localhost:8000/CLodopfuncs.js"></script>
+</html>

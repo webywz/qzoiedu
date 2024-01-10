@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>教务处-泉州海洋职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="教务处-泉州海洋职业学院">
+<meta name="keywords" content="教务处,泉州海洋职业学院">
+
+<link type="text/css" rel="stylesheet" href="static/css/style10.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/xx-sj-tj.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1938612469)</script>
+</head>
+<body style=" background:#f3f3f3;">
+
+<!--顶部开始-->
+
+<div class="wrap" style=" background:#3e6db5;border-bottom:solid 1px #2f61ac;">
+  <div class="w">
+    <div class="toubu"> 
+      
+      <!--logo开始-->
+      <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="教务处"><img src="static/picture/logo4.png"></a></div>
+      <!--logo结束-->
+      
+      <div class="search fr"> 
+        
+        <!--设为首页/加入收藏开始-->
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83564)">学校主页</a>
+</div>
+        <div class="clearfix"></div>
+        <!--设为首页/加入收藏结束--> 
+        
+        <!--搜索开始-->
+      <div>
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938612469";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <!--搜索结束--> 
+        
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!--顶部结束--> 
+
+<!--导航开始-->
+
+<div class="wrap bg_color">
+  <div class="w Navigation"><div id="navbar" class="menubox">
+                    <div class="nav">
+                        <ul>
+                                                        <li class="dhdqwz">
+                                 <a href="index.htm" title="首页">首页</a>
+                            </li>
+                            <li>
+                                 <a href="jgsz.htm" title="机构设置">机构设置</a>
+                            </li>
+                            <li>
+                                 <a href="jwdt.htm" title="教务动态">教务动态</a>
+                            </li>
+                            <li>
+                                 <a href="rcpy.htm" title="人才培养">人才培养</a>
+                            </li>
+                            <li>
+                                 <a href="jwxx/kskw.htm" title="教务信息">教务信息</a>
+                                <div class="two-nav">
+                                    <a href="jwxx/kskw.htm" title="考试考务">考试考务</a>
+                                    <a href="jwxx/xjgl.htm" title="学籍管理">学籍管理</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jxjs/zyjs.htm" title="教学建设">教学建设</a>
+                                <div class="two-nav">
+                                    <a href="jxjs/zyjs.htm" title="专业建设">专业建设</a>
+                                    <a href="jxjs/pjzl.htm" title="评建专栏">评建专栏</a>
+                                    <a href="jxjs/zdzy.htm" title="重点专业">重点专业</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="jxyj/sjjx.htm" title="教学研究">教学研究</a>
+                                <div class="two-nav">
+                                    <a href="jxyj/sjjx.htm" title="实践教学">实践教学</a>
+                                    <a href="jxyj/sysx.htm" title="实验实训">实验实训</a>
+                                    <a href="jxyj/jgxm.htm" title="教改项目">教改项目</a>
+                                    <a href="jxyj/jnjs.htm" title="技能竞赛">技能竞赛</a>
+                                    <a href="jxyj/jycg.htm" title="教研成果">教研成果</a>
+                                    <a href="jxyj/zyjyhdz.htm" title="职业教育活动周">职业教育活动周</a>
+                                    <a href="jxyj/aqjy.htm" title="安全教育">安全教育</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="xzzx/jpkc.htm" title="下载中心">下载中心</a>
+                                <div class="two-nav">
+                                    <a href="xzzx/jpkc.htm" title="精品课程">精品课程</a>
+                                    <a href="xzzx/cybg.htm" title="常用表格">常用表格</a>
+                                    <a href="xzzx/xxhjx.htm" title="信息化教学">信息化教学</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="gzzd.htm" title="规章制度">规章制度</a>
+                            </li>
+                            <li>
+                                 <a href="" title="教务管理系统">教务管理系统</a>
+                                <div class="two-nav">
+                                    <a href="http://59.60.15.99:8009/" title="登录外网">登录外网</a>
+                                    <a href="#" title="登录内网">登录内网</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+</div>
+            
+</div>
+</div>
+
+<!--导航结束--> 
+
+<!--Banner开始-->
+<div class="index-banner">
+            <div class="main-visual-wrapper ar_web">
+                <section class="swiper-box1 main-visual-slider">
+                        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/555.jpg) no-repeat;">
+                                        <img src="static/picture/555.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/444.jpg) no-repeat;">
+                                        <img src="static/picture/444.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide main-visual-item">
+                                <a class="slide-inner">
+                                    <div class="visual-img imged" style="background: url(static/image/333.jpg) no-repeat;">
+                                        <img src="static/picture/333.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ban-dot">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+</div>
+
+
+
+<!--Banner结束-->
+
+<div class="clearfix"></div>
+
+<!--container开始-->
+
+  <div class="w">
+  <div class="clearfix">
+    <div class="w380 fl mt15" style="background:#ffffff;height:418px;">
+      <div class="menu_bt">
+        <h3 class="fl kcjs_bg">教务动态</h3>
+        <div class="fr more"> <a href="jwdt.htm"><img src="static/picture/ga_13.png" width="107" height="10"> </a></div>
+      </div>
+      <div class="clearfix"></div><script language="javascript" src="static/js/centerCutImg.js"></script><script language="javascript" src="static/js/ajax.js"></script>  
+
+ <div class="Notifications2 mt20">
+        <p>2023年12月19日 </p>
+        <h3><a href="info/1281/6751.htm">学校2023年第八届教学能力比赛圆满落幕</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2023年12月07日 </p>
+        <h3><a href="info/1281/6731.htm">我校召开023-2024学年第一学期第四次（总第4...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2023年11月28日 </p>
+        <h3><a href="info/1281/6701.htm">泉海院教〔2023〕114号关于征集2023年课程思...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20" style="border:none;">
+        <p>2023年11月02日 </p>
+        <h3><a href="info/1281/6551.htm">我校召开2023-2024学年第一学期第三次教学工...</a></h3>
+      </div>
+
+<script>_showDynClickBatch(['dynclicks_u5_6751','dynclicks_u5_6731','dynclicks_u5_6701','dynclicks_u5_6551'],[6751,6731,6701,6551],"wbnews", 1938612469)</script>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fl ml30 mt15" style="background:#ffffff;">
+      <div class="menu_bt">
+        <h3 class="fl kcjs_bg">教务信息</h3>
+        <div class="fr more"> <a href="jwxx/kskw.htm"><img src="static/picture/ga_13.png" width="107" height="10">  </a></div>
+      </div>
+      <div class="clearfix"></div>
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">12.23</li>
+            <li style="color:#333; background:#f2f2f2;">2023</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/6761.htm">诚信考试 领航未来</a></h3>
+          <p>诚信考试 领航未来                                ——致泉...</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">09.05</li>
+            <li style="color:#333; background:#f2f2f2;">2023</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/5781.htm">泉海院教〔2023〕58号关于2022-2023...</a></h3>
+          <p></p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">02.10</li>
+            <li style="color:#333; background:#f2f2f2;">2023</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/1971.htm">泉州海洋职业学院考试安排（2022-20...</a></h3>
+          <p>泉州海洋职业学院考试安排（2022-2023学年第二学期期初补考）</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+
+ <div class="Academic mt20">
+        <div class="Academic_time fl">
+          <ul>
+            <li style="color:#fff;background:#3e6db5;">11.28</li>
+            <li style="color:#333; background:#f2f2f2;">2022</li>
+          </ul>
+        </div>
+        <div class="Academic_content fl ml10">
+          <h3><a href="info/1271/1961.htm">泉海院教〔2022〕15号  关于2022-20...</a></h3>
+          <p></p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+<script>_showDynClickBatch(['dynclicks_u6_6761','dynclicks_u6_5781','dynclicks_u6_1971','dynclicks_u6_1961'],[6761,5781,1971,1961],"wbnews", 1938612469)</script>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fr mt15" style="background:#FFF;">
+      <div class="menu_bt">
+        <h3 class="fl kcjs_bg">教研成果</h3>
+        <div class="fr more"> <a href="jxyj/jycg.htm"><img src="static/picture/ga_13.png" width="107" height="10"> </a> </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div>  
+
+ <div class="Notifications2 mt20">
+        <p>2023年10月07日 </p>
+        <h3><a href="info/1463/5871.htm">喜报 | 我院师生获“互联网＋”创新创业大赛...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2023年09月22日 </p>
+        <h3><a href="info/1463/5851.htm">我院教师荣获2023年福建省职业院校教师教学...</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20">
+        <p>2022年08月12日 </p>
+        <h3><a href="info/1463/3931.htm">【喜讯】我校教师获省级教学能力比赛三等奖</a></h3>
+      </div>
+
+  
+
+ <div class="Notifications2 mt20" style="border:none;">
+        <p>2022年05月19日 </p>
+        <h3><a href="info/1463/3751.htm">“一主线、双主体、三驱动、四融合”的航海...</a></h3>
+      </div>
+
+<script>_showDynClickBatch(['dynclicks_u7_5871','dynclicks_u7_5851','dynclicks_u7_3931','dynclicks_u7_3751'],[5871,5851,3931,3751],"wbnews", 1938612469)</script>
+</div>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+  </div>
+</div>
+<div class="w txhd mt15" style="background:#FFF;">
+  <div class="txhd_nr"><div class="xysh_nr m-imgtxtq1">
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/6551.htm" target="_blank" title="我校召开2023-2024学年第一学期第三次教学工作例会"><img src="static/picture/DF121432A9A829DDC28308BA80F_8B4F6D62_147AC.png"></a></div>
+                        <span>我校召开2023-2024学年...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/6541.htm" target="_blank" title="我校召开教材建设与管理研讨会"><img src="static/picture/16B6BE0F35D436339615338AA0D_CB403A37_268F8.png"></a></div>
+                        <span>我校召开教材建设与管...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/5881.htm" target="_blank" title="我校召开2023-2024学年第一学期第二次教学工作例会"><img src="static/picture/995B3EDE3BFFFF4827224D5ED83_9D0BDACF_17B10.png"></a></div>
+                        <span>我校召开2023-2024学年...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/5831.htm" target="_blank" title="我校召开专业建设发展规划研讨会"><img src="static/picture/187E30E94DE4266E21539409F79_C393899D_164FD.png"></a></div>
+                        <span>我校召开专业建设发展...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/5771.htm" target="_blank" title="我校开展2023-2024学年第一学期开学第一课教学检查"><img src="static/picture/70A942CE5CC0C730BC6AB73DF40_256F010E_16413.png"></a></div>
+                        <span>我校开展2023-2024学年...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1111.htm" target="_blank" title="我校召开2022-2023学年第二学期期中教学检查总结会 暨第四次教学工作例会"><img src="static/picture/034DE6340C2A6BD19998E3CAABB_4B8DFBFF_17D5C.jpg"></a></div>
+                        <span>我校召开2022-2023学年...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1101.htm" target="_blank" title="学校2023年教师教学能力比赛圆满落幕"><img src="static/picture/0E2D1FA03FD3693262C95F7317C_3E739E66_C8A5.jpg"></a></div>
+                        <span>学校2023年教师教学能...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1081.htm" target="_blank" title="凝心聚力，扬帆起航，我校召开 教师座谈会"><img src="static/picture/4F11F6297E32ACC2FF61CBABA3F_F5E3CCB0_27B44.jpg"></a></div>
+                        <span>凝心聚力，扬帆起航，...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1091.htm" target="_blank" title="倾听心声，关爱成长，我校召开 学生座谈会"><img src="static/picture/1F6551F3DDEC201F0425E01E830_4991C050_D022.jpg"></a></div>
+                        <span>倾听心声，关爱成长，...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1071.htm" target="_blank" title="我校召开2022-2023学年第二学期第三次教学工作会议"><img src="static/picture/B688586BC8F196A3566979C95E5_6B2944B5_A0099.png"></a></div>
+                        <span>我校召开2022-2023学年...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1061.htm" target="_blank" title="我校召开公共基础课程教学提升研讨会"><img src="static/picture/1221EEC21A5AB784F0114CE5CBD_F6151BA1_9B207.png"></a></div>
+                        <span>我校召开公共基础课程...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1051.htm" target="_blank" title="教务处组织2023年度职业技能大赛交流分享会"><img src="static/picture/F4343974F4E5E37EC9A8DB0CAC4_55680A12_FC5E1.png"></a></div>
+                        <span>教务处组织2023年度职...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1041.htm" target="_blank" title="教务处召开“立足常规，规范管理”的专题会议"><img src="static/picture/EAFA1A1D5E0FD369A43F265B2B8_5726749C_EEA98.png"></a></div>
+                        <span>教务处召开“立足常规...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1231.htm" target="_blank" title="我校召开编制2023级专业人才培养方案研讨会"><img src="static/picture/E76BEDF15A3A59E8178325C13D8_8CBA3574_247497.png"></a></div>
+                        <span>我校召开编制2023级专...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1211.htm" target="_blank" title="我校召开2022-2023学年第二学期第二次教学工作例会"><img src="static/picture/C5C1DAE4E7EC6AD1B74BD81C214_40743B48_42EA.jpg"></a></div>
+                        <span>我校召开2022-2023学年...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1201.htm" target="_blank" title="我校开展期初常规教学工作检查"><img src="static/picture/57C9C257D8BC2E59A47D571059E_0038460D_C468.jpg"></a></div>
+                        <span>我校开展期初常规教学...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1191.htm" target="_blank" title="我校召开示范特色专业建设剖析专题会议"><img src="static/picture/2996D34038B4ED4F825352B3954_C7D21125_58A4A.png"></a></div>
+                        <span>我校召开示范特色专业...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1151.htm" target="_blank" title="我校召开期中教学检查总结会"><img src="static/picture/B06FECF409A1587BB7EA03B89F8_6824706B_B1DD4.png"></a></div>
+                        <span>我校召开期中教学检查...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1311.htm" target="_blank" title="学校召开2022-2023学年第一学期第三次教学工作例会"><img src="static/picture/27BFF2F7FAF343C9EF626176175_40D95F90_E245.jpg"></a></div>
+                        <span>学校召开2022-2023学年...</span>
+                    </div>
+                    <div class="pic">
+                        <div class="img"><a href="info/1281/1261.htm" target="_blank" title="我校当选新一届省民办教育协会高专委轮值理事长单位"><img src="static/picture/07B30D164E7C27D926C5777ADE6_D1957D66_60E99.png"></a></div>
+                        <span>我校当选新一届省民办...</span>
+                    </div>
+                </div>
+<script>_showDynClickBatch(['dynclicks_u8_6551','dynclicks_u8_6541','dynclicks_u8_5881','dynclicks_u8_5831','dynclicks_u8_5771','dynclicks_u8_1111','dynclicks_u8_1101','dynclicks_u8_1081','dynclicks_u8_1091','dynclicks_u8_1071','dynclicks_u8_1061','dynclicks_u8_1051','dynclicks_u8_1041','dynclicks_u8_1231','dynclicks_u8_1211','dynclicks_u8_1201','dynclicks_u8_1191','dynclicks_u8_1151','dynclicks_u8_1311','dynclicks_u8_1261'],[6551,6541,5881,5831,5771,1111,1101,1081,1091,1071,1061,1051,1041,1231,1211,1201,1191,1151,1311,1261],"wbnews", 1938612469)</script>
+</div>    
+      
+      
+</div>
+
+ <div class="w">
+  <div class="clearfix">
+    <div class="w380 fl mt15" style="background:#ffffff;">
+      <div class="menu_bt menu_bt2">
+        <h3 class="fl kcjs_bg">教学建设</h3>
+        <div class="fr more"> <a href="jxjs/zyjs.htm"><img src="static/picture/ga_14.png" width="107" height="10"> </a></div>
+      </div>
+      <div class="clearfix"></div>
+      <div> <ul class="n_list">
+   <li><span class="date">11-13</span><a href="info/1383/6571.htm" target="_blank" title="泉海院教〔2023〕108号关于开展2024年拟新增专业申报工作的通知">泉海院教〔2023〕108号关于开展2024...</a></li>           
+   <li><span class="date">11-10</span><a href="info/1383/6561.htm" target="_blank" title="泉州海洋职业学院教学简报2023年第6期(总第6期)">泉州海洋职业学院教学简报2023年第6...</a></li>           
+   <li><span class="date">10-16</span><a href="info/1383/6441.htm" target="_blank" title="泉海院教〔2023〕96号泉州海洋职业学院关于开展课程思政示范项目建设工作的通知">泉海院教〔2023〕96号泉州海洋职业...</a></li>           
+   <li><span class="date">09-25</span><a href="info/1383/5861.htm" target="_blank" title="泉州海洋职业学院教学简报2023年第5期（总第5期）">泉州海洋职业学院教学简报2023年第5...</a></li>           
+   <li><span class="date">09-05</span><a href="info/1383/6371.htm" target="_blank" title="泉海院教[2023]59号关于组织开展2022-2023学年第二学期期末教学场所安全检查的通知">泉海院教[2023]59号关于组织开展202...</a></li>           
+   <li><span class="date">06-30</span><a href="info/1383/5671.htm" target="_blank" title="泉州海洋职业学院教学简报2023年第4期（总第4期）">泉州海洋职业学院教学简报2023年第4...</a></li>           
+</ul><script>_showDynClickBatch(['dynclicks_u9_6571','dynclicks_u9_6561','dynclicks_u9_6441','dynclicks_u9_5861','dynclicks_u9_6371','dynclicks_u9_5671'],[6571,6561,6441,5861,6371,5671],"wbnews", 1938612469)</script>
+</div>
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fl ml30 mt15" style="background:#ffffff;">
+      <div class="menu_bt  menu_bt2">
+        <h3 class="fl kcjs_bg">下载中心</h3>
+        <div class="fr more"> <a href="xzzx/jpkc.htm"><img src="static/picture/ga_14.png" width="107" height="10">  </a></div>
+      </div>
+      <div class="clearfix"></div><div> <ul class="n_list">
+   <li><span class="date">09-02</span><a href="info/1513/5761.htm" target="_blank" title="泉州海洋职业学院岗位实习平台操作手册">泉州海洋职业学院岗位实习平台操作手册</a></li>           
+   <li><span class="date">09-01</span><a href="info/1523/5731.htm" target="_blank" title="泉州海洋职业学院2023级专业人才培养方案">泉州海洋职业学院2023级专业人才培...</a></li>           
+   <li><span class="date">05-23</span><a href="info/1493/6121.htm" target="_blank" title="泉海院教〔2023〕57号-关于公布2023年校级在线精品课程建设项目立项名单的通知">泉海院教〔2023〕57号-关于公布2023...</a></li>           
+   <li><span class="date">03-16</span><a href="info/1523/6391.htm" target="_blank" title="泉海院教〔2023〕20号 泉州海洋职业学院关于编制专业人才培养方案的通知">泉海院教〔2023〕20号 泉州海洋职业...</a></li>           
+   <li><span class="date">03-10</span><a href="info/1503/5251.htm" target="_blank" title="泉州海洋职业学院学籍异动申请表">泉州海洋职业学院学籍异动申请表</a></li>           
+   <li><span class="date">02-28</span><a href="info/1493/6131.htm" target="_blank" title="泉海院教〔2023〕4号  关于开展 2023年校级在线精品课程申报工作的通知">泉海院教〔2023〕4号  关于开展 202...</a></li>           
+</ul><script>_showDynClickBatch(['dynclicks_u10_5761','dynclicks_u10_5731','dynclicks_u10_6121','dynclicks_u10_6391','dynclicks_u10_5251','dynclicks_u10_6131'],[5761,5731,6121,6391,5251,6131],"wbnews", 1938612469)</script>
+</div>
+      <div style="height:10px;"></div>
+    </div>
+    
+    <div class="w380 fr mt15" style="background:#FFF;">
+      <div class="menu_bt  menu_bt2">
+        <h3 class="fl kcjs_bg">规章制度</h3>
+        <div class="fr more"> <a href="gzzd.htm"><img src="static/picture/ga_14.png" width="107" height="10"> </a> </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div> <ul class="n_list">
+   <li><span class="date">07-08</span><a href="info/1291/6111.htm" target="_blank" title="泉海院教〔2023〕103号泉州海洋职业学院关于印发《泉州海洋职业学院学生岗位实习管理办法（修订版）》的通知">泉海院教〔2023〕103号泉州海洋职业...</a></li>           
+   <li><span class="date">07-07</span><a href="info/1291/6101.htm" target="_blank" title="泉海院教〔2023〕100号 泉州海洋职业学院教学事故认定与处理规定（修订）">泉海院教〔2023〕100号 泉州海洋职...</a></li>           
+   <li><span class="date">07-07</span><a href="info/1291/6641.htm" target="_blank" title="泉海院综〔2023〕104号 泉州海洋职业学院教师教学工作量统计办法（修订）">泉海院综〔2023〕104号 泉州海洋职...</a></li>           
+   <li><span class="date">06-27</span><a href="info/1291/6081.htm" target="_blank" title="泉海院教〔2023〕98号 泉州海洋职业学院学生学籍管理规定（修订）">泉海院教〔2023〕98号 泉州海洋职业...</a></li>           
+   <li><span class="date">06-02</span><a href="info/1291/6091.htm" target="_blank" title="泉海院教〔2023〕81号 泉州海洋职业学院职业技能竞赛管理办法（试行）">泉海院教〔2023〕81号 泉州海洋职业...</a></li>           
+   <li><span class="date">05-24</span><a href="info/1291/6041.htm" target="_blank" title="泉海院综〔2023〕69号 关于调整泉州海洋职业学院教学工作委员会成员的通知">泉海院综〔2023〕69号 关于调整泉州...</a></li>           
+</ul><script>_showDynClickBatch(['dynclicks_u11_6111','dynclicks_u11_6101','dynclicks_u11_6641','dynclicks_u11_6081','dynclicks_u11_6091','dynclicks_u11_6041'],[6111,6101,6641,6081,6091,6041],"wbnews", 1938612469)</script>
+</div>
+
+      <div style="height:10px;"></div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="clearfix"></div>
+<div style="background:#e6e6e6;">
+  <div class="jz">
+    <div class="menu_bt">
+      <h3 class="fl kcjs_bg mt10"> 友情链接 </h3>
+    </div>
+    <div class="clearfix"></div> <ul class="yqlj">
+
+ <li><a href="http://jyt.fujian.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83562)">福建省教育厅</a></li>
+
+
+  
+
+ <li><a href="http://jyj.quanzhou.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83563)">泉州市教育局</a></li>
+
+
+  
+
+ <li><a href="https://www.fj.msa.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83561)">福建海事局</a></li>
+
+
+  
+
+ <li><a href="http://www.cmaritime.com.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83556)">中国海事服务中心</a></li>
+
+
+  
+
+ <li><a href="http://www.mot.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83557)">中华人民共和国交通运输部</a></li>
+
+
+  
+
+ <li><a href="http://www.626china.com/" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83559)">中国禁毒展览馆</a></li>
+
+
+  
+
+ <li><a href="index.html#/" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83560)">一站式办事大厅</a></li>
+
+
+  
+
+ <li><a href="https://exmail.qq.com/login" onclick="_addDynClicks(&#34;wburl&#34;, 1938612469, 83558)">邮箱系统</a></li>
+
+
+  
+</ul>
+  </div>
+     <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="wrap" style="background: #3e6db5;">
+  <div class="w footer">
+    <div class="ac">
+    
+    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p>
+    
+   
+    </div>
+  </div>
+</div>
+
+
+
+<!--jquery-->
+
+<script type="text/javascript" src="static/js/bdtxk.min.js"></script>
+<script src="static/js/pub.js" type="text/javascript"></script>
+<script src="static/js/slick.js"></script>
+<!--左滚动特效--> 
+  <script>// 校园专题
+                $('.m-imgtxtq1').slick({
+                    rows: 1,
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            dots: true,
+                            arrows: false
+                        }
+                    },
+                        {
+                            breakpoint: 960,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 350,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });</script><!--左滚动特效--> 
+
+
+
+<script src="static/js/swiper.min3.js"></script>
+<script>
+    // banner
+    var swiper = new Swiper(".main-visual-slider .swiper-container", {
+        loop: true,
+        speed: 1200,
+        draggable: false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        // allowTouchMove: true,
+        // watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            slideChangeTransitionStart : function(swiper){
+                var swiper = this;
+                // 判断swiper-slide-active是否有视频
+                if($(".main-visual-slider .swiper-slide-active video").length>0){
+                    console.log(1)
+                    // 停止自动切换
+                    swiper.autoplay.stop();
+                    // 动态增加id
+                    setTimeout(function(){
+                        swiper.autoplay.stop();
+                        $(".main-visual-slider .swiper-slide-active video").attr("id","video_01");
+
+                        var _video=document.getElementById("video_01");
+
+                        // 播放视频
+                        _video.play();
+                        // 切换后重新播放视频
+                        _video.currentTime = 0;
+                        // 静音
+                        _video.volume = 0;
+                        // 监听视频播放结束
+                        _video.addEventListener('ended', function () {
+                            swiper.slideNext();
+                            //重新开始轮播banner
+                            swiper.autoplay.start();
+                        });
+                    }, 10);
+                }
+            },
+            slideChangeTransitionEnd: function(swiper){
+                //动态移除id
+                setTimeout(function(){
+                    $(".main-visual-slider .swiper-slide-active video").attr("id","");
+                }, 10);
+            },
+        }
+    });
+</script>
+
+<!--焦点图特效--> 
+<script type="text/javascript" src="static/js/bdtxk.yx_rotaion.js"></script> 
+<script type="text/javascript">
+    $(".yx-rotaion").yx_rotaion({auto:true});
+</script> 
+
+
+
+<!--选项卡-->
+
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="apple-touch-icon" href="http://www.qzoiedu.com/chuanyuan/images/favicon_logo.png">
+<link rel="icon" href="http://www.qzoiedu.com/chuanyuan/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.qzoiedu.com/chuanyuan/images/favicon.ico" type="image/x-icon">
+    <title>学院概况-船员培训学院-泉州海洋职业学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<meta name="keywords" content="船员培训学院,泉州海洋职业学院">
+
+    <link href="static/css/style7.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery1.js"></script>
+    <script type="text/javascript" src="static/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="static/js/jquerybdtxk.js"></script>
+    <script src="static/js/pub2.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="static/css/_sitegray_d.css">
+<script language="javascript" src="static/js/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778475650565742000300014f51 -->
+<link rel="stylesheet" type="text/css" href="static/css/about.vsb.css">
+<script type="text/javascript" src="static/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1111,'/wzzw_list.jsp',-1,1938084365)</script>
+</head>
+<body>
+<div class="header">
+    <div class="w1200">
+           <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="static/picture/logo3.png" alt=""></a></div>
+        <div class="i-search fr ">
+        <div class="top_right_top"><script language="javascript" src="static/js/dynclicks.js"></script><script language="javascript" src="static/js/openlink.js"></script><a href="index1.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83402)">学校主页</a>
+</div>
+        
+        
+
+
+<script language="javascript" src="static/js/base64.js"></script><script language="javascript" src="static/js/jquery-latest.min.js"></script><script language="javascript" src="static/js/vue.js"></script><script language="javascript" src="static/js/bluebird.min.js"></script><script language="javascript" src="static/js/axios.js"></script><script language="javascript" src="static/js/polyfill.js"></script><script language="javascript" src="static/js/token.js"></script><link href="static/css/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="static/js/index.js"></script><script language="javascript" src="static/js/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 141px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: 15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+     var jq_l = jQuery.noConflict();
+var $ = jq_l;
+    jq_l("#divu2").html(jq_l("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1938084365";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+   
+    jq_l.support.cors = true;
+    jq_l.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                jq_l.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.220.220.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="i-nav"><div id="navbar" class="menubox">
+                <div class="w1200">
+                    <div class="nav">
+                        <ul>
+                                                        <li>
+                                 <a href="index.htm" title="首页">首页</a>
+                            </li>
+                            <li class="dhdqwz">
+                                 <a href="" title="学院概况">学院概况</a>
+                            </li>
+                            <li>
+                                 <a href="pxdt.htm" title="培训动态">培训动态</a>
+                            </li>
+                            <li>
+                                 <a href="pxxm/hyzsjnpx.htm" title="培训项目">培训项目</a>
+                                <div class="two-nav" style="width:220px; margin-left:-37px;">
+                                    <a href="pxxm/hyzsjnpx.htm" referrer="no-referrer|origin|unsafe-url" rel="noreferrer" title="海员证书技能培训">海员证书技能培训</a>
+                                    <a href="pxxm/tshgzpx.htm" referrer="no-referrer|origin|unsafe-url" rel="noreferrer" title="特殊合格证培训">特殊合格证培训</a>
+                                    <a href="pxxm/hsjtaqjnpx.htm" referrer="no-referrer|origin|unsafe-url" rel="noreferrer" title="海上交通安全技能培训">海上交通安全技能培训</a>
+                                    <a href="pxxm/yczspx.htm" referrer="no-referrer|origin|unsafe-url" rel="noreferrer" title="渔船证书培训">渔船证书培训</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="pxjh.htm" title="培训计划">培训计划</a>
+                            </li>
+                            <li>
+                                 <a href="xyfc.htm" title="学员风采">学员风采</a>
+                            </li>
+                            <li>
+                                 <a>服务中心</a>
+                                <div class="two-nav" style="width:220px; margin-left:-37px;">
+                                    <a href="http://cyxx.msa.gov.cn/crew_qey/qry/certInit.action" referrer="no-referrer|origin|unsafe-url" rel="noreferrer" title="证书查询">证书查询</a>
+                                    <a href="https://cyxx.msa.gov.cn/crew_qey/qry/scoreInit.action" referrer="no-referrer|origin|unsafe-url" rel="noreferrer" title="成绩查询">成绩查询</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <a href="lxwm.htm" title="联系我们">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+<!--listbanner-->
+<div class="list_banner">
+                            <img src="static/picture/list_banner01.jpg" border="0">
+                
+            
+</div>
+<div class="this_map">
+    <div class="w1200">
+        <div class="this_name"><h1>学院概况</h1><span></span></div>
+
+        <div class="this_dqwz">
+            
+<h2>学院概况</h2>
+            <a href="#" class="ico_home"><img src="static/picture/ico_home.png" alt=""></a>
+                <a href="index.htm">首页</a>
+                >>
+                <a href="">学院概况</a>
+</div>
+    </div>
+</div>
+<!--主要内容开始-->
+<div class="list_main">
+       <div class="list_main_left">
+        <div class="list_sub">
+            
+        </div>
+    </div>
+    <div class="list_main_right">
+        <div class="c-content">
+
+
+
+<script language="javascript" src="static/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1938084365,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="static/js/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1938084365,1001)</script>
+<div class="nr-info">
+
+    <div id="vsb_content_1001_u91"><div id="vsb_content"><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">船员培训学院是学校依托航海类专业办学资源，专门服务涉海类培训，含各类普通船员、高级船员、特种船船员等在内的25项培训许可项目，以及社会职业技能培训、渔业船员培训而设立的二级培训单位。其前身是成立于2010年的船员培训中心，是学校在涉海类培训发展过程中全面整合国际船员专修学院、特种船国际培训学院、社会技能培训中心、远洋渔业培训学院而设立的培训学院，学院承担海船船员培训、特种船船员培训、海上设施工作人员海上交通安全技能培训和远洋渔业船员培训等业务，船员培训量常年位居全国前列，2022年船员培训总量超4万人次。</p><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">船员培训学院拥有齐全的培训场地设施设备，严格按照培训主管部门要求配置了国内一流的培训场地设施设备和高素质的双师型培训师资队伍，并专门为培训学员提供面积32086.71平方米的海景公寓。学校拥有海边训练基地94亩、排他性海域280亩，可开展滩涂登船紧急出航、登岛、荒岛求生、反海盗、海上救生、水下智能装备等训练和培训，是国内同类院校中唯一拥有独立码头、港湾、沙滩、岛屿的高校。学院拥有以下四大培训业务模块：</p><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">（一）海船船员培训：主要开展国际、国内航线各类海船船员证书的培训及证书再有效等培训项目。包括从普通船员到高级船员的一系列岗位适任培训、专业合格证培训以及知识更新培训等项目。</p><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">（二）特种船船员培训：开展油船、化学品船、液化气船、客船及大型船舶操纵特殊培训等项目；以及船上厨师和膳食服务辅助人员培训。</p><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">（三）海上设施工作人员海上交通安全技能培训：是面向海上设施工作人员的专项培训。我校是经中华人民共和国海事局授权、在全国高校中首个开展此项培训业务的单位，已完成培训人数位居全国前列，培训成效得到主管机关和用人单位的高度好评。年度培训量和任务完成率得到上级主管部门的高度肯定。</p><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">（四）远洋渔业船员培训：是面向渔业船员的各类项目培训。我校是经福建省海洋与渔业厅批准、国家农业农村部备案，具备远洋、海洋、内陆渔业船员培训资质的单位，每年培训超过八千人次。</p><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">船员培训质量的稳步提升和社会影响力的持续扩大是我校未来发展的一大目标，借助学校在建的信息化大数据管理平台，完善数据和办公管理，提高工作效率，同时规范培训管理，提升培训质量，增强核心竞争力。船员培训学院将在各级海事和渔业主管机关的悉心指导和大力支持下，秉承“以服务为宗旨，以就业为导向”的理念，坚持“视质量为生命，严谨治学，发扬航运特色，培养合格航运人才”的质量方针，坚守“不断促进海上交通安全技能，构建更加安全、环保的水上交通环境”的初心，严格按照《中华人民共和国船员培训质量管理规则》及相关管理文件要求开展社会培训，做到培训质量得到社会的广泛认可，为行业和区域海洋经济发展培养大量的高素质技术技能人才。</p><p style="text-align:justify;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">学校已全面推进信息化大数据建设工作，专门设立一个部门为国内船员到校咨询报名培训进行跟踪服务，通过建立学员资料卡、收集国内外航运市场用人信息等方式，加强培训资源库的建设，为培训学员提供就业参考并根据学员的证书信息进行智能化的证书再有效或职级提升培训等人性化提醒服务，以提升培训质量。</p><p style="text-align:right;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)"><br></p><p style="text-align:right;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">泉州海洋职业学院</p><p style="text-align:right;margin-top: 0px;margin-bottom: 0px;margin-left: 0;font-size: 16px;color: rgb(102, 102, 102);line-height: 32px;text-indent: 37px;font-family: 'microsoft yahei', 'helvetica neue', helvetica, tahoma, sans-serif;white-space: normal;background: rgb(255, 255, 255)">船员培训学院</p><p><br></p><p><br></p></div></div>
+    <span id="vsb_content_1001_u9" name="vsb_content_1001_u9"></span>
+    
+
+</div>           
+     
+</div>
+    </div>
+</div>
+<!--主要内容结束-->
+
+<!--end-->
+<div class="end">
+<div class="w1200">
+    <div class="end_left">
+        <div class="i-title" style="border-bottom: none;  margin:20px 0 0  0"><h2 style=" color: #ffffff">友情链接 / <span>Link</span></h2></div>
+        <div class="i-yqlj"><a href="http://jyt.fujian.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83400)">福建省教育厅</a>
+<a href="http://jyj.quanzhou.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83401)">泉州市教育局</a>
+<a href="https://www.fj.msa.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83399)">福建海事局</a>
+<a href="http://www.cmaritime.com.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83394)">中国海事服务中心</a>
+<a href="http://www.mot.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83395)">中华人民共和国交通运输部</a>
+<a href="http://www.626china.com/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83397)">中国禁毒展览馆</a>
+<a href="index.html#/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83398)">一站式办事大厅</a>
+<a href="https://exmail.qq.com/login" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1938084365, 83396)">邮箱系统</a>
+</div>
+
+        <div class="copright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：福建省石狮市祥芝镇古浮二十区1号&nbsp;&nbsp; 邮编：362700<br>招生热线 （0595）83858888 &nbsp;&nbsp;电话：(0595)88983105&nbsp;&nbsp;传真：（0595）83015559<br>Copyright © 2016-2023 泉州海洋职业学院 版权所有&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" target="_blank">闽ICP备09021863号-1&nbsp;&nbsp;</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35058102000172" target="_blank"> 闽公网安备 35058102000172号</a></p></div>
+    </div>
+    <div class="end_right">
+        <div class="wx_sm">    <table align="center">
+    </table></div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
